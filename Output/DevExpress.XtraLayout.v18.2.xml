@@ -59,7 +59,6 @@
       <summary>
         <para>Fires when the current position in the bound data source changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraDataLayout.DataLayoutControl.DataMember">
       <summary>
@@ -77,13 +76,11 @@
       <summary>
         <para>Fires after a layout is generated at runtime. Allows you to customize settings of individual generated layout items and editors.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraDataLayout.DataLayoutControl.FieldRetrieving">
       <summary>
         <para>Fires before a layout item with an embedded editor is generated and thus, prior to the editor&#39;s data binding. It allows you to customize the type of editor to be generated, modify editor binding settings and hide certain editors.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraDataLayout.DataLayoutControl.ForceInitialize">
       <summary>
@@ -258,7 +255,6 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires when the current item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Clone(DevExpress.XtraLayout.LayoutGroup,DevExpress.XtraLayout.ILayoutControl)">
       <summary>
@@ -272,7 +268,6 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Allows you to custom paint the current item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.BaseLayoutItem.CustomizationFormText">
       <summary>
@@ -290,7 +285,6 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires when the current item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.EndInit">
       <summary>
@@ -325,7 +319,6 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires after an item has been hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.HideToCustomization">
       <summary>
@@ -336,7 +329,6 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires when the item is about to be hidden (when dragging the item and dropping it onto on the Customization Form).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Invalidate">
       <summary>
@@ -389,13 +381,11 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Occurs when the mouse pointer is over a layout item and a mouse button is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.BaseLayoutItem.MouseUp">
       <summary>
         <para>Occurs when the mouse button is released if it was pressed within a layout item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Move(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
       <summary>
@@ -527,13 +517,11 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires when the item is about to be added to the layout (by dragging it from the Customization Form).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.BaseLayoutItem.Shown">
       <summary>
         <para>Fires after an item has been made visible.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.BaseLayoutItem.Size">
       <summary>
@@ -569,13 +557,12 @@ This property indicates when changes to the bound editor property are propagated
       <summary>
         <para>Fires after the layout item&#39;s text has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.BaseLayoutItem.TextLocation">
       <summary>
-        <para>Gets or sets the position of the text region.</para>
+        <para>Gets or sets the item caption position.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.Utils.Locations"/> value that specifies the position of the item&#39;s text region.</value>
+      <value>A <see cref="T:DevExpress.Utils.Locations"/> value that specifies the item caption position.</value>
     </member>
     <member name="P:DevExpress.XtraLayout.BaseLayoutItem.TextSize">
       <summary>
@@ -1629,7 +1616,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs before a layout is restored from storage (a stream, xml file or the system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.BeginInit">
       <summary>
@@ -1669,13 +1655,11 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires when a property of the layout control is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.Changing">
       <summary>
         <para>Fires when a property of the layout control is about to be changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.Clear">
       <summary>
@@ -1758,7 +1742,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Allows you to custom paint individual items in the LayoutControl.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControl.CustomizationForm">
       <summary>
@@ -1788,13 +1771,11 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires after the default layout (the layout saved by the <see cref="M:DevExpress.XtraLayout.LayoutControl.SetDefaultLayout"/> method) has been loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.DefaultLayoutLoading">
       <summary>
         <para>Fires before loading the default layout (the layout saved by the <see cref="M:DevExpress.XtraLayout.LayoutControl.SetDefaultLayout"/> method).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControl.EnabledStateController">
       <summary>
@@ -2143,13 +2124,11 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires after a layout group has been expanded/collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.GroupExpandChanging">
       <summary>
         <para>Fires when a layout group is about to be expanded or collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.HardUpdate">
       <summary>
@@ -2172,7 +2151,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires before the Customization Form is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.HideCustomizationForm">
       <summary>
@@ -2230,19 +2208,16 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires after a layout item has been added to the Items collection of its parent.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.ItemDragging">
       <summary>
         <para>Fires repeatedly when a layout item is being dragged and allows you to prevent the item from being dropped at a specific position.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.ItemRemoved">
       <summary>
         <para>Fires after a layout item has been removed from the Items collection of its parent.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControl.Items">
       <summary>
@@ -2254,7 +2229,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires after the selected layout item has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.LayoutChanged">
       <summary>
@@ -2265,19 +2239,16 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when the Layout Tree View Context Menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.LayoutUpdate">
       <summary>
         <para>Occurs after the size of any layout item has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.LayoutUpgrade">
       <summary>
         <para>Occurs when a layout is restored from a data store (a stream, xml file or system registry), and its version differs from the version of the current layout.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControl.LayoutVersion">
       <summary>
@@ -2343,7 +2314,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when the Context Menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.Print">
       <summary>
@@ -2396,7 +2366,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Allows you to provide unique names for layout items created in code, whose names conflict with existing names.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.RestoreDefaultLayout">
       <summary>
@@ -2465,13 +2434,11 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when the Context Menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutControl.ShowCustomization">
       <summary>
         <para>Fires immediately after the Customization Form has been invoked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.ShowCustomizationForm">
       <summary>
@@ -2482,7 +2449,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when the Layout Tree View Context Menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.ShowPrintPreview">
       <summary>
@@ -2504,7 +2470,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires when a Close button within a tab page is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControl.ToolTipController">
       <summary>
@@ -2522,7 +2487,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Allows you to provide unique names for layout items created in code, whose names conflict with existing names.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.UnRegisterCustomPropertyGridWrapper(System.Type)">
       <summary>
@@ -2775,7 +2739,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Allows you to respond to a click on a context button.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControlItem.ContextButtonOptions">
       <summary>
@@ -2793,7 +2756,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires when the <see cref="P:DevExpress.Utils.CheckContextButton.Checked"/>, <see cref="P:DevExpress.Utils.TrackBarContextButton.Value"/> or <see cref="P:DevExpress.Utils.RatingContextButton.Rating"/> property value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControlItem.Control">
       <summary>
@@ -2829,7 +2791,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Allows hints for context buttons to be customized. This event is only raised for <see cref="T:DevExpress.Utils.RatingContextButton"/> and <see cref="T:DevExpress.Utils.TrackBarContextButton"/> objects.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutControlItem.Enabled">
       <summary>
@@ -3151,6 +3112,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>The <see cref="P:DevExpress.XtraLayout.LayoutGroup.BackgroundImageOptions"/> property backing field.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutGroup.BackgroundImageVisible">
       <summary>
@@ -3216,6 +3178,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>The <see cref="P:DevExpress.XtraLayout.LayoutGroup.CaptionImageOptions"/> property backing field.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutGroup.CaptionImagePadding">
       <summary>
@@ -3274,6 +3237,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>The <see cref="P:DevExpress.XtraLayout.LayoutGroup.ContentImageOptions"/> property backing field.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutGroup.Count">
       <summary>
@@ -3297,31 +3261,26 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires when a custom header button is checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutGroup.CustomButtonClick">
       <summary>
         <para>Fires on a regular (push) custom header button click.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutGroup.CustomButtonUnchecked">
       <summary>
         <para>Fires when a custom header button is unchecked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutGroup.CustomDrawBackground">
       <summary>
         <para>Allows you to custom paint the group&#39;s client area background.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.LayoutGroup.CustomDrawCaption">
       <summary>
         <para>Allows you to custom paint the group&#39;s caption.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.LayoutGroup.CustomHeaderButtons">
       <summary>
@@ -4978,7 +4937,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Fires when the position of the current splitter in the layout is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.SplitterItem.ResizeMode">
       <summary>
@@ -5197,7 +5155,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when a custom header button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.TabbedGroup.CustomHeaderButtons">
       <summary>
@@ -5291,13 +5248,11 @@ is dependent on the type of control embedded in this layout item.</value>
       <summary>
         <para>Occurs when a tab page is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraLayout.TabbedGroup.SelectedPageChanging">
       <summary>
         <para>Enables you to prevent changing the selected page.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraLayout.TabbedGroup.SelectedTabPage">
       <summary>

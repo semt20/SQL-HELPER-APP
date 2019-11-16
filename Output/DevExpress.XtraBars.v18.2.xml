@@ -103,7 +103,6 @@
       <summary>
         <para>Fires when the text of alert windows is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.AlertFormList">
       <summary>
@@ -157,19 +156,16 @@
       <summary>
         <para>Fires before displaying an alert window and allows it to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Alerter.AlertControl.ButtonClick">
       <summary>
         <para>Fires when a custom button within an alert window has been clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Alerter.AlertControl.ButtonDownChanged">
       <summary>
         <para>Fires when the pressed state of a custom check button within an alert window has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.Buttons">
       <summary>
@@ -187,7 +183,6 @@
       <summary>
         <para>Fires when an alert window is about to be closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.FormDisplaySpeed">
       <summary>
@@ -199,7 +194,6 @@
       <summary>
         <para>Fires after an alert window has been created, and allows you to customize the window and window&#39;s buttons.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.FormLocation">
       <summary>
@@ -223,7 +217,6 @@
       <summary>
         <para>Allows you to set an alert window&#39;s width.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.IgnoreChildren">
       <summary>
@@ -247,13 +240,11 @@
       <summary>
         <para>Fires when the mouse pointer enters an alert window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Alerter.AlertControl.MouseFormLeave">
       <summary>
         <para>Fires when the mouse pointer leaves an alert window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.PopupMenu">
       <summary>
@@ -783,7 +774,6 @@
       <summary>
         <para>Occurs after the bar has been docked to another position by an end-user.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Bar.DockCol">
       <summary>
@@ -914,13 +904,11 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires immediately after a link has been added to the bar.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Bar.LinkDeleted">
       <summary>
         <para>Fires immediately after a link has been removed from the bar.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Bar.LinksPersistInfo">
       <summary>
@@ -1031,7 +1019,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires immediately after the visibility of the bar has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Bar.VisibleLinks">
       <summary>
@@ -1105,7 +1092,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs when a BarAndDockingController&#39;s settings are modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarAndDockingController.CustomPaintStyle">
       <summary>
@@ -1307,13 +1293,18 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs after the item&#39;s pressed state has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarBaseButtonItem.GroupIndex">
       <summary>
         <para>Gets or sets the group index of the button item.</para>
       </summary>
       <value>The group index of the button item.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarBaseButtonItem.ImageToTextAlignment">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarBaseButtonItem.Toggle">
       <summary>
@@ -1742,7 +1733,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Occurs when the <see cref="P:DevExpress.XtraBars.BarCheckItem.BindableChecked"/> property changes its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarCheckItem.BindCommand(System.Linq.Expressions.Expression{System.Action},System.Object,System.Func{System.Object})">
       <summary>
@@ -1792,7 +1782,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Fires after the check state of a link associated with the check item has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarCheckItem.CheckStyle">
       <summary>
@@ -1832,7 +1821,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Occurs when an item submenu closes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarCustomContainerItem.ContainsItem(DevExpress.XtraBars.BarItem)">
       <summary>
@@ -1845,7 +1833,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Allows you to provide child items for the current <see cref="T:DevExpress.XtraBars.BarCustomContainerItem"/> object, or to customize the existing child items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarCustomContainerItem.ItemLinks">
       <summary>
@@ -1881,13 +1868,11 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Enables you to paint the content of the bar displayed to the left of the sub-menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarCustomContainerItem.Popup">
       <summary>
         <para>Occurs when an item&#39;s submenu pops up.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarCustomContainerItem.ShowMenuCaption">
       <summary>
@@ -2354,7 +2339,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Occurs when the <see cref="P:DevExpress.XtraBars.BarEditItem.EditValue"/> property value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarEditItem.EditWidth">
       <summary>
@@ -2366,7 +2350,6 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Occurs when an editor is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarEditItem.IEBehavior">
       <summary>
@@ -2384,13 +2367,11 @@ A specific version of the addressed image is automatically chosen, based on the 
       <summary>
         <para>Occurs before activating an editor.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarEditItem.ShownEditor">
       <summary>
         <para>Occurs after an editor has been activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarEditItem.SmallWithoutTextWidth">
       <summary>
@@ -2955,7 +2936,6 @@ This property is supported for bar items used within a <see cref="T:DevExpress.X
       <summary>
         <para>Occurs each time an end-user click a hyperlink within the current <see cref="T:DevExpress.XtraBars.BarItem"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.Id">
       <summary>
@@ -3022,7 +3002,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs when the current item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.ItemClickFireMode">
       <summary>
@@ -3034,7 +3013,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when a link to an item is double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.ItemInMenuAppearance">
       <summary>
@@ -3046,7 +3024,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires immediately after a link associated with an item has been pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.ItemShortcut">
       <summary>
@@ -3690,6 +3667,12 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <value>A DevExpress.XtraBars.BarItemLinkAlignment enumeration value that specifies the link&#39;s horizontal alignment.</value>
     </member>
+    <member name="P:DevExpress.XtraBars.BarItemLink.AllowCollapseInSimplifiedRibbon">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="P:DevExpress.XtraBars.BarItemLink.AllowHtmlText">
       <summary>
         <para>Gets whether HTML text formatting is enabled for the corresponding BarItem object.</para>
@@ -4220,6 +4203,18 @@ A specific version of the addressed image is automatically chosen based on the a
       <param name="buttonGroup">A Boolean value that specifies whether the bar item link is arranged in the same manner as a <see cref="T:DevExpress.XtraBars.BarButtonGroup"/> object . This value is used to initialize the created link&#39;s <see cref="P:DevExpress.XtraBars.BarItemLink.ActAsButtonGroup"/> property. This parameter is in effect in a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/>.</param>
       <returns>A <see cref="T:DevExpress.XtraBars.BarItemLink"/> object representing the added link.</returns>
     </member>
+    <member name="M:DevExpress.XtraBars.BarItemLinkCollection.Add(DevExpress.XtraBars.BarItem,System.Boolean,System.String,System.String,System.Boolean,System.Boolean)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="item"></param>
+      <param name="beginGroup"></param>
+      <param name="keyTip"></param>
+      <param name="dropDownKeyTip"></param>
+      <param name="buttonGroup"></param>
+      <param name="allowCollapseInSimplifiedRibbon"></param>
+      <returns></returns>
+    </member>
     <member name="M:DevExpress.XtraBars.BarItemLinkCollection.Add(DevExpress.XtraBars.BarItem,System.String)">
       <summary>
         <para>Adds a link to the specified bar item and key tip, and adds it to the end of the collection.</para>
@@ -4264,7 +4259,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when changes are made to the collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarItemLinkCollection.Insert(DevExpress.XtraBars.BarItemLink,DevExpress.XtraBars.BarItem)">
       <summary>
@@ -4303,6 +4297,12 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Creates a new <see cref="T:DevExpress.XtraBars.BarItemLinkReadOnlyCollection"/> object.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraBars.BarItemLinkReadOnlyCollection.#ctor(System.Int32)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="capacity"></param>
     </member>
     <member name="M:DevExpress.XtraBars.BarItemLinkReadOnlyCollection.Contains(DevExpress.XtraBars.BarItemLink)">
       <summary>
@@ -4385,7 +4385,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when changes to the bar item collection are made.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarItems.Contains(DevExpress.XtraBars.BarItem)">
       <summary>
@@ -4550,6 +4549,12 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <value>One of the <see cref="T:DevExpress.XtraBars.BarItemCaptionAlignment"/> enumeration values specifying caption text position.</value>
     </member>
+    <member name="P:DevExpress.XtraBars.BarLargeButtonItem.ImageToTextAlignment">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="P:DevExpress.XtraBars.BarLargeButtonItem.LargeGlyphHot">
       <summary>
         <para>Gets or sets the large image displayed within associated links when they are hot-tracked.</para>
@@ -4631,13 +4636,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires immediately after a link has been added to the sub links collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarLinkContainerItem.LinkDeleted">
       <summary>
         <para>Fires immediately after a link has been removed from the sub links collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarLinkContainerItem.LinksPersistInfo">
       <summary>
@@ -4799,7 +4802,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Enables you to provide responses to list item clicks.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarListItem.MaxSubItemTextWidth">
       <summary>
@@ -4975,13 +4977,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs before a layout is restored from storage (a stream, xml file or the system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarManager.BeforePopup">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.BeginInit">
       <summary>
@@ -5021,6 +5021,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs when a close button (&#39;x&#39;) is clicked.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarManager.CloseEditorOnModalFormShow">
+      <summary>
+        <para></para>
+      </summary>
       <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.CloseMenus">
@@ -5044,7 +5049,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs before the Customization Window is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.CreateDesignTimeToolbar">
       <summary>
@@ -5056,13 +5060,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Allows you to customize a bar when it is created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarManager.CustomDrawItem">
       <summary>
         <para>Allows you to manually paint any <see cref="T:DevExpress.XtraBars.BarButtonItemLink"/> within this <see cref="T:DevExpress.XtraBars.BarManager"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.Customize">
       <summary>
@@ -5115,7 +5117,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs when a user finishes customizing the <see cref="T:DevExpress.XtraBars.BarManager"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.EndUpdate">
       <summary>
@@ -5203,7 +5204,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires immediately after the highlighted link has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.HighlightMode">
       <summary>
@@ -5215,7 +5215,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs each time an end-user clicks a hyperlink within the <see cref="T:DevExpress.XtraBars.BarManager"/> control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.Images">
       <summary>
@@ -5276,13 +5275,11 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs when a link within the bar is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.BarManager.ItemDoubleClick">
       <summary>
         <para>Occurs when a link is double clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.ItemLinkIdCollection">
       <summary>
@@ -5294,7 +5291,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires immediately after any of the links associated with the Bar Manager has been pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.Items">
       <summary>
@@ -5335,7 +5331,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs after a layout whose version doesn&#39;t match the current layout&#39;s version has been loaded from storage(a stream, xml file or system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.LayoutVersion">
       <summary>
@@ -5377,7 +5372,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Allows you to customize menus and bars when a child MDI form is activated or maximized (depending on the <see cref="P:DevExpress.XtraBars.BarManager.MdiMenuMergeStyle"/> property value).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.MergedOwner">
       <summary>
@@ -5390,6 +5384,12 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
         <para>Gets or sets the value (as a percentage) that determines which of the menu items that haven&#39;t recently been used should be hidden</para>
       </summary>
       <value>The value, as a percentage, for calculating the most frequently used items.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarManager.OpenSubMenuOnHover">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.OptionsLayout">
       <summary>
@@ -5426,7 +5426,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.PopupMenuAlignment">
       <summary>
@@ -5450,7 +5449,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires immediately after a link has been pressed or released.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.PrimaryShortcutProcessor">
       <summary>
@@ -5468,7 +5466,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs when a control&#39;s PopupContextMenu is about to appear.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.ReFocusEditorOnPopupClose">
       <summary>
@@ -5617,7 +5614,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Allows you to stop a bar item&#39;s shortcut that has been pressed from being processed by XtraBars.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.ShowCloseButton">
       <summary>
@@ -5659,7 +5655,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Allows you to modify the customization menu before it is displayed onscreen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.ShowToolBarsPopup">
       <summary>
@@ -5676,7 +5671,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Occurs when a user starts customizing the <see cref="T:DevExpress.XtraBars.BarManager"/> component.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.StatusBar">
       <summary>
@@ -5748,7 +5742,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Allows you to customize menus and bars when a child MDI form becomes inactive or when it is restored or minimized from its maximized view (depending on the <see cref="P:DevExpress.XtraBars.BarManager.MdiMenuMergeStyle"/> property value).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.UpdateLayout">
       <summary>
@@ -5772,6 +5765,12 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
         <para>Gets or sets whether the main menu is activated when the F10 key is pressed.</para>
       </summary>
       <value>true if the main menu is activated when the F10 key is pressed; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarManager.UseSynchronizationContextForMdiCheck">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.BarManagerAppearances">
       <summary>
@@ -5985,7 +5984,6 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
       <summary>
         <para>Fires when changes are made to the category collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManagerCategoryCollection.GetSortedList">
       <summary>
@@ -6613,6 +6611,7 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Represents a null shortcut. (The <see cref="P:DevExpress.XtraBars.BarShortcut.Key"/> and <see cref="P:DevExpress.XtraBars.BarShortcut.SecondKey"/> properties of the returned <see cref="T:DevExpress.XtraBars.BarShortcut"/> object are set to Keys.None).</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.BarShortcut.Equals(System.Object)">
       <summary>
@@ -6666,6 +6665,12 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
         <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarStaticItem"/> autosize type.</para>
       </summary>
       <value>The <see cref="T:DevExpress.XtraBars.BarStaticItem"/> autosize type.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarStaticItem.ImageToTextAlignment">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarStaticItem.LargeWidth">
       <summary>
@@ -6879,7 +6884,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs whenever the <see cref="P:DevExpress.XtraBars.BarToggleSwitchItem.BindableChecked"/> property changes its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.BarToggleSwitchItem.Checked">
       <summary>
@@ -6891,7 +6895,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the check state of the current item is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.BarToggleSwitchItemLink">
       <summary>
@@ -7450,7 +7453,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the panel&#39;s active child has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.ActivePanel">
       <summary>
@@ -7462,7 +7464,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the active dock panel has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.ActivePanelID">
       <summary>
@@ -7525,7 +7526,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs before a layout is restored from storage (a stream, xml file or the system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.BeginInit">
       <summary>
@@ -7546,25 +7546,21 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs after a panel has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.ClosingPanel">
       <summary>
         <para>Occurs when a panel is closing.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.Collapsed">
       <summary>
         <para>Occurs when any auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> within the current <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> is completely hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.Collapsing">
       <summary>
         <para>Occurs when any auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> within the current <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> is about to hide.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.Controller">
       <summary>
@@ -7582,13 +7578,11 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after an auto hide container has been created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.CreateResizeZone">
       <summary>
         <para>Allows you to prevent dock panels from being resized using the mouse at specific borders and corners.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.CreateVs2005DockStyleVisualizers">
       <summary>
@@ -7599,7 +7593,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires before an auto hide container has been destroyed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.DockController">
       <summary>
@@ -7611,7 +7604,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires repeatedly while a dock panel is being dragged.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.DockingOptions">
       <summary>
@@ -7647,7 +7639,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires immediately after a docking operation on a dock panel has finished.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.EndInit">
       <summary>
@@ -7658,7 +7649,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after a resize operation on a dock panel has finished.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.EndUpdate">
       <summary>
@@ -7669,13 +7659,11 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs when any auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> within the current <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> is completely shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.Expanding">
       <summary>
         <para>Occurs when any auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> within the current <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.ForceInitialize">
       <summary>
@@ -7743,7 +7731,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs after a layout whose version doesn&#39;t match the current layout&#39;s version has been loaded from storage (a stream, xml file or system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.LayoutVersion">
       <summary>
@@ -7755,7 +7742,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the docking layout has been loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.LockWindowUpdate">
       <summary>
@@ -7779,19 +7765,22 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs when a context menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.RegisterDockPanel">
       <summary>
         <para>Occurs when a new panel is registered within the dock manager.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.RemovePanel(DevExpress.XtraBars.Docking.DockPanel)">
       <summary>
         <para>Destroys the specified panel.</para>
       </summary>
       <param name="panel">A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object that specifies the panel to destroy.</param>
+    </member>
+    <member name="M:DevExpress.XtraBars.Docking.DockManager.ReplaceOwnerForm">
+      <summary>
+        <para></para>
+      </summary>
     </member>
     <member name="M:DevExpress.XtraBars.Docking.DockManager.RestoreFromRegistry(System.String)">
       <summary>
@@ -7889,25 +7878,21 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs each time an end-user drags a <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> into another panel and allows you to hide specific dock hints and guides. This event is in effect when the DockManager is coupled with the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> component.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.Sizing">
       <summary>
         <para>Fires when the dock panel is being resized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.StartDocking">
       <summary>
         <para>Fires when a docking operation starts.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.StartSizing">
       <summary>
         <para>Enables specifying whether end-users can resize the dock panels.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.Style">
       <summary>
@@ -7919,19 +7904,16 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs when a panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.Tabbed"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.TabsPositionChanged">
       <summary>
         <para>Fires after a dock panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.TabsPosition"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.TabsScrollChanged">
       <summary>
         <para>Occurs when a panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.TabsScroll"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.ToolTipController">
       <summary>
@@ -7949,7 +7931,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Occurs when a panel is removed from the dock manager.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.ValidateDockPanelOnDeactivate">
       <summary>
@@ -7973,7 +7954,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the visible state of any dock panel owned by the dock manager has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockManager.XtraSerializableScreenConfiguration">
       <summary>
@@ -8109,7 +8089,6 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
       <summary>
         <para>Fires after the panel&#39;s active child has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.ActiveChildIndex">
       <summary>
@@ -8187,25 +8166,21 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs after the current panel has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.ClosingPanel">
       <summary>
         <para>Occurs before the current panel is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.Collapsed">
       <summary>
         <para>Occurs when the current auto-hidden <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.Collapsing">
       <summary>
         <para>Occurs when the current auto-hidden <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> is about to hide.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.ControlContainer">
       <summary>
@@ -8223,25 +8198,21 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to prevent the current dock panel form being resized using the mouse at specific borders and corners.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.CustomButtonChecked">
       <summary>
         <para>Fires when a custom header button is checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.CustomButtonClick">
       <summary>
         <para>Fires on a regular (push) custom header button click.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.CustomButtonUnchecked">
       <summary>
         <para>Fires when a custom header button is unchecked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.CustomHeaderButtons">
       <summary>
@@ -8365,13 +8336,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the current auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> is completely displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockPanel.Expanding">
       <summary>
         <para>Occurs when the current auto-hide <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.FloatForm">
       <summary>
@@ -8545,6 +8514,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.Options">
       <summary>
@@ -8661,7 +8631,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.Tabbed"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.TabsPosition">
       <summary>
@@ -8673,7 +8642,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires after the dock panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.TabsPosition"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.TabsScroll">
       <summary>
@@ -8685,7 +8653,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the panel&#39;s <see cref="P:DevExpress.XtraBars.Docking.DockPanel.TabsScroll"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.TabText">
       <summary>
@@ -8709,7 +8676,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires after the dock panel&#39;s visible state has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.Visible">
       <summary>
@@ -8721,7 +8687,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires after the visible state of any dock panel owned by the dock manager has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.XtraActiveChildID">
       <summary>
@@ -9070,6 +9035,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.HitInfo"/> class. This field is read-only.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.HitInfo.HitPoint">
       <summary>
@@ -10147,7 +10113,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever a Document within this <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.DocumentActivationScope">
       <summary>
@@ -10244,6 +10209,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       </summary>
       <value></value>
     </member>
+    <member name="M:DevExpress.XtraBars.Docking2010.DocumentManager.ReplaceOwnerForm">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.RibbonAndBarsMergeStyle">
       <summary>
         <para>Gets or sets whether Bar Managers and Ribbon Controls from this <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>&#39;s child Documents should be automatically merged to Bars and Ribbons in the main application form.</para>
@@ -10302,13 +10272,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs after the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> has switched to another view.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.DocumentManager.ViewChanging">
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> changes its active view and allows you to respond to these changes before they are applied.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.ViewCollection">
       <summary>
@@ -10537,6 +10505,23 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <param name="control">A Control descendant to be displayed within the newly created document.</param>
       <returns>A newly created <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseDocument"/> object.</returns>
     </member>
+    <member name="M:DevExpress.XtraBars.Docking2010.Views.BaseView.AddFloatDocument(System.Windows.Forms.Control,System.Drawing.Point)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="control"></param>
+      <param name="floatLocation"></param>
+      <returns></returns>
+    </member>
+    <member name="M:DevExpress.XtraBars.Docking2010.Views.BaseView.AddFloatDocument(System.Windows.Forms.Control,System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="control"></param>
+      <param name="floatLocation"></param>
+      <param name="floatSize"></param>
+      <returns></returns>
+    </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.BaseView.AddFloatingDocumentsHost(DevExpress.XtraBars.Docking2010.Views.BaseDocument)">
       <summary>
         <para>Creates a documents host window that contains the specified document. This method is in effect in the DocumentsHost mode.</para>
@@ -10606,25 +10591,21 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to cancel docking a document onto the current control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.BeginDocumentsHostDocking">
       <summary>
         <para>Occurs whenever a Floating Documents Container starts docking to this <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.BeginFloating">
       <summary>
         <para>Fires when an end-user starts to drag a docked document, so that it is transformed into a floating window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.BeginSizing">
       <summary>
         <para>Occurs when a resizing of the current View&#39;s layout begins.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Bounds">
       <summary>
@@ -10642,37 +10623,31 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs after a control has been loaded to a Document within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.ControlReleased">
       <summary>
         <para>Fires after the previously selected document is disposed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.ControlReleasing">
       <summary>
         <para>Occurs when a document is deselected and allows you to unbind the document from its content and dispose of the content. This event is in effect in Deferred Load mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.ControlShown">
       <summary>
         <para>Fires when an empty document is loaded and displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.CustomDocumentsHostWindow">
       <summary>
         <para>Fired before a host container for floating documents is created, allowing you to create your own custom floating document container.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.CustomDrawBackground">
       <summary>
         <para>Occurs when the current View&#39;s background becomes visible to an end-user.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.CustomResizeZoneThickness">
       <summary>
@@ -10684,31 +10659,26 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when the View&#39;s <see cref="P:DevExpress.XtraBars.Docking2010.Views.BaseView.ActiveDocument"/> property changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentAdded">
       <summary>
         <para>Fires when a new document is added to the current View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentClosed">
       <summary>
         <para>Fires after a document has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentClosing">
       <summary>
         <para>Fires when a document is about to be closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentDeactivated">
       <summary>
         <para>Fires when a document is deactivated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentProperties">
       <summary>
@@ -10720,7 +10690,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a document is removed from the <see cref="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Documents"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Documents">
       <summary>
@@ -10732,13 +10701,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to manually sort documents and dock panels displayed within the Document Selector.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentSelectorHidden">
       <summary>
         <para>Fires when a document selector is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentSelectorProperties">
       <summary>
@@ -10750,37 +10717,31 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a document selector is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.EmptyDocumentsHostWindow">
       <summary>
         <para>Fires when the last floating document in the documents host window is closed or the control it contains is disposed, allowing you to specify whether to keep open the empty documents host window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.EndDocking">
       <summary>
         <para>Fires after a document has been docked to the control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.EndDocumentsHostDocking">
       <summary>
         <para>Occurs when a Floating Document Container with all its child Documents is docked to a View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.EndFloating">
       <summary>
         <para>Fires after an end-user drops a floating document.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.EndSizing">
       <summary>
         <para>Occurs when resizing the current View&#39;s layout is complete.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.FloatDocuments">
       <summary>
@@ -10792,7 +10753,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a docked document becomes floating.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.FloatingDocumentContainer">
       <summary>
@@ -10810,7 +10770,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when focus is moved to any document within the current View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.IsDocumentSelectorVisible">
       <summary>
@@ -10858,25 +10817,21 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever the current <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>&#39;s layout is being modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.LayoutReset">
       <summary>
         <para>Fires after a <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>&#39;s layout was reset.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.LayoutResetting">
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseView"/>&#39;s layout is to be reset.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.LayoutUpgrade">
       <summary>
         <para>Occurs after a layout whose version doesn&#39;t match the current layout&#39;s version has been loaded from storage (a stream, xml file or system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.LoadingIndicatorProperties">
       <summary>
@@ -10888,13 +10843,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the loading indicator is shown within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.LostFocus">
       <summary>
         <para>Fires when focus is moved from the current View&#39;s document to any external control (for instance, to an external <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/>).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Manager">
       <summary>
@@ -10906,7 +10859,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when an end-user tries to switch to the next or previous document by pressing CTRL+TAB or CTRL+SHIFT+TAB.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.OptionsLayout">
       <summary>
@@ -10918,25 +10870,21 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraBars.Docking2010.Views.BaseView"/> is redrawn.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.PopupMenuShowing">
       <summary>
         <para>Fires when a context menu is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.QueryControl">
       <summary>
         <para>Occurs when a document is to be displayed and allows you to assign content to this document. This event is in effect in Deferred Load mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.RegisterDocumentsHostWindow">
       <summary>
         <para>Fires when a document is made floating and provides access to the created documents host window. This allows subscribing its DocumentManager to existing event handlers. This event is in effect in the DocumentsHost mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.BaseView.ReleaseDeferredLoadControl(DevExpress.XtraBars.Docking2010.Views.BaseDocument)">
       <summary>
@@ -11049,7 +10997,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to hide and disable individual dock hints.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Style">
       <summary>
@@ -11073,7 +11020,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a documents host window is closed and allows you to unsubscribe event handlers from its DocumentManager.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.UseDocumentSelector">
       <summary>
@@ -11842,7 +11788,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/>&#39;s selected state has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document.Parent">
       <summary>
@@ -11854,7 +11799,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/> changes its parent <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document.Pinned">
       <summary>
@@ -12000,7 +11944,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when document selection within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/> changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup.SetSelected(DevExpress.XtraBars.Docking2010.Views.Tabbed.Document)">
       <summary>
@@ -12012,7 +11955,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when an end-user clicks a tab page header within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/> to activate a corresponding <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup.Tag">
       <summary>
@@ -12024,7 +11966,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires whenever the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/>&#39;s visibility changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup.Visible">
       <summary>
@@ -12692,7 +12633,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a custom header button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.DocumentGroupProperties">
       <summary>
@@ -12710,7 +12650,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/> in the <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> is pinned.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.DocumentProperties">
       <summary>
@@ -12722,7 +12661,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/> in the <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> is unpinned.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.EnableFreeLayoutMode">
       <summary>
@@ -12752,7 +12690,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.Orientation"/> property&#39;s value is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.RootContainer">
       <summary>
@@ -12793,7 +12730,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when an end-user clicks a tab page header within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> to activate a corresponding <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.Document"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView.Type">
       <summary>
@@ -12927,13 +12863,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires whenever this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.BaseRelativeLengthElement"/> changes its length.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.BaseRelativeLengthElement.VisibilityChanged">
       <summary>
         <para>Fires whenever this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.BaseRelativeLengthElement"/> changes its visibility.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition">
       <summary>
@@ -13007,19 +12941,16 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a check Custom Header Button within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> is checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.Document.CustomButtonClick">
       <summary>
         <para>Occurs when an end-user clicks a regular Custom Header Button within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.Document.CustomButtonUnchecked">
       <summary>
         <para>Occurs when a check Custom Header Button within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> is unchecked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.CustomHeaderButtons">
       <summary>
@@ -13138,7 +13069,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> is maximized at runtime.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.MaximizedControl">
       <summary>
@@ -13162,7 +13092,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when this maximized Widget <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> is restored to its normal state.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.RowIndex">
       <summary>
@@ -13639,7 +13568,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Length"/>&#39;s properties change.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.Length.ToString">
       <summary>
@@ -13857,13 +13785,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever an end-user tries to drag a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.BeginStackGroupDragging">
       <summary>
         <para>Occurs immediately after an end-user moves a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.StackGroup"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.BeginUpdateAnimation">
       <summary>
@@ -13910,19 +13836,16 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> is dragged.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.EndDragging">
       <summary>
         <para>Occurs whenever an end-user drops a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> after dragging.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.EndStackGroupDragging">
       <summary>
         <para>Occurs when an end-user drops a dragged <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.StackGroup"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.EndUpdateAnimation">
       <summary>
@@ -13951,19 +13874,16 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires after a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> document receives its maximized control on the <see cref="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.QueryMaximizedControl"/> event.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.MaximizedControlReleased">
       <summary>
         <para>Fires after the <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> document was destroyed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.MaximizedControlReleasing">
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> document is minimized back to its regular state and allows you to destroy its maximized content.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.Orientation">
       <summary>
@@ -13975,7 +13895,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to dynamically assign a maximized control for each widget document.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.ReleaseDeferredLoadMaximizedControl(DevExpress.XtraBars.Docking2010.Views.Widget.Document)">
       <summary>
@@ -14109,7 +14028,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever Navigation Bars within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer"/> are to be displayed. Allows you to customize this container&#39;s Navigation Bar Actions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer.Actions">
       <summary>
@@ -14121,7 +14039,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when the current Content Container&#39;s actions collection changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer.AllowButtonGlyphSkinning">
       <summary>
@@ -14151,13 +14068,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a Custom Button within the current Content Container is checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer.ButtonClick">
       <summary>
         <para>Occurs when a regular Custom Button within the current Content Container is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer.ButtonInterval">
       <summary>
@@ -14175,7 +14090,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a Custom Button within the current Content Container is checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseContentContainer.Caption">
       <summary>
@@ -14397,13 +14311,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/>&#39;s check state has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile.Click">
       <summary>
         <para>Occurs when an end-user clicks the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile.CurrentFrame">
       <summary>
@@ -14469,7 +14381,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs immediately after the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile"/> was pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile.Properties">
       <summary>
@@ -14661,7 +14572,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever an end-user clicks a header of a Document that belongs to this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentGroup"/> container.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentGroup.Info">
       <summary>
@@ -14726,13 +14636,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>WindowsUI Buttons are not supported within <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout"/> containers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonClick">
       <summary>
         <para>WindowsUI Buttons are not supported within <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout"/> containers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonInterval">
       <summary>
@@ -14750,7 +14658,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>WindowsUI Buttons are not supported within <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout"/> containers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Document">
       <summary>
@@ -14862,11 +14769,13 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>The &#39;Abort&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.Cancel">
       <summary>
         <para>The &#39;Cancel&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.CanExecute(DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout)">
       <summary>
@@ -14879,7 +14788,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs upon changing the criteria that controls whether or not this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand"/> is currently available.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.Execute(DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout)">
       <summary>
@@ -14891,6 +14799,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>The &#39;Ignore&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.Image">
       <summary>
@@ -14902,11 +14811,13 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>The &#39;No&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.OK">
       <summary>
         <para>The &#39;OK&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.RaiseCanExecuteChanged">
       <summary>
@@ -14923,6 +14834,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>The &#39;Retry&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand.Text">
       <summary>
@@ -14934,6 +14846,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>The &#39;Yes&#39; button.</para>
       </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutResultEventArgs">
       <summary>
@@ -16659,7 +16572,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when any <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/>&#39;s checked state within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/> was changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer.CheckedTiles">
       <summary>
@@ -16671,13 +16583,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs after any <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/> was clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer.EndItemDragging">
       <summary>
         <para>Occurs when an end-user drops a <see cref="T:DevExpress.XtraEditors.TileItem"/> after dragging.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer.GetID(DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile)">
       <summary>
@@ -16720,7 +16630,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs immediately after a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/> is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer.Properties">
       <summary>
@@ -16781,7 +16690,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever an end-user starts dragging a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/>&#39;s tile.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer.StopAnimation(DevExpress.XtraBars.Docking2010.Views.WindowsUI.BaseTile)">
       <summary>
@@ -16922,7 +16830,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when an end-user clicks a &#39;Back&#39; button within a Navigation Bar.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.Caption">
       <summary>
@@ -16934,7 +16841,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to customize default Navigation Bar Actions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainerActions">
       <summary>
@@ -16946,31 +16852,26 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires when a Content Container gets activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainerAdded">
       <summary>
         <para>Fires when a Content Container is being added to the <see cref="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainers"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainerDeactivated">
       <summary>
         <para>Fires when a Content Container gets deactivated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainerHeaderClick">
       <summary>
         <para>Occurs when an end-user clicks a Document header within any Content Container in this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainerRemoved">
       <summary>
         <para>Fires when a Content Container is being removed from the <see cref="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainers"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ContentContainers">
       <summary>
@@ -16988,13 +16889,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Fires whenever the Back button needs to be displayed and allows you to manually draw this button.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.CustomizeSearchItems">
       <summary>
         <para>Occurs when the search panel is invoked. Allows you to customize search results and manually specify the content within which the search panel should look for the entered text.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.DetailContainerProperties">
       <summary>
@@ -17012,13 +16911,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a Flyout within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> is completely closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.FlyoutHiding">
       <summary>
         <para>Occurs when a Flyout within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> is to be closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.FlyoutProperties">
       <summary>
@@ -17030,13 +16927,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a Flyout is to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.FlyoutShown">
       <summary>
         <para>Occurs after a Flyout within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> is completely displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.HideFlyout">
       <summary>
@@ -17058,7 +16953,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the application&#39;s hierarchy (navigation tree) has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.IsTransitionAnimationInProgress">
       <summary>
@@ -17068,39 +16962,33 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigatedFrom">
       <summary>
-        <para>Occurs when an end-user navigates to a parent Content Container.</para>
+        <para>Occurs when a current Content Container is deactivated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigatedTo">
       <summary>
-        <para>Occurs when the end-user navigates to a child Content Container or to another <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/> within the current Container.</para>
+        <para>Occurs when a new Content Container is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigationBarsButtonClick">
       <summary>
         <para>Occurs when an end-user clicks an action within a Navigation Bar.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigationBarsHidden">
       <summary>
         <para>Fires when navigation bars are hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigationBarsShowing">
       <summary>
         <para>Occurs when Navigation Bars are to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.NavigationBarsShown">
       <summary>
         <para>Fires when navigation bars are shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.OverviewContainerProperties">
       <summary>
@@ -17124,31 +17012,26 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to add How To: Create Custom Document Actions to Content Containers within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.QueryFlyoutActionsControl">
       <summary>
         <para>Allows you to assign content for popup container actions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.QueryStartupContentContainer">
       <summary>
         <para>Fires at the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> application start-up.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.SearchItemClick">
       <summary>
         <para>Occurs when end-users click any item displayed by the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/>&#39;s Search Panel.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.SearchPanelHidden">
       <summary>
         <para>Occurs after the Search Panel is completely closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.SearchPanelProperties">
       <summary>
@@ -17160,13 +17043,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the Search Panel is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.SearchPanelShown">
       <summary>
         <para>Occurs after the Search Panel is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.ShowFlyoutDialog(DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout)">
       <summary>
@@ -17208,19 +17089,16 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> is added to the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.TileCheckedChanged">
       <summary>
         <para>Occurs when the checked state for any <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> was changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.TileClick">
       <summary>
         <para>Occurs when any <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.TileContainerProperties">
       <summary>
@@ -17232,7 +17110,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when any <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.TileProperties">
       <summary>
@@ -17244,7 +17121,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile"/> is removed from the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView.Tiles">
       <summary>
@@ -17564,7 +17440,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when an end-user clicks this <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.WindowsUIButton.EnableImageTransparency">
       <summary>
@@ -17634,13 +17509,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when an end-user checks a <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel.ButtonClick">
       <summary>
         <para>Occurs when a regular (push) <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/> is clicked within the current <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel.ButtonInterval">
       <summary>
@@ -17658,7 +17531,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when an end-user unchecks a <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/> within the current <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel.CalcHitInfo(System.Drawing.Point)">
       <summary>
@@ -17750,7 +17622,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Enables you to provide content for a Peek Form.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel.ShowPeekForm(DevExpress.XtraEditors.ButtonPanel.IBaseButton,System.Nullable{DevExpress.Utils.BeakPanelBeakLocation})">
       <summary>
@@ -17842,7 +17713,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm.AllowMdiBar">
       <summary>
@@ -17935,6 +17805,12 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"/> class with the default settings.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.AddedHeight">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.BackColor">
       <summary>
@@ -18029,13 +17905,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs when the control is redrawn.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.PaintEx">
       <summary>
         <para>A DirectX-compatible method that replaces the standard Control.Paint method.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.RepositoryItems">
       <summary>
@@ -19035,13 +18909,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs whenever an item from either the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupContextButtons"/> or <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons"/> collections is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonCustomize">
       <summary>
         <para>Fires before any context button is shown and allows you to dynamically customize it.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonsOptions">
       <summary>
@@ -19053,19 +18925,16 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Allows you to dynamically customize item tooltips.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomDrawElement">
       <summary>
         <para>Allows you to draw your own elements upon <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> items and groups using the standard e.Cache and e.Graphics methods.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomElementText">
       <summary>
         <para>Provides the capability to dynamically rename specific <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> elements.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.DesignManager">
       <summary>
@@ -19083,13 +18952,11 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       <summary>
         <para>Occurs after any <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> hosted in this <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ElementDragOver">
       <summary>
         <para>Occurs whenever an end-user hovers an element within this <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> while dragging another element.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ElementPositionOnExpanding">
       <summary>
@@ -19108,7 +18975,6 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Occurs when an end-user releases the currently dragged <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> element.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.EndInit">
       <summary>
@@ -19161,19 +19027,16 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Fires after an element has been expanded/collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ExpandStateChanging">
       <summary>
         <para>Fires when an element is about to be expanded/collapsed. Allows you to implement a custom element expansion behavior.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.FilterContent">
       <summary>
         <para>Allows you to control an element&#39;s visibility during a filtration performed using the built-in filter control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.FilterControl">
       <summary>
@@ -19220,7 +19083,6 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Allows you to dynamically specify a content container for empty items. This event must be handled along with the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.HasContentContainer"/> event.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetElements">
       <summary>
@@ -19256,7 +19118,6 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Allows you to specify whether an item, when expanded, will display a custom control container. The custom control container should be provided by handling the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.GetContentContainer"/> event.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Header">
       <summary>
@@ -19280,7 +19141,6 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Occurs whenever an item element hides its content container (if any).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons">
       <summary>
@@ -19332,13 +19192,11 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Occurs when the control is redrawn.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.PaintEx">
       <summary>
         <para>Occurs when the control is redrawn.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.Refresh">
       <summary>
@@ -19453,7 +19311,6 @@ The Default value is equivalent to ScrollUp.</value>
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElement"/> property&#39;s value is changed. This event is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SelectElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
       <summary>
@@ -19496,13 +19353,11 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
       <summary>
         <para>Occurs whenever an end-user presses an element owned by this <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> and starts dragging this element away from its original location.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.StateChanged">
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Navigation.OptionsMinimizing.State"/> property value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SuperTip">
       <summary>
@@ -19677,7 +19532,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> changes its <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> property value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Navigation.AccordionControlElementBase">
       <summary>
@@ -19705,7 +19559,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>Fires when the element is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.ContentContainer">
       <summary>
@@ -19723,7 +19576,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Enabled">
       <summary>
@@ -19735,7 +19587,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>Fires after the element&#39;s <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Enabled"/> property value has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Expanded">
       <summary>
@@ -19872,7 +19723,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Visible"/> property value is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode">
       <summary>
@@ -20214,7 +20064,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavElement.Enabled">
       <summary>
@@ -20430,25 +20279,21 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/> has finished loading a page content.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlReleased">
       <summary>
         <para>Fires when a <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/> page loses its content.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlReleasing">
       <summary>
         <para>Fires when a dynamically populated <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> is deselected.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.ControlShown">
       <summary>
         <para>Fires when a <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/> page has shown its loaded content.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.NavigationFrame.CreateNewPage">
       <summary>
@@ -20489,13 +20334,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs whenever a new page was added to this <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.PageRemoved">
       <summary>
         <para>Occurs whenever a page is removed from this <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationFrame.Pages">
       <summary>
@@ -20507,7 +20350,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to dynamically assign content to each <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> in this <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/> or <see cref="T:DevExpress.XtraBars.Navigation.NavigationPane"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.NavigationFrame.ResetBackColor">
       <summary>
@@ -20530,13 +20372,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the selected page is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationFrame.SelectedPageChanging">
       <summary>
         <para>Fires when the <see cref="T:DevExpress.XtraBars.Navigation.NavigationFrame"/> is about to change its currently selected page and allows you to cancel this upcoming modification.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationFrame.SelectedPageIndex">
       <summary>
@@ -20548,7 +20388,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs whenever the <see cref="P:DevExpress.XtraBars.Navigation.NavigationFrame.SelectedPageIndex"/> property changes its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.NavigationFrame.SelectNextPage">
       <summary>
@@ -20570,7 +20409,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to customize an animated state transition.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationFrame.TransitionType">
       <summary>
@@ -20598,19 +20436,16 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the custom header button of the check type was checked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationPage.CustomButtonClick">
       <summary>
         <para>Occurs whenever a custom header button was clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationPage.CustomButtonUnchecked">
       <summary>
         <para>Occurs when the custom header button of check type was unchecked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationPage.CustomHeaderButtons">
       <summary>
@@ -20970,7 +20805,6 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Fires when the overlay resizing starts.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.OverlayResizeZoneThickness">
       <summary>
@@ -21006,18 +20840,17 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Navigation.NavigationPane"/> changes its <see cref="P:DevExpress.XtraBars.Navigation.NavigationPane.State"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.NavigationPane.StateChanging">
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Navigation.NavigationPane"/> changes its state (expanded, collapsed, regular).</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraBars.Navigation.NavigationPane.StickyWidth">
       <summary>
         <para>Specifies the <see cref="T:DevExpress.XtraBars.Navigation.NavigationPane"/> content area&#39;s width, below which the pane is automatically collapsed. Equals 80 by default.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.ToolTipController">
       <summary>
@@ -21103,7 +20936,6 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Occurs when the <see cref="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.Compact"/> property changes its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.OfficeNavigationBar.CreateItemInstance">
       <summary>
@@ -21166,7 +20998,6 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Fires when an item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.ItemImageAlignment">
       <summary>
@@ -21249,13 +21080,11 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Fires when a button within the Peek Form&#39;s built-in button panel is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.OfficeNavigationBar.PeekFormHidden">
       <summary>
         <para>Fires when the Peek Form is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.PeekFormShowDelay">
       <summary>
@@ -21267,7 +21096,6 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Fires after the Peek Form is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.PeekFormSize">
       <summary>
@@ -21285,20 +21113,17 @@ Supports animation effects when navigating through pages.  See Navigation Pane.<
       <summary>
         <para>Allows you to customize a context menu for <see cref="T:DevExpress.XtraBars.Navigation.OfficeNavigationBar"/> elements.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.OfficeNavigationBar.QueryPeekFormContent">
       <summary>
         <para>Allows you to provide a content for the Peek Form.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.OfficeNavigationBar.RegisterItem">
       <summary>
         <para>Fires when an item is automatically added that corresponds to an element in the element source provided by the <see cref="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.NavigationClient"/>.
 This event allows you to customize these automatically created items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.SelectedItem">
       <summary>
@@ -21310,13 +21135,11 @@ This event allows you to customize these automatically created items.</para>
       <summary>
         <para>Fires after the item is selected.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.OfficeNavigationBar.SelectedItemChanging">
       <summary>
         <para>Allows you to prevent an item from being selected.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.OfficeNavigationBar.ShowNavigationOptionsDialog">
       <summary>
@@ -21345,7 +21168,6 @@ This event allows you to customize these automatically created items.</para>
       <summary>
         <para>Allows you to implement your own custom relation between items of this <see cref="T:DevExpress.XtraBars.Navigation.OfficeNavigationBar"/> and items of the child <see cref="T:DevExpress.XtraNavBar.NavBarControl"/> managed by this <see cref="T:DevExpress.XtraBars.Navigation.OfficeNavigationBar"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.ToolTipController">
       <summary>
@@ -21358,7 +21180,6 @@ This event allows you to customize these automatically created items.</para>
         <para>Fires when removing an item 
 that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.NavigationClient"/> property was set to an INavigationBarClient object.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.ViewMode">
       <summary>
@@ -21615,7 +21436,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs whenever any a drop-down for any tile within this <see cref="T:DevExpress.XtraBars.Navigation.TileBar"/> is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileBar.DropDownOptions">
       <summary>
@@ -21633,13 +21453,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when a tile&#39;s dropdown button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.TileBar.DropDownShown">
       <summary>
         <para>Occurs whenever any tile within this <see cref="T:DevExpress.XtraBars.Navigation.TileBar"/> displays its drop-down.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileBar.GetDropDown">
       <summary>
@@ -22021,6 +21839,7 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>The <see cref="T:DevExpress.XtraBars.Navigation.TileNavPane"/> that owns the current <see cref="T:DevExpress.XtraBars.Navigation.TileNavButtonCollection"/>.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileNavButtonCollection.Remove(DevExpress.XtraBars.Navigation.ITileNavButton)">
       <summary>
@@ -22161,7 +21980,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the current tile navigation element is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavElement.TileImage">
       <summary>
@@ -22324,7 +22142,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after the primary or secondary drop-down tile bar is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.DropDownShowDirection">
       <summary>
@@ -22336,13 +22153,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after the primary or secondary drop-down tile bar is shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.TileNavPane.ElementClick">
       <summary>
         <para>Occurs when any <see cref="T:DevExpress.XtraBars.Navigation.NavElement"/> of the <see cref="T:DevExpress.XtraBars.Navigation.TileNavPane"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileNavPane.EndUpdate">
       <summary>
@@ -22417,13 +22232,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs after the <see cref="P:DevExpress.XtraBars.Navigation.TileNavPane.SelectedElement"/> is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.TileNavPane.SelectedElementChanging">
       <summary>
         <para>Occurs when the <see cref="P:DevExpress.XtraBars.Navigation.TileNavPane.SelectedElement"/> is about to be changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileNavPane.ShowDropDown(DevExpress.XtraBars.Navigation.NavElement)">
       <summary>
@@ -22447,7 +22260,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when any tile in a drop-down tile bar is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.ToolTipController">
       <summary>
@@ -22628,7 +22440,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the pop-up is about to be displayed and allows you to adjust its settings (e.g., size), or cancel the action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.PopupControlContainer.CloseOnLostFocus">
       <summary>
@@ -22646,7 +22457,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.PopupControlContainer"/> hides a popup control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.PopupControlContainer.FormMinimumSize">
       <summary>
@@ -22669,7 +22479,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraBars.PopupControlContainer"/> displays a popup control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.PopupControlContainer.Ribbon">
       <summary>
@@ -22840,7 +22649,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Enables you to paint the content of the bar displayed to the left of the popup menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.PopupMenu.RibbonToolbar">
       <summary>
@@ -22941,7 +22749,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to customize the popup menu before it is displayed onscreen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.PopupMenuBase.BeginInit">
       <summary>
@@ -22968,7 +22775,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraBars.PopupMenuBase"/> object is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.PopupMenuBase.Customize">
       <summary>
@@ -23008,13 +22814,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires immediately after a link has been added to the popup menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.PopupMenuBase.LinkDeleted">
       <summary>
         <para>Fires immediately after a link has been removed from the popup menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.PopupMenuBase.LinksPersistInfo">
       <summary>
@@ -23050,7 +22854,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraBars.PopupMenuBase"/> object appears onscreen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.PopupMenuBase.RemoveLink(DevExpress.XtraBars.BarItemLink)">
       <summary>
@@ -23294,7 +23097,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after the <see cref="P:DevExpress.XtraBars.Ribbon.AppMenuFileLabel.Checked"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.AppMenuFileLabel.Description">
       <summary>
@@ -23355,13 +23157,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the label&#39;s image (<see cref="F:DevExpress.XtraBars.BarLinkUserDefines.Glyph"/>) is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.AppMenuFileLabel.LabelImageClick">
       <summary>
         <para>Fires when the label&#39;s image/selected image is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.AppMenuFileLabel.ResetImageSuperTip">
       <summary>
@@ -23473,7 +23273,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the current item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Ribbon.BackstageViewClientControl">
       <summary>
@@ -23565,7 +23364,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs when the &#39;Back&#39; button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.BackColor">
       <summary>
@@ -23629,7 +23427,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to manually re-draw this <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>&#39;s items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.DefaultSizeCore">
       <summary>
@@ -23699,19 +23496,16 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Occurs after this <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> is completely closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.BackstageViewControl.Hiding">
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> is hiding.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.BackstageViewControl.HighlightedItemChanged">
       <summary>
         <para>Fires when an item is highlighted and when item highlighting is cleared.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.Image">
       <summary>
@@ -23735,13 +23529,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after any of the <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>&#39;s items has been clicked with the mouse (the mouse button has been pressed and then released).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.BackstageViewControl.ItemPressed">
       <summary>
         <para>Fires after any of the <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>&#39;s items has been pressed with the mouse.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.Items">
       <summary>
@@ -23818,7 +23610,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to respond to selecting tab items in a <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.SelectedTabIndex">
       <summary>
@@ -23836,13 +23627,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the current <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> is about to be shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.BackstageViewControl.Shown">
       <summary>
         <para>Fires when the current <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> is shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.Style">
       <summary>
@@ -24066,13 +23855,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the item is hovered over with the mouse.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.BackstageViewItem.ItemPressed">
       <summary>
         <para>Fires when the current item is pressed with the mouse (when the mouse button is pressed against the item and not yet released).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewItem.KeyTip">
       <summary>
@@ -24274,7 +24061,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the item&#39;s selection is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="N:DevExpress.XtraBars.Ribbon.Gallery">
       <summary>
@@ -24397,17 +24183,20 @@ See Navigation Frame and Tab Pane.</para>
       </summary>
       <param name="gallery">The gallery whose contents and settings are copied to the current gallery.</param>
     </member>
+    <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.CustomDrawEmptyBackground">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.CustomDrawItemImage">
       <summary>
         <para>Enables the Gallery item&#39;s image to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.CustomDrawItemText">
       <summary>
         <para>Enables the Gallery item&#39;s text to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.Destroy">
       <summary>
@@ -24447,7 +24236,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after gallery scrolling stops.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.EndUpdate">
       <summary>
@@ -24458,13 +24246,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when a standard item of a gallery&#39;s Group Filter menu is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.FilterMenuPopup">
       <summary>
         <para>Fires when an end-user invokes the Group Filter menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.FirstItemVertAlignment">
       <summary>
@@ -24507,13 +24293,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when the mouse pointer hovers over a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GalleryItemLeave">
       <summary>
         <para>Fires when the mouse pointer leaves a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetAllItems">
       <summary>
@@ -24563,13 +24347,11 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Allows you to set the custom loading indicator.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetThumbnailImage">
       <summary>
         <para>Occurs each time the gallery needs to display an item whose image is loaded asynchronously.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetVisibleItems">
       <summary>
@@ -24640,7 +24422,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires whenever an item&#39;s check (selected) state is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.ItemCheckMode">
       <summary>
@@ -24652,7 +24433,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when a Gallery item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.ItemClickFireMode">
       <summary>
@@ -24664,7 +24444,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires after a gallery item has been double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.ItemImageLayout">
       <summary>
@@ -24724,7 +24503,6 @@ See Navigation Frame and Tab Pane.</para>
       <summary>
         <para>Fires when a user has finished selecting gallery items using marquee selection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.MaxItemWidth">
       <summary>
@@ -25120,6 +24898,11 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       </summary>
       <value>The currently processed item.</value>
     </member>
+    <member name="M:DevExpress.XtraBars.Ribbon.Gallery.GalleryThumbnailImageEventArgs.ResetImageCache">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraBars.Ribbon.Gallery.GalleryThumbnailImageEventHandler">
       <summary>
         <para>Represents a method that will handle the <see cref="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetThumbnailImage"/> event.</para>
@@ -25253,7 +25036,6 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Enables the gallery, when it&#39;s displayed as a dropdown window, to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.InRibbonGallery.Invalidate">
       <summary>
@@ -25294,7 +25076,6 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Fires when a popup window which contains the current gallery is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.InRibbonGallery.RefreshGallery">
       <summary>
@@ -25394,13 +25175,11 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Fires when a context button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.ContextButtonCustomize">
       <summary>
         <para>Allows you to customize the context buttons for individual gallery items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.ContextButtonOptions">
       <summary>
@@ -25418,25 +25197,21 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Allows hints for the <see cref="T:DevExpress.Utils.RatingContextButton"/> objects displayed in the current <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery"/> to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.DragItemDrop">
       <summary>
         <para>Fires after an item has been dropped. Allows you to perform custom actions on item dropping.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.DragItemMove">
       <summary>
         <para>Fires during item dragging.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.DragItemStart">
       <summary>
         <para>Fires when a drag-and-drop operation starts on a gallery item. Allows you to cancel the operation.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.FilterCaption">
       <summary>
@@ -25465,7 +25240,6 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Occurs whenever an end-user right-clicks an item within the current <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.MakeVisible(DevExpress.XtraBars.Ribbon.GalleryItem)">
       <summary>
@@ -25478,6 +25252,12 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
         <para>Gets whether the Group Filter menu is opened.</para>
       </summary>
       <value>true if the Group Filter menu is opened; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.RefreshContextButtons(DevExpress.XtraBars.Ribbon.GalleryItem)">
+      <summary>
+        <para>Redraws context buttons in the specified gallery item.</para>
+      </summary>
+      <param name="item">Gallery item for which to redraw context buttons.</param>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.Gallery.StandaloneGallery.RefreshGallery">
       <summary>
@@ -25695,55 +25475,46 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Enables images of items in the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryDropDown"/> control&#39;s gallery to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryCustomDrawItemText">
       <summary>
         <para>Enables the text of gallery items in the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryDropDown"/> control&#39;s gallery to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryFilterMenuItemClick">
       <summary>
         <para>Fires when a filter menu item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryFilterMenuPopup">
       <summary>
         <para>Fires when an end-user invokes the filter menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryItemCheckedChanged">
       <summary>
         <para>Fires whenever an item&#39;s check state is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryItemClick">
       <summary>
         <para>Fires when a Gallery item in the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryDropDown"/> control&#39;s gallery is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryItemDoubleClick">
       <summary>
         <para>Fires after a gallery item has been double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryItemHover">
       <summary>
         <para>Fires when the mouse pointer hovers over a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.GalleryDropDown.GalleryItemLeave">
       <summary>
         <para>Fires when the mouse pointer leaves a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.GalleryDropDown.HidePopup">
       <summary>
@@ -25760,7 +25531,6 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
       <summary>
         <para>Fires when a user has finished selecting gallery items using marquee selection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.GalleryDropDown.ShowPopup(DevExpress.XtraBars.BarManager,System.Drawing.Point)">
       <summary>
@@ -26039,7 +25809,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs each time an end-user clicks the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.GalleryItem.MakeVisible">
       <summary>
@@ -26638,7 +26407,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when the center button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RadialMenu.ClearLinks">
       <summary>
@@ -26668,7 +26436,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires after the menu is collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RadialMenu.CollapseOnOuterMouseClick">
       <summary>
@@ -26680,7 +26447,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when the menu is about to be collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RadialMenu.CurrentContainer">
       <summary>
@@ -26703,13 +26469,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires after the menu is expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RadialMenu.Expanding">
       <summary>
         <para>Fires when the menu is about to be expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RadialMenu.GetAutoSize(DevExpress.XtraBars.BarItem)">
       <summary>
@@ -26775,31 +26539,26 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when the mouse pointer is over the control and a mouse button is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RadialMenu.MouseEnter">
       <summary>
         <para>Occurs when the mouse pointer enters the control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RadialMenu.MouseLeave">
       <summary>
         <para>Occurs when the mouse pointer leaves the control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RadialMenu.MouseMove">
       <summary>
         <para>Occurs when the mouse pointer is moved over the control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RadialMenu.MouseUp">
       <summary>
         <para>Occurs when the mouse pointer is over the control and a mouse button is released.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RadialMenu.PaintStyle">
       <summary>
@@ -26997,7 +26756,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs whenever the link, stored within the <see cref="P:DevExpress.XtraBars.Ribbon.RecentHyperlinkItem.Link"/> property, is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RecentHyperlinkItem.ShowBrowser">
       <summary>
@@ -27080,13 +26838,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs whenever an end-user clicks this item at runtime.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RecentItemBase.ItemPressed">
       <summary>
         <para>Occurs when an end-user presses this item at runtime.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RecentItemBase.Margin">
       <summary>
@@ -27233,13 +26989,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs whenever an end-user clicks any item in this <see cref="T:DevExpress.XtraBars.Ribbon.RecentItemControl"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RecentItemControl.ItemMouseClick">
       <summary>
         <para>A global event that fires when a user clicks any item that belongs to this Recent Item Control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RecentItemControl.MainPanel">
       <summary>
@@ -27287,7 +27041,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs whenever the currently selected tab is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RecentItemControl.ShowSplitter">
       <summary>
@@ -27311,7 +27064,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Ribbon.RecentItemControl"/>&#39;s splitter was moved.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RecentItemControl.Text">
       <summary>
@@ -27538,7 +27290,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires whenever an end-user clicks pins this <see cref="T:DevExpress.XtraBars.Ribbon.RecentPinItem"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RecentPinItem.PinButtonVisibility">
       <summary>
@@ -27703,7 +27454,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires after the dropdown control associated with the Application Button is hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.AllowContentChangeAnimation">
       <summary>
@@ -27763,6 +27513,7 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Gets or sets whether pressing the ALT key displays shortcuts for controls that belong to the same form as the RibbonControl.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.AllowTrimPageText">
       <summary>
@@ -27792,13 +27543,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when the Application Button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.ApplicationButtonDoubleClick">
       <summary>
         <para>Fires when the Application Button is double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.ApplicationButtonDropDownControl">
       <summary>
@@ -27900,13 +27649,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when the Application Button&#39;s associated control (<see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.ApplicationButtonDropDownControl"/>) is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.BeforeUnMerge">
       <summary>
         <para>Raises before this <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> is unmerged and allows you to react to this upcoming change.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.BeginInit">
       <summary>
@@ -27954,7 +27701,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.ColorScheme"/> property&#39;s value is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.CommandLayout">
       <summary>
@@ -27966,7 +27712,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.CommandLayout"/> property value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.ContextMenu">
       <summary>
@@ -27990,13 +27735,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Allows you to manually paint any <see cref="T:DevExpress.XtraBars.BarButtonItemLink"/> within this <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.CustomizeQatMenu">
       <summary>
         <para>Fires when the Quick Access Toolbar customization menu is about to be displayed, allowing commands in the menu to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.DeactivateKeyboardNavigation">
       <summary>
@@ -28144,7 +27887,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when a hyperlink within the current <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Image">
       <summary>
@@ -28168,7 +27910,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires whenever saving or loading a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/>&#39;s layout fails.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.IsDesignMode">
       <summary>
@@ -28186,13 +27927,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when a link within the Ribbon Control is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.ItemPress">
       <summary>
         <para>Fires after a links has been pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Items">
       <summary>
@@ -28245,7 +27984,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Allows you to perform additional customizations after another Ribbon Control has been merged into the current RibbonControl.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.MergedCategories">
       <summary>
@@ -28294,19 +28032,16 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Allows you to respond to minimizing/restoring the RibbonControl&#39;s pages.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.MinimizedRibbonHiding">
       <summary>
         <para>Provides access to the collapsed ribbon that has been displayed in a pop-up and is about to be hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.MinimizedRibbonShowing">
       <summary>
         <para>Provides access to the collapsed ribbon that is about to be displayed in a pop-up.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.MiniToolbars">
       <summary>
@@ -28384,7 +28119,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Enables you to perform actions when end-users click group caption buttons.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.PageHeaderItemLinks">
       <summary>
@@ -28454,7 +28188,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when the current <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/>&#39;s control is being reset to defaults.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.RestoreLayoutFromXml(System.String)">
       <summary>
@@ -28478,7 +28211,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs each time the current <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/>&#39;s <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.RibbonStyle"/> property value is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.RowCount">
       <summary>
@@ -28496,7 +28228,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.FullScreen"/> property value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.SelectedPage">
       <summary>
@@ -28508,13 +28239,11 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires after the selected page has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RibbonControl.SelectedPageChanging">
       <summary>
         <para>Fires before a specific Ribbon Page is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.SelectPage(DevExpress.XtraBars.Ribbon.RibbonPage)">
       <summary>
@@ -28555,7 +28284,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs before the RibbonControl&#39;s Customization Menu is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.ShowDisplayOptionsMenuButton">
       <summary>
@@ -28669,7 +28397,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Fires after the value of the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.ToolbarLocation"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.ToolTipController">
       <summary>
@@ -28699,7 +28426,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Allows you to perform additional customizations after another Ribbon Control has been unmerged from the current RibbonControl.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.UnMergeRibbon">
       <summary>
@@ -28947,6 +28673,7 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.Ribbon.RibbonItemStyles">
       <summary>
@@ -29054,7 +28781,6 @@ This option is in effect when a custom control is embedded into the gallery grou
       <summary>
         <para>Occurs when the toolbar is about to be hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonMiniToolbar.ItemLinks">
       <summary>
@@ -29902,7 +29628,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs when the group&#39;s Caption Button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonPageGroup.Clone">
       <summary>
@@ -30082,7 +29807,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs whenever the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonPageGroupCollection"/> is modified and allows you to respond to these changes in a specific manner.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonPageGroupCollection.Contains(DevExpress.XtraBars.Ribbon.RibbonPageGroup)">
       <summary>
@@ -30221,7 +29945,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs whenever this <see cref="T:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar"/>&#39;s <see cref="T:DevExpress.XtraBars.BarItemLink"/> collection is modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar.RestoreLayoutFromRegistry(System.String)">
       <summary>
@@ -30395,7 +30118,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Allows you to perform any actions after a RibbonStatusBar within a child MDI form has been merged into the current RibbonStatusBar object.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonStatusBar.MergeStatusBar(DevExpress.XtraBars.Ribbon.RibbonStatusBar)">
       <summary>
@@ -30448,7 +30170,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Allows you to perform any actions after another RibbonStatusBar object has been unmerged from the current RibbonStatusBar object.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonStatusBar.UnMergeStatusBar">
       <summary>
@@ -31162,13 +30883,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Enables images of gallery items to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryCustomDrawItemText">
       <summary>
         <para>Enables the text of gallery items to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryDropDown">
       <summary>
@@ -31180,55 +30899,46 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when a filter menu item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryFilterMenuPopup">
       <summary>
         <para>Fires when an end-user invokes the filter menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryInitDropDownGallery">
       <summary>
         <para>Enables a gallery, when displayed as a dropdown window, to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryItemCheckedChanged">
       <summary>
         <para>Fires whenever a gallery item&#39;s check (selected) state is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryItemClick">
       <summary>
         <para>Fires when a gallery item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryItemDoubleClick">
       <summary>
         <para>Fires after a gallery item has been double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryItemHover">
       <summary>
         <para>Fires when the mouse pointer hovers over a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryItemLeave">
       <summary>
         <para>Fires when the mouse pointer leaves a Gallery item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.RibbonGalleryBarItem.GalleryPopupClose">
       <summary>
         <para>Fires when a popup window containing a gallery is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.RibbonGalleryBarItem.Glyph">
       <summary>
@@ -31306,7 +31016,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when a user has finished selecting gallery items using marquee selection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.RibbonGalleryBarItem.PaintStyle">
       <summary>
@@ -31747,7 +31456,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Occurs when changes are made to the <see cref="T:DevExpress.XtraBars.Strings"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.Strings.Clear">
       <summary>
@@ -31923,7 +31631,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when the Application Button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.TabFormControlBase.ApplicationButtonDropDownControl">
       <summary>
@@ -32098,37 +31805,31 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires after an outer form has been created (as a result of dragging a tab outside the main form).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.OuterFormCreating">
       <summary>
         <para>Fires before displaying a created outer form (as a result of dragging a tab outside the main form).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.PageClosed">
       <summary>
         <para>Fires after a page is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.PageClosing">
       <summary>
         <para>Fires when a page is about to be closed, and allows you to cancel the action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.PageCollectionChanged">
       <summary>
         <para>Fires when the <see cref="P:DevExpress.XtraBars.TabFormControlBase.Pages"/> collection has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.PageCreated">
       <summary>
         <para>Fires when an end-user creates a new page using the &#39;+&#39; button, or when a new page is created in code using the <see cref="M:DevExpress.XtraBars.TabFormControlBase.AddNewPage"/> method.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.TabFormControlBase.Pages">
       <summary>
@@ -32170,13 +31871,11 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Fires when the <see cref="T:DevExpress.XtraBars.TabFormPage"/> currently selected in the <see cref="T:DevExpress.XtraBars.TabForm"/> has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.TabFormControlBase.SelectedPageChanging">
       <summary>
         <para>Fires when the <see cref="T:DevExpress.XtraBars.TabFormPage"/> currently selected in the <see cref="T:DevExpress.XtraBars.TabForm"/> is about to be changed, and allows you to cancel the action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.TabFormControlBase.ShowAddPageButton">
       <summary>
@@ -32807,7 +32506,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when an end-user clicks an active notification.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.ApplicationActivator">
       <summary>
@@ -32849,19 +32547,16 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Occurs when a notification owned by this <see cref="T:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager"/> could not be displayed due to end-user system settings.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.Failed">
       <summary>
         <para>Raised when a notification is not shown due to an error, and allows you to specify whether to throw exceptions that caused notification showing to end prematurely.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.Hidden">
       <summary>
         <para>Occurs when a notification owned by this <see cref="T:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager"/> is hidden via corresponding methods in code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.HideNotification(DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties)">
       <summary>
@@ -32921,7 +32616,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Occurs when a notification lifetime expires.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.TryCreateApplicationShortcut">
       <summary>
@@ -32937,13 +32631,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Allows you to customize a notification&#39;s content (visuals, actions, audio, etc.) according to the Toast Content Schema.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.UserCancelled">
       <summary>
         <para>Fires if an end-user closes a notification owned by this <see cref="T:DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraBars.ToastNotifications.ToastNotificationSound">
       <summary>
@@ -33177,6 +32869,12 @@ This image is shown when the notification has the Generic template applied.</par
         <para>Gets or sets whether or not links contained within <see cref="T:DevExpress.XtraBars.BarSubItem"/> objects are serialized.</para>
       </summary>
       <value>true, if links contained within <see cref="T:DevExpress.XtraBars.BarSubItem"/> objects are serialized; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.Utils.BarManagerOptionsLayout.ResetRecentItems">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="N:DevExpress.XtraBars.WinRTLiveTiles">
       <summary>
@@ -33778,7 +33476,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Occurs each time an end-user clicks a Live Tile on a Start Screen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraBars.WinRTLiveTiles.WinRTLiveTileManager.RemoveTile">
       <summary>
@@ -33926,6 +33623,7 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>The class name of the edit control corresponding to the current repository item.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPageNumberEdit.DefaultAlignment">
       <summary>
@@ -34014,7 +33712,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Enables you to provide custom display text for the editor.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.SeparatorChar">
       <summary>
@@ -34422,13 +34119,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Allows you to cancel docking a floating page onto the <see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.BeginFloating">
       <summary>
         <para>Allows you to prevent a page from becoming floating.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.BeginUpdate">
       <summary>
@@ -34482,13 +34177,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Allows you to customize display settings of the Document Selector&#39;s items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.CustomDocumentSelectorSettings">
       <summary>
         <para>Allows you to customize the Document Selector&#39;s settings, before it&#39;s displayed on-screen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.Dock(System.Windows.Forms.Form,DevExpress.XtraTabbedMdi.XtraTabbedMdiManager)">
       <summary>
@@ -34502,13 +34195,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires after a floating page has been docked to the <see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.EndFloating">
       <summary>
         <para>Fires when dropping a page that is becoming floating.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.EndUpdate">
       <summary>
@@ -34533,19 +34224,16 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when a docked page becomes floating.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.FloatMDIChildActivated">
       <summary>
         <para>Fires when a floating page is activated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.FloatMDIChildDeactivated">
       <summary>
         <para>Fires when a floating page is deactivated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.FloatMDIChildDockDelay">
       <summary>
@@ -34557,7 +34245,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when dragging a floating page. Allows you to implement the drag-and-drop of child floating pages to another XtraTabbedMdiManager.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.FloatOnDoubleClick">
       <summary>
@@ -34658,31 +34345,26 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Occurs when the mouse pointer is over a tabbed MDI and a mouse button is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.MouseEnter">
       <summary>
         <para>Occurs when the mouse pointer enters the tabbed MDI.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.MouseLeave">
       <summary>
         <para>Occurs when the mouse pointer leaves the tabbed MDI.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.MouseMove">
       <summary>
         <para>Occurs when the mouse pointer moves over a tabbed MDI.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.MouseUp">
       <summary>
         <para>Occurs when the mouse button is released if it was pressed within a tabbed MDI.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.MultiLine">
       <summary>
@@ -34694,7 +34376,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires after a new page has been added to the <see cref="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.Pages"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.PageImagePosition">
       <summary>
@@ -34706,7 +34387,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires after a page has been removed from the <see cref="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.Pages"/> collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.Pages">
       <summary>
@@ -34742,13 +34422,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires after the selected page has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.SetNextMdiChild">
       <summary>
         <para>Provides the ability to cycle through the pages using custom rules.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager.SetNextMdiChildMode">
       <summary>
@@ -34847,7 +34525,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Provides the ability to perform custom painting of the <see cref="T:DevExpress.XtraToolbox.ToolboxControl"/> visual elements.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxControl.DesignManager">
       <summary>
@@ -34859,19 +34536,16 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires after an item has been dropped. Allows you to perform custom actions on item dropping.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraToolbox.ToolboxControl.DragItemMove">
       <summary>
         <para>Fires during item dragging. Allows you to specify the drop effect in the current position.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraToolbox.ToolboxControl.DragItemStart">
       <summary>
         <para>Fires when an item&#39;s drag operation starts. Allows you to replace the cursor icon and cancel the drag operation.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraToolbox.ToolboxControl.EndUpdate">
       <summary>
@@ -34882,13 +34556,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when a <see cref="T:DevExpress.XtraToolbox.ToolboxGroup"/> is about to displayed for the first time and allows you to provide a custom group icon.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraToolbox.ToolboxControl.GetItemImage">
       <summary>
         <para>Fires when a <see cref="T:DevExpress.XtraToolbox.ToolboxItem"/> is about to displayed for the first time and allows you to provide a custom item icon.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraToolbox.ToolboxControl.GetMenuLocation">
       <summary>
@@ -34918,7 +34590,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when the <see cref="T:DevExpress.XtraToolbox.ToolboxControl"/> popup menu is about to be shown, and allows you to customize the menu.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraToolbox.ToolboxControl.InvertExpanded">
       <summary>
@@ -34929,13 +34600,11 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when a toolbox item is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraToolbox.ToolboxControl.ItemDoubleClick">
       <summary>
         <para>Fires when an item is double clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxControl.MenuManager">
       <summary>
@@ -34976,7 +34645,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when the text in the search box is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxControl.SelectedGroup">
       <summary>
@@ -34988,7 +34656,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when the group currently selected in the toolbox is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxControl.SelectedGroupIndex">
       <summary>
@@ -35006,7 +34673,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when the toolbox state is changed from normal to minimized, and vice versa.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxControl.Text">
       <summary>
@@ -35231,7 +34897,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when a property value has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxGroup.Items">
       <summary>
@@ -35265,7 +34930,6 @@ This image is shown when the notification has the Generic template applied.</par
       <summary>
         <para>Fires when a property value has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraToolbox.ToolboxItem.OwnerGroup">
       <summary>

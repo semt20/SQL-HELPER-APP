@@ -60,5 +60,11 @@ namespace SQL_HELPER_APP
             BMS_DLL.GLOBAL.FORMAC(true, new Departmanlar(), this, false, null);
 
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //BMS_DLL.DX.XTRAREPORT_AC("select * from BM_219_SIPARIS", null, true);
+            BMS_DLL.GLOBAL.FORMAC(true, new SQLTABLEGENERATOR(), this, false, null);
+        }
     }
 }

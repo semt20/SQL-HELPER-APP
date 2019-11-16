@@ -328,7 +328,6 @@
       <summary>
         <para>Fires when the &quot;Add New&quot; button is clicked, and allows you to add new records to the dropdown data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
       <summary>
@@ -401,7 +400,6 @@
       <summary>
         <para>This event is not supported by the <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit"/> class.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit.RegisterSearchLookUpEdit">
       <summary>
@@ -440,7 +438,6 @@
       <summary>
         <para>Fires when the &quot;Add New&quot; button is clicked, and allows you to add new records to the dropdown data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.SearchLookUpEdit.EditorContainsFocus">
       <summary>
@@ -996,7 +993,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.ColumnEdit">
       <summary>
-        <para>Gets or sets the repository item specifying the editor used to edit a column&#39;s cell values.</para>
+        <para>Gets or sets the in-place editor for all data cells that belong to this column.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> descendant.</value>
     </member>
@@ -1231,7 +1228,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
       <summary>
         <para>Gets or sets the column&#39;s position among sorted columns.</para>
       </summary>
-      <value>An integer value representing the zero-based column&#39;s index among sorted columns. -1 if data is not sorted by this column.</value>
+      <value>The column&#39;s index among sorted columns. &#0045;1 if data is not sorted by this column.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.SortMode">
       <summary>
@@ -1306,7 +1303,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.GridColumn.Visible">
       <summary>
-        <para>Gets or sets whether the column is visible (displays its values in grid cells).</para>
+        <para>Gets or sets whether the grid column is visible.</para>
       </summary>
       <value>true, if the column is visible; otherwise, false.</value>
     </member>
@@ -1326,7 +1323,7 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
       <summary>
         <para>Gets or sets the column width.</para>
       </summary>
-      <value>An integer value specifying the column width.</value>
+      <value>The column&#39;s width.</value>
     </member>
     <member name="T:DevExpress.XtraGrid.Columns.GridColumnCollection">
       <summary>
@@ -2291,11 +2288,23 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object representing the column that contains images to display in tiles&#39; background.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.BackgroundImageColumnName">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.CheckedColumn">
       <summary>
         <para>Gets or sets the column with Boolean values that specify the checked state for tiles.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object representing a column with Boolean values that specify the checked state for tiles.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.CheckedColumnName">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.EnabledColumn">
       <summary>
@@ -2303,11 +2312,23 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object that represents a column with Boolean values that specify the enabled/disabled state for tiles.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.EnabledColumnName">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.GroupColumn">
       <summary>
         <para>Gets or sets the column whose values are used to combine tiles in groups.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object representing a column whose values are used to combine tiles in groups.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Columns.TileViewColumns.GroupColumnName">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Columns.TileViewColumns.ToString">
       <summary>
@@ -2379,6 +2400,7 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       <summary>
         <para>Gets the View whose columns are used to initialize Filter Columns in the current collection.</para>
       </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.XtraGrid.GridColumnSummaryItem">
       <summary>
@@ -2535,6 +2557,7 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       <summary>
         <para>Contains a value which represents the handle of the Auto Filter Row. For more information on row handles refer to the Rows section.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.AvailableViews">
       <summary>
@@ -2617,7 +2640,6 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       <summary>
         <para>Fires when changing the <see cref="P:DevExpress.XtraGrid.GridControl.DataSource"/> property value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.DefaultView">
       <summary>
@@ -2629,7 +2651,6 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       <summary>
         <para>Fires when zooming a View in or out.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.DisableAccessibility">
       <summary>
@@ -2686,11 +2707,25 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       </summary>
       <param name="stream">A System.IO.Stream object to which the created document should be exported.</param>
     </member>
+    <member name="M:DevExpress.XtraGrid.GridControl.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="stream"></param>
+      <param name="options"></param>
+    </member>
     <member name="M:DevExpress.XtraGrid.GridControl.ExportToDocx(System.String)">
       <summary>
         <para>Exports the control&#39;s data in the Office Open XML file format and saves it to the specified DOCX file.</para>
       </summary>
       <param name="filePath">A System.String value which specifies the full path (including the file name and extension) where the DOCX file should be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraGrid.GridControl.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="filePath"></param>
+      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.ExportToExcelOld(System.String)">
       <summary>
@@ -2818,11 +2853,25 @@ It specifies whether selecting a date or date range via the embedded calendar fi
       </summary>
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, which the data is exported to.</param>
     </member>
+    <member name="M:DevExpress.XtraGrid.GridControl.ExportToRtf(System.IO.Stream,DevExpress.XtraPrinting.RtfExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="stream"></param>
+      <param name="options"></param>
+    </member>
     <member name="M:DevExpress.XtraGrid.GridControl.ExportToRtf(System.String)">
       <summary>
         <para>Exports the data displayed by the <see cref="P:DevExpress.XtraGrid.GridControl.DefaultView"/> (the <see cref="P:DevExpress.XtraGrid.GridControl.MainView"/> or the currently maximized detail View) to a file in RTF format.</para>
       </summary>
       <param name="filePath">A string that specifies the full path to the file the View&#39;s data will be exported to.</param>
+    </member>
+    <member name="M:DevExpress.XtraGrid.GridControl.ExportToRtf(System.String,DevExpress.XtraPrinting.RtfExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="filePath"></param>
+      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.ExportToText(System.IO.Stream)">
       <summary>
@@ -2979,16 +3028,19 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>In Embedded detail mode, this row handle corresponds to the regions of detail Views below detail data and group rows. See <see cref="M:DevExpress.XtraGrid.Views.Grid.GridView.IsExternalRow(System.Int32)"/>.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraGrid.GridControl.ExternalRowHandle">
       <summary>
         <para>In Embedded detail mode, this row handle corresponds to data and group rows of detail Views. See <see cref="M:DevExpress.XtraGrid.Views.Grid.GridView.IsExternalRow(System.Int32)"/>.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraGrid.GridControl.ExternalRowHeaderHandle">
       <summary>
         <para>In Embedded detail mode, this row handle corresponds to the regions of detail Views above data and group rows (these regions include group panels and column header panels). See <see cref="M:DevExpress.XtraGrid.Views.Grid.GridView.IsExternalRow(System.Int32)"/>.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.FireChanged">
       <summary>
@@ -3005,7 +3057,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires in response to focus moving between Views.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.ForceInitialize">
       <summary>
@@ -3042,6 +3093,7 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Contains the value representing the invalid row handle. This value is returned when an attempt to obtain a particular row fails, etc. Please refer to the Rows topic for more information regarding row handles.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.IsAttachedToSearchControl">
       <summary>
@@ -3096,7 +3148,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when moving focus between Views.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.LevelTree">
       <summary>
@@ -3108,7 +3159,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when a grid control is displayed for the first time.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.LockFireChanged">
       <summary>
@@ -3131,18 +3181,17 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Contains a value which represents the handle of the New Item Row/Card. For more information on row handles refer to the Rows section.</para>
       </summary>
+      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.GridControl.Paint">
       <summary>
         <para>Use the <see cref="E:DevExpress.XtraGrid.GridControl.PaintEx"/> event instead.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.GridControl.PaintEx">
       <summary>
         <para>A DirectX-compatible method that replaces the standard Control.Paint method.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.Print">
       <summary>
@@ -3158,7 +3207,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Enables you to process key presses before they are processed by the grid control&#39;s focused View and the active in-place editor.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.RefreshDataSource">
       <summary>
@@ -3243,13 +3291,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when a new detail clone is created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.GridControl.ViewRemoved">
       <summary>
         <para>Fires when a detail clone is being disposed of.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.Views">
       <summary>
@@ -3792,19 +3838,16 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires before a Split View is displayed or before its orientation is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.GridSplitContainer.SplitViewHidden">
       <summary>
         <para>Fires after the current Split View has been destroyed or when the Split View&#39;s orientation is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.GridSplitContainer.SplitViewShown">
       <summary>
         <para>Fires after a Split View has been displayed or after its orientation has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridSplitContainer.SynchronizeExpandCollapse">
       <summary>
@@ -4036,7 +4079,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when changes are made to the summary item collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.GridSummaryItemCollection.EndUpdate">
       <summary>
@@ -4928,7 +4970,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when the band&#39;s width is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedGridView.CalcHitInfo(System.Drawing.Point)">
       <summary>
@@ -4976,7 +5017,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Enables you to custom paint band headers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedGridView.InvalidateBandHeader(DevExpress.XtraGrid.Views.BandedGrid.GridBand)">
       <summary>
@@ -5986,7 +6026,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs before a layout is restored from storage (a stream, xml file or the system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.BeginDataUpdate">
       <summary>
@@ -6048,7 +6087,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a View is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.CloseEditor">
       <summary>
@@ -6100,7 +6138,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when the data source of the current View changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.DetailHeight">
       <summary>
@@ -6130,7 +6167,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a View is double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.Editable">
       <summary>
@@ -6220,11 +6256,25 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       </summary>
       <param name="stream">A System.IO.Stream object to which the created document should be exported.</param>
     </member>
+    <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="stream"></param>
+      <param name="options"></param>
+    </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToDocx(System.String)">
       <summary>
         <para>Exports the view&#39;s data in the Office Open XML file format and saves it to the specified DOCX file.</para>
       </summary>
       <param name="filePath">A System.String value which specifies the full path (including the file name and extension) where the DOCX file should be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="filePath"></param>
+      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToExcelOld(System.String)">
       <summary>
@@ -6359,11 +6409,25 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       </summary>
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, which the data is exported to.</param>
     </member>
+    <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToRtf(System.IO.Stream,DevExpress.XtraPrinting.RtfExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="stream"></param>
+      <param name="options"></param>
+    </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToRtf(System.String)">
       <summary>
         <para>Exports the <see cref="P:DevExpress.XtraGrid.GridControl.DefaultView"/>&#39;s data to a file in RTF format.</para>
       </summary>
       <param name="filePath">A string that specifies the full path to the file the View&#39;s data will be exported to.</param>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToRtf(System.String,DevExpress.XtraPrinting.RtfExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="filePath"></param>
+      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ExportToText(System.IO.Stream)">
       <summary>
@@ -6552,7 +6616,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a View receives focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.GridControl">
       <summary>
@@ -6592,7 +6655,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Enables you to provide a proper response to entering an invalid cell value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.IsDefaultState">
       <summary>
@@ -6668,27 +6730,23 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.KeyDown">
       <summary>
-        <para>Fires when a key is pressed while the View has focus.</para>
+        <para>Fires when a user presses a key while the View has focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.KeyPress">
       <summary>
         <para>Fires when a character key is pressed while the View has focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.KeyUp">
       <summary>
         <para>Occurs when releasing the pressed key.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.Layout">
       <summary>
         <para>Fires immediately after a View&#39;s layout has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.LayoutChanged">
       <summary>
@@ -6699,7 +6757,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a layout is restored from storage (a stream, xml file or system registry) and its version differs from the version of the current View&#39;s layout.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.LevelName">
       <summary>
@@ -6717,48 +6774,42 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a View loses focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraGrid.Views.Base.BaseView.MaxRowCopyCount">
       <summary>
         <para>Allows you to limit the maximum number of rows that are copied to the Clipboard when the <see cref="M:DevExpress.XtraGrid.Views.Base.BaseView.CopyToClipboard"/> method is called, or when an end-user presses the CTRL+C shortcut.</para>
       </summary>
+      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseDown">
       <summary>
         <para>Occurs when the mouse pointer is over a View and a mouse button is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseEnter">
       <summary>
         <para>Occurs when the mouse pointer enters the View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseLeave">
       <summary>
         <para>Occurs when the mouse pointer leaves the View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseMove">
       <summary>
         <para>Occurs when the mouse pointer moves over a View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseUp">
       <summary>
         <para>Occurs when the mouse button is released if it was pressed within a View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.MouseWheel">
       <summary>
         <para>Occurs when the mouse wheel is moved while a View has focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.Name">
       <summary>
@@ -6793,7 +6844,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after the View&#39;s paint style has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.PaintStyleName">
       <summary>
@@ -6814,7 +6864,7 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.PostEditor">
       <summary>
-        <para>Posts the value to the associated data source but doesn&#39;t close the active in-place editor.</para>
+        <para>Saves the modified cell value to the data source. If the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.RowAutoHeight"/> setting is disabled, the currently active cell editor remains opened.</para>
       </summary>
       <returns>true if the value has been successfully saved to the data source; otherwise, false.</returns>
     </member>
@@ -6832,13 +6882,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires repeatedly while the View&#39;s data is being printed/exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.BaseView.PrintInitialize">
       <summary>
         <para>Allows you to customize general print/export settings when the View is about to be printed/exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.QueryMoreRows">
       <summary>
@@ -6904,7 +6952,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when the number of visible records is changed within a View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.SaveLayoutToRegistry(System.String)">
       <summary>
@@ -7048,7 +7095,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when a user edits a row cell value and attempts to select another cell. Handle this event to check whether this new value is valid, and if not, choose the required behavior (discard edits, show a warning message, ignore errors, or keep the focus on this cell until a user enters valid values). This event allows tracking edits made in the Edit Form as well.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.BaseView.ViewCaption">
       <summary>
@@ -7178,7 +7224,7 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Gets a View&#39;s active editor.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraEditors.BaseEdit"/> object representing the currently active editor. null (Nothing in Visual Basic) if no cell is being currently edited.</value>
+      <value>The currently active editor. null (Nothing in Visual Basic) if there are no active editors at the time.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.ActiveFilter">
       <summary>
@@ -7231,13 +7277,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when async data loading has finished, in Instant Feedback Mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.BeforeLeaveRow">
       <summary>
         <para>Enables you to prevent row focus changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.BeginDataUpdate">
       <summary>
@@ -7292,13 +7336,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires immediately after a cell value has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CellValueChanging">
       <summary>
         <para>Fires when the edit value changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ClearColumnErrors">
       <summary>
@@ -7312,7 +7354,7 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ClearSelection">
       <summary>
-        <para>Unselects any selected rows in the current View when multiple row selection is enabled.</para>
+        <para>Unselects any selected rows in the current View when multiple row selection is in effect.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ClearSorting">
@@ -7324,19 +7366,16 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when changing a column&#39;s properties.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ColumnFilterChanged">
       <summary>
         <para>Occurs when a column&#39;s filter condition changes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ColumnPositionChanged">
       <summary>
         <para>Allows you to respond to changing a column&#39;s position within the View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.Columns">
       <summary>
@@ -7348,7 +7387,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after a column&#39;s <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.UnboundExpression"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ConvertFormatConditionToFormatRules">
       <summary>
@@ -7357,57 +7395,48 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomColumnDisplayText">
       <summary>
-        <para>Allows you to provide custom display text for column values displayed within text box-based cells, group rows and filter dropdowns.</para>
+        <para>Allows you to replace cell display texts (for cells with textbox-based editors), group row texts, and filter menu item captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomColumnSort">
       <summary>
-        <para>Provides the ability to sort data using custom rules.</para>
+        <para>Allows you to implement custom rules according to which a Grid column will sort its data. A column uses these custom rules only when its <see cref="P:DevExpress.XtraGrid.Columns.GridColumn.SortMode"/> property is set to <see cref="F:DevExpress.XtraGrid.ColumnSortMode.Custom"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomDrawEmptyForeground">
       <summary>
         <para>Enables a View&#39;s empty space to be custom painted when there aren&#39;t any rows displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomDrawFilterPanel">
       <summary>
         <para>Enables you to paint the filter panel manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomFilterDialog">
       <summary>
         <para>Enables the Custom Filter Dialog to be replaced with custom filtering facilities.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomFilterDisplayText">
       <summary>
         <para>Allows you to customize the display text representing the current filter within the filter panel.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomRowFilter">
       <summary>
         <para>Allows you to hide particular rows that exist in the data source or make them visible (regardless of the grid&#39;s filter).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomUnboundColumnData">
       <summary>
         <para>Fires for all cells of visible unbound columns. Allows you to manually provide data to these cells, and save values entered by users at runtime.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.DataManagerReset">
       <summary>
         <para>Fires when significant data source changes occur.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.DefaultEdit">
       <summary>
@@ -7454,7 +7483,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after the grouping operation has been completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.EndSort">
       <summary>
@@ -7465,7 +7493,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after the sorting operation has been completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.EnsureRowLoaded(System.Int32,DevExpress.Data.OperationCompleted)">
       <summary>
@@ -7484,7 +7511,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Allows you to customize the Filter Editor before it is displayed on screen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPanelText">
       <summary>
@@ -7496,25 +7522,21 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Allows you to customize templates for Excel-style filters and for external editors generated with Filtering UI Context.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelData">
       <summary>
         <para>Allows you to add, remove and modify filters in the Excel style pop-up filter menus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelPrepareTemplate">
       <summary>
         <para>Allows you to replace the UI for the Excel-styled menus&#39; &quot;Values&quot; tab. Also affects editors generated by the Filtering UI Context component attached to this Data Grid.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelQueryFilterCriteria">
       <summary>
         <para>Allows you to modify criteria expressions built when users filter Data Grid data in Excel-style filtering menus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupMaxRecordsCount">
       <summary>
@@ -7557,17 +7579,15 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires in response to changing column focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FocusedRowChanged">
       <summary>
         <para>Fires when row focus moves from one row to another.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FocusedRowHandle">
       <summary>
-        <para>Gets or sets the focused record by its handle.</para>
+        <para>Read this property value to retrieve the currently selected row&#39;s handle. Modify the property to manually select a row with the given handle.</para>
       </summary>
       <value>An integer value representing the handle of the focused record.</value>
     </member>
@@ -7575,7 +7595,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when the focused row&#39;s data has been loaded (in Instant Feedback Mode).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FocusedRowModified">
       <summary>
@@ -7587,7 +7606,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after focus is moved to another row object.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.FocusedValue">
       <summary>
@@ -7798,10 +7816,10 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.GetRowHandle(System.Int32)">
       <summary>
-        <para>Returns the handle of the row which represents the specified record in the data source.</para>
+        <para>Returns the row&#39;s handle.</para>
       </summary>
-      <param name="dataSourceIndex">The zero-based index of a record in the data source.</param>
-      <returns>An integer value which represents the handle of the row which corresponds to the specified record in the data source.</returns>
+      <param name="dataSourceIndex">The record&#39;s index in the data source.</param>
+      <returns>The row&#39;s handle.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.GetSelectedRows">
       <summary>
@@ -7865,7 +7883,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires immediately after an inplace editor has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.HideEditor">
       <summary>
@@ -7887,13 +7904,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Enables you to initialize added rows.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.InvalidRowException">
       <summary>
         <para>Fires when a row fails validation or when it cannot be saved to the data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.InvertRowSelection(System.Int32)">
       <summary>
@@ -8188,19 +8203,16 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Enables you to specify content alignment for individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.RowDeleted">
       <summary>
         <para>Fires after a data row is deleted.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.RowDeleting">
       <summary>
         <para>Fires when a data row is about to be deleted.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.RowFilter">
       <summary>
@@ -8212,13 +8224,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when a row&#39;s data has been loaded (in Instant Feedback Mode).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.RowUpdated">
       <summary>
         <para>Occurs after changes made to a focused data row have been saved to an underlying data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.SelectAll">
       <summary>
@@ -8235,7 +8245,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when row/cell selection is changed in multiple selection mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.SelectRange(System.Int32,System.Int32)">
       <summary>
@@ -8334,25 +8343,21 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Allows you to customize checked filter dropdown lists before they are displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFilterPopupDate">
       <summary>
         <para>Allows you to customize the filter dropdown for date-time columns.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFilterPopupExcel">
       <summary>
         <para>Allows you to hide specific filtering conditions from the &quot;Filters&quot; and &quot;Values&quot; tabs of the Excel-style Filter Dropdown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFilterPopupListBox">
       <summary>
         <para>Enables you to customize a particular column&#39;s filter dropdown list.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFindPanel">
       <summary>
@@ -8363,13 +8368,11 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when a cell inplace editor is about to open, and allows you to cancel this action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShownEditor">
       <summary>
         <para>Fires immediately after a cell editor has been invoked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.ShowUnboundExpressionEditor(DevExpress.XtraGrid.Columns.GridColumn)">
       <summary>
@@ -8393,25 +8396,21 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires before a grouping operation is started.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.StartSorting">
       <summary>
         <para>Fires before a sorting operation is started.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.SubstituteFilter">
       <summary>
         <para>Allows you to replace a filter applied with another filter.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.SubstituteSortInfo">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.SynchronizeData(DevExpress.XtraGrid.Views.Base.BaseView)">
       <summary>
@@ -8429,7 +8428,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires after an Expression Editor has been created for an unbound column.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.UnselectRow(System.Int32)">
       <summary>
@@ -8453,7 +8451,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Fires when a user edits row cell values and attempts to select another row. Handle this event to check whether these new values are valid, and if not, choose the required behavior (discard edits, show a warning message, ignore errors, or keep the focus on this row until a user enters valid values).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.ColumnView.ViewCaptionHeight">
       <summary>
@@ -10052,7 +10049,6 @@ to the specified file in XLSX (MS Excel 2007) format using the specified options
       <summary>
         <para>Occurs when the current collection has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ViewFilter.Clone">
       <summary>
@@ -10646,7 +10642,6 @@ In server mode, this option is not in effect.</para>
       <summary>
         <para>Allows you provide custom height for individual card fields.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CalcHitInfo(System.Drawing.Point)">
       <summary>
@@ -10679,25 +10674,21 @@ In server mode, this option is not in effect.</para>
       <summary>
         <para>Fires immediately after a card has been collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardCollapsing">
       <summary>
         <para>Provides the ability to prevent particular cards from being collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanded">
       <summary>
         <para>Fires immediately after a card has been expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanding">
       <summary>
         <para>Provides the ability to prevent particular cards from being expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardInterval">
       <summary>
@@ -10739,31 +10730,26 @@ In server mode, this option is not in effect.</para>
       <summary>
         <para>Enables custom images to be shown in card captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardCaption">
       <summary>
         <para>Enables card captions to be custom painted.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardField">
       <summary>
         <para>Enables you to custom paint card fields.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldCaption">
       <summary>
         <para>Enables you to custom paint card field captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldValue">
       <summary>
         <para>Enables you to custom paint card field value cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ExpandAll">
       <summary>
@@ -10952,7 +10938,6 @@ In server mode, this option is not in effect.</para>
       <summary>
         <para>Occurs when a Card View is being scrolled.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Card.CardView.TopLeftCardIndex">
       <summary>
@@ -11926,6 +11911,7 @@ In server mode, this option is not in effect.</para>
       <summary>
         <para>Specifies the text representing the filter item within the filter dropdown list.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.FilterItem.ToString">
       <summary>
@@ -13014,6 +13000,12 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       </summary>
       <value>true to print/export the View with all data rows visible regardless of the group rows&#39; expanded state; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.IgnoreGroupDrawMode">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.MaxMergedCellHeight">
       <summary>
         <para>Gets or sets the maximum height of merged cells in the print/export output.</para>
@@ -13300,9 +13292,9 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.RowAutoHeight">
       <summary>
-        <para>Gets or sets whether the height of each data row is automatically adjusted to completely display the contents of its cells.</para>
+        <para>Gets or sets whether the Data Grid automatically adjusts data row heights depending on cell content.</para>
       </summary>
-      <value>true, to enable automatic data row height calculation; otherwise, false.</value>
+      <value>true to change the data row height automatically; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.ShowAutoFilterRow">
       <summary>
@@ -13354,7 +13346,7 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.ShowGroupPanel">
       <summary>
-        <para>Gets or sets a value specifying whether the group panel is visible.</para>
+        <para>Gets or sets whether the group panel is visible.</para>
       </summary>
       <value>true, to display the group panel; otherwise, false.</value>
     </member>
@@ -13563,7 +13555,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Fires after an individual row has been printed/exported, and allows you to add custom information to the printout/export output.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.Appearance">
       <summary>
@@ -13594,7 +13585,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Fires before printing/exporting each individual row, and allows you to add custom information to the printout/export output, and prevent a row from being printed/exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.BeginSummaryUpdate">
       <summary>
@@ -13603,7 +13593,7 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.BestFitColumns">
       <summary>
-        <para>Adjusts the width of columns so that columns fit their content in the optimal way.</para>
+        <para>Adjusts column widths so that columns fit their content in the optimal way.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.BestFitColumns(System.Boolean)">
@@ -13637,13 +13627,11 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Enables you to provide custom text for preview sections.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CalcRowHeight">
       <summary>
         <para>Enables you to provide custom heights for individual rows.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.CanCollapseMasterRowEx(System.Int32,System.Int32)">
       <summary>
@@ -13721,12 +13709,12 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Provides the ability to customize cell merging behavior.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridView.CheckBoxSelectorColumnName">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.ChildGridLevelName">
       <summary>
@@ -13748,7 +13736,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Repeatedly fires for each pasted row before updating the control, and allows you to modify pasted data and to cancel the pasting of the currently processed row.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.CloseEditForm">
       <summary>
@@ -13833,7 +13820,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Occurs after a column&#39;s width has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.CopyToClipboard">
       <summary>
@@ -13851,79 +13837,66 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
       <summary>
         <para>Provides the ability to group data using custom rules.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawCell">
       <summary>
-        <para>Enables data cells to be painted manually.</para>
+        <para>Allows you to manually draw data cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawColumnHeader">
       <summary>
         <para>Enables you to paint column headers manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawFooter">
       <summary>
         <para>Enables you to paint the view footer manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawFooterCell">
       <summary>
         <para>Enables you to paint view footer cells manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawGroupPanel">
       <summary>
         <para>Enables you to paint the group panel manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawGroupRow">
       <summary>
         <para>Enables you to paint group rows manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawGroupRowCell">
       <summary>
         <para>Allows you to manually paint individual cells of group rows.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawRowFooter">
       <summary>
         <para>Enables you to paint group footers manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawRowFooterCell">
       <summary>
         <para>Enables you to paint group footer cells manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawRowIndicator">
       <summary>
         <para>Enables you to custom paint cells within the row indicator panel.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawRowPreview">
       <summary>
         <para>Enables you to paint preview sections manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomDrawScroll">
       <summary>
         <para>Allows you to draw custom scrollbars, or highlight specific positions on the scrollbars.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.CustomizationForm">
       <summary>
@@ -13945,34 +13918,29 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomRowCellEdit">
       <summary>
-        <para>Enables you to assign editors to individual cells.</para>
+        <para>Allows you to assign custom in-place editors to individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomRowCellEditForEditing">
       <summary>
         <para>Allows you to assign a custom editor to a column for in-place editing and so override the default column editor, which is by default used both in display and edit modes.
 This event also allows you to change editors within an Edit Form.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomScrollAnnotation">
       <summary>
         <para>Allows you to specify custom annotations.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomSummaryCalculate">
       <summary>
         <para>Allows you to manually calculate summaries. Fires for summaries whose <see cref="F:DevExpress.Data.SummaryItemType.Custom"/> is <see cref="F:DevExpress.Data.SummaryItemType.Custom"/>. Does not occur when the Data Grid functions in server mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomSummaryExists">
       <summary>
         <para>Enables you to specify which summaries should be calculated and displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.DefaultRelationIndex">
       <summary>
@@ -13995,19 +13963,16 @@ This event also allows you to change editors within an Edit Form.</para>
       <summary>
         <para>Fires immediately after a drag and drop operation on a column header or band header has been completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.DragObjectOver">
       <summary>
         <para>Enables you to control whether the dragged column header or band header can be dropped at the current position.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.DragObjectStart">
       <summary>
         <para>Fires when the end-user attempts to drag a  column header or band header.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.Editable">
       <summary>
@@ -14019,13 +13984,11 @@ This event also allows you to change editors within an Edit Form.</para>
       <summary>
         <para>Allows you to customize the Edit Form that is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.EditFormShowing">
       <summary>
         <para>Occurs when an Edit Form is about to be displayed, and allows you to cancel the action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.EditingValue">
       <summary>
@@ -14227,7 +14190,6 @@ This event also allows you to change editors within an Edit Form.</para>
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraGrid.Views.Grid.GridView"/> loads its images asynchronously and allows you to set your custom loading indicator displayed for images that are not yet loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.GetMasterRowExpanded(System.Int32)">
       <summary>
@@ -14400,7 +14362,6 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>Occurs when the <see cref="T:DevExpress.XtraGrid.Views.Grid.GridView"/> loads its images asynchronously and allows you to manually pass the required image to the current item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.GetVisibleDetailRelationIndex(System.Int32)">
       <summary>
@@ -14441,7 +14402,6 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>Enables you to provide custom responses to clicking context menu items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.GroupFooterShowMode">
       <summary>
@@ -14459,7 +14419,6 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>Enables you to specify custom styles for group rows (and corresponding indents) residing at particular nesting levels.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.GroupPanelText">
       <summary>
@@ -14471,25 +14430,21 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>Fires immediately after a group row has been collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.GroupRowCollapsing">
       <summary>
         <para>Occurs before group rows are collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.GroupRowExpanded">
       <summary>
         <para>Fires immediately after a group row has been expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.GroupRowExpanding">
       <summary>
         <para>Occurs when a group row is about to be expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.GroupRowHeight">
       <summary>
@@ -14524,6 +14479,7 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.HideCustomization">
       <summary>
@@ -14534,7 +14490,6 @@ The method&#39;s argument will contain the requested value. The completed parame
       <summary>
         <para>Fires before the Customization Form is closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.HideEditForm">
       <summary>
@@ -14837,7 +14792,6 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Fires when the View is scrolled horizontally.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.LevelIndent">
       <summary>
@@ -14874,67 +14828,56 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Fires immediately after a detail clone has been destroyed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowCollapsing">
       <summary>
         <para>Enables you to control whether master rows can be collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowEmpty">
       <summary>
         <para>Enables you to specify whether a particular detail is empty. This event is in effect if the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsDetail.AllowExpandEmptyDetails"/> option is set to false.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowExpanded">
       <summary>
         <para>Fires immediately after a particular detail clone has become visible.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowExpanding">
       <summary>
         <para>Enables you to control whether particular detail clones can be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowGetChildList">
       <summary>
         <para>Enables you to supply detail data manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowGetLevelDefaultView">
       <summary>
         <para>Enables you to specify a pattern view to represent a particular detail.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowGetRelationCount">
       <summary>
         <para>Enables you to specify the number of details for individual master rows.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowGetRelationDisplayCaption">
       <summary>
         <para>Enables the display caption for a particular relationship (detail clone) to be specified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MasterRowGetRelationName">
       <summary>
         <para>Enables you to specify the pattern view that will represent a particular detail clone.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.MeasurePreviewHeight">
       <summary>
         <para>Provides the ability to specify the height of individual preview sections in pixels.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.MoveNextPage">
       <summary>
@@ -15071,7 +15014,6 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Enables you to customize or prohibit built-in context menus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.PressedColumn">
       <summary>
@@ -15129,10 +15071,22 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <param name="kind">The kind of scrollbar annotations to update.</param>
       <param name="rows">An array of row handles.</param>
     </member>
+    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ResetAutoFilterCondition(DevExpress.XtraGrid.Columns.GridColumn)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="column"></param>
+    </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ResetAutoFilterConditions">
       <summary>
         <para>Resets all automatic filtering row conditions to their default values.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ResetAutoFilterConditions(System.Collections.Generic.IEnumerable{DevExpress.XtraGrid.Columns.GridColumn})">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="columns"></param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ResetThumbnailCache">
       <summary>
@@ -15143,19 +15097,16 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Fires when a user clicks a data cell. If data is editable and the <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode"/> property equals MouseDown (or Default, if multiple row selection is disabled), the event is suppressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.RowCellStyle">
       <summary>
-        <para>Enables the appearance settings of individual cells to be changed.</para>
+        <para>Fires for every Grid cell before this cell is shown. Allows you to modify Appearance settings for this cell.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.RowClick">
       <summary>
         <para>Allows you to respond to row clicks. The event will not fire when data editing is enabled and the <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode"/> property is set to MouseDown (and to Default, if multiple row selection is disabled).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.RowCount">
       <summary>
@@ -15179,13 +15130,11 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Allows you to override the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewAppearances.Row"/> and <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewAppearances.GroupRow"/> appearance settings for any data or group row.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.ScrollAnnotationsStyle">
       <summary>
         <para>Allows you to customize scrollbar annotation color and alignment.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.ScrollStyle">
       <summary>
@@ -15208,8 +15157,8 @@ descendant (a <see cref="T:DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo"/
       <summary>
         <para>Selects the cell.</para>
       </summary>
-      <param name="rowHandle">An integer value which specifies the handle of the row where the cell is located.</param>
-      <param name="column">A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object which represents the column which contains the cell.</param>
+      <param name="rowHandle">The cell&#39;s row handle.</param>
+      <param name="column">The cell&#39;s column.</param>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.SelectCellAnchorRange(DevExpress.XtraGrid.Views.Base.GridCell,DevExpress.XtraGrid.Views.Base.GridCell)">
       <summary>
@@ -15326,7 +15275,6 @@ If set to -1, the method acts like the  method.</param>
       <summary>
         <para>Fires immediately after the Customization Form has been invoked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ShowEditForm">
       <summary>
@@ -15365,13 +15313,11 @@ If set to -1, the method acts like the  method.</param>
       <summary>
         <para>Enables you to customize or prohibit grid context menus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Grid.GridView.ShowingPopupEditForm">
       <summary>
         <para>Occurs when an Edit Form is about to be displayed as a separate modal window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.ShowInplaceEditForm">
       <summary>
@@ -15427,7 +15373,6 @@ If set to -1, the method acts like the  method.</param>
       <summary>
         <para>Fires when the View is scrolled vertically.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.TopRowIndex">
       <summary>
@@ -16970,31 +16915,26 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Occurs when a card is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CardCollapsed">
       <summary>
         <para>Fires immediately after a card has been collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CardCollapsing">
       <summary>
         <para>Provides the ability to prevent particular cards from being collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CardExpanded">
       <summary>
         <para>Fires immediately after a card has been expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CardExpanding">
       <summary>
         <para>Provides the ability to prevent particular cards from being expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutView.CardHorzInterval">
       <summary>
@@ -17037,79 +16977,66 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Enables custom images to be shown in card captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomCardLayout">
       <summary>
         <para>Allows you to dynamically customize the layout of fields within specific cards.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomCardStyle">
       <summary>
         <para>Allows you to customize the appearance of a card&#39;s caption and border.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomDrawCardBackground">
       <summary>
         <para>Allows you to highlight or manually paint a card&#39;s border and background in a custom manner.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomDrawCardCaption">
       <summary>
         <para>Enables card captions to be custom painted.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomDrawCardFieldCaption">
       <summary>
         <para>Enables card field captions to be custom painted.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomDrawCardFieldValue">
       <summary>
         <para>Enables you to custom paint card field value cells</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomFieldCaptionImage">
       <summary>
         <para>Allows you to dynamically display images in field captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomFieldCaptionStyle">
       <summary>
         <para>Allows you to customize the appearance of field captions in cards.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomFieldEditingValueStyle">
       <summary>
         <para>Allows you to customize the appearance of field value regions in edit mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomFieldValueStyle">
       <summary>
         <para>Allows you to customize the appearance of field value regions in display mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomRowCellEdit">
       <summary>
         <para>Enables you to assign editors to individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomSeparatorStyle">
       <summary>
         <para>Enables you to change the separator&#39;s width and customize its appearance.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutView.DeleteSelectedRows">
       <summary>
@@ -17143,7 +17070,6 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Occurs when a field value is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutView.FocusedColumn">
       <summary>
@@ -17196,7 +17122,6 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Fires after the Customization Form has been hidden.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutView.HideCustomizationForm">
       <summary>
@@ -17396,7 +17321,6 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Fires before the Customization Form is opened.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutView.ShowCustomizationForm">
       <summary>
@@ -17448,7 +17372,6 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <summary>
         <para>Fires on scrolling the Layout View.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Layout.LayoutViewAppearances">
       <summary>
@@ -19426,13 +19349,11 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Fires when a tile drag operation is about to be started. Allows you to provide a drag image, or to cancel the operation.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.BeforeItemDrop">
       <summary>
         <para>Fires when a tile drop operation is initiated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.BeginInit">
       <summary>
@@ -19468,13 +19389,11 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs whenever an end-user clicks a context button within a <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/> tile.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ContextButtonCustomize">
       <summary>
         <para>Allows you to customize context buttons for individual <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/> tiles.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.ContextButtonOptions">
       <summary>
@@ -19484,9 +19403,9 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.ContextButtons">
       <summary>
-        <para>Provides access to context buttons, displayed within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>&#39;s tiles.</para>
+        <para>Provides access to the <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>&#39;s tile context buttons.</para>
       </summary>
-      <value>A ContextItemCollection that stores context buttons, displayed within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>&#39;s tiles.</value>
+      <value>A ContextItemCollection that stores the <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>&#39;s tile context buttons.</value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.CreateItem">
       <summary>
@@ -19498,19 +19417,16 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows you to dynamically customize tooltips of context buttons, displayed by this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.CustomItemTemplate">
       <summary>
         <para>Allows you to assign custom item templates to tiles.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.CustomRowCellEditForEditing">
       <summary>
         <para>Allows you to replace default editors in an Edit Form with custom ones.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.DetailTabHeaderLocation">
       <summary>
@@ -19522,13 +19438,11 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows you to customize the Edit Form that is about to be displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.EditFormShowing">
       <summary>
         <para>Occurs when an Edit Form is about to be displayed, and allows you to cancel the action.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.FocusBorderColor">
       <summary>
@@ -19561,7 +19475,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows you to assign your own loading indicator, displayed when tile background images are not yet loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetParentRowHandle(System.Int32)">
       <summary>
@@ -19581,7 +19494,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs whenever a tile within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/> needs to load its background image asynchronously and allows you to manually pass the desired image.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.GetViewInfo">
       <summary>
@@ -19637,43 +19549,36 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs whenever a tile within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/> changes its checked state.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemClick">
       <summary>
         <para>Occurs when an end-user clicks a tile within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>, or presses the Space or Enter keyboard keys.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemCustomize">
       <summary>
         <para>Allows you to customize individual tiles.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemDoubleClick">
       <summary>
         <para>Fires whenever this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>&#39;s tile is double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemDrop">
       <summary>
         <para>Fires after a tile drop operation has been completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemPress">
       <summary>
         <para>Occurs when a tile within the <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/> is pressed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemRightClick">
       <summary>
         <para>Raised when an end-user right clicks a tile within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.LayoutChanged">
       <summary>
@@ -19746,6 +19651,12 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Provides access to a set of properties that manage tile background image loading.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewOptionsImageLoad"/> object that stores properties that manage tile background image loading.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsLayout">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsList">
       <summary>
@@ -19835,7 +19746,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs when an Edit Form is about to be displayed as a separate modal window.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.TemplateItem">
       <summary>
@@ -20812,13 +20722,11 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs when a context button in this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ContextButtonCustomize">
       <summary>
         <para>Allows you to customize individual context buttons for specific <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> items.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ContextButtonOptions">
       <summary>
@@ -20836,19 +20744,16 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows hints for the <see cref="T:DevExpress.Utils.RatingContextButton"/> objects displayed in the current <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.CustomDrawGroupItem">
       <summary>
         <para>Allows you to manually repaint specific <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> group captions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.CustomDrawItem">
       <summary>
         <para>Allows you to manually repaint a <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.DeleteSelectedRows">
       <summary>
@@ -20910,7 +20815,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows you to set an image that will be used as a loading indicator. The loading indicator is displayed while the <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> record&#39;s image is being loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.GetParentRowHandle(System.Int32)">
       <summary>
@@ -20930,7 +20834,6 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Allows you to asynchronously assign an image to a <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> record.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.HideEditor">
       <summary>
@@ -20997,25 +20900,21 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs whenever an item within this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ItemDoubleClick">
       <summary>
         <para>Occurs whenever an item within this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> is double-clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ItemDrag">
       <summary>
         <para>Occurs when an end-user clicks an item within this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> and drags this item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.ItemKeyDown">
       <summary>
         <para>Occurs when an end-user presses any keyboard key, while an item within this <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/> is selected.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.LargeImages">
       <summary>
@@ -21038,13 +20937,11 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>Occurs when the marquee selection is over.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.MarqueeSelectionStarted">
       <summary>
         <para>Occurs when an end-user starts the marquee selection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.MediumImages">
       <summary>

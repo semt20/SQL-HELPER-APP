@@ -552,13 +552,11 @@
       <summary>
         <para>Intended for internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.Office.Utils.OfficeImage.NativeImageChanging">
       <summary>
         <para>Intended for internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Office.Utils.OfficeImage.PaletteLength">
       <summary>

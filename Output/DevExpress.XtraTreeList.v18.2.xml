@@ -43,11 +43,13 @@
         <para>Returns the <see cref="F:DevExpress.XtraEditors.Repository.ExportMode.Default"/> value, which is equivalent to <see cref="F:DevExpress.XtraEditors.Repository.ExportMode.DisplayText"/>.
 This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItem.ExportMode"/> property.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.EditorName">
       <summary>
         <para>Returns &quot;TreeListLookUpEdit&quot;. This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.EditorTypeName">
       <summary>
@@ -357,13 +359,20 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.CellValueChanged"/> and <see cref="E:DevExpress.XtraTreeList.TreeList.CellValueChanging"/> events.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraTreeList.CellValueChangedEventArgs.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Object)">
+    <member name="M:DevExpress.XtraTreeList.CellValueChangedEventArgs.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn,DevExpress.XtraTreeList.Nodes.TreeListNode,System.Object,System.Boolean)">
       <summary>
-        <para>Creates an instance of the <see cref="T:DevExpress.XtraTreeList.CellValueChangedEventArgs"/> class.</para>
+        <para></para>
       </summary>
-      <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> object representing the column whose cell&#39;s value has been modified. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.CellEventArgs.Column"/> property.</param>
-      <param name="node">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node whose cell&#39;s value has been modified. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.NodeEventArgs.Node"/> property.</param>
-      <param name="val">An object representing the new value assigned to the cell. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.CellValueChangedEventArgs.Value"/> property.</param>
+      <param name="column"></param>
+      <param name="node"></param>
+      <param name="val"></param>
+      <param name="changedByUser"></param>
+    </member>
+    <member name="P:DevExpress.XtraTreeList.CellValueChangedEventArgs.ChangedByUser">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.CellValueChangedEventArgs.Value">
       <summary>
@@ -613,16 +622,19 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
       <summary>
         <para>The default value for the <see cref="P:DevExpress.XtraTreeList.Columns.TreeListBand.MinWidth"/> property. The DefaultBandMinWidth field is set to 20.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraTreeList.Columns.TreeListBand.DefaultBandWidth">
       <summary>
         <para>The default value for the <see cref="P:DevExpress.XtraTreeList.Columns.TreeListBand.Width"/> property. The DefaultBandWidth field is set to 75.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraTreeList.Columns.TreeListBand.DefaultMinimumMinBandWidth">
       <summary>
         <para>Specifies the minimum allowed value of the <see cref="P:DevExpress.XtraTreeList.Columns.TreeListBand.MinWidth"/> property. The DefaultMinimumMinBandWidth field is set to 16.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.Fixed">
       <summary>
@@ -1343,7 +1355,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
       <summary>
         <para>Fires when changes are made to the column collection.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumnCollection.ColumnByFieldName(System.String)">
       <summary>
@@ -1702,6 +1713,7 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
       <summary>
         <para>Returns &#39;*&#39; which means that the search is performed against all visible columns.</para>
       </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ExpandNodesOnIncrementalSearch">
       <summary>
@@ -2827,7 +2839,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
       <summary>
         <para>Fires when the collection is modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.FilterConditionCollectionBase.Contains(DevExpress.XtraTreeList.FilterConditionBase)">
       <summary>
@@ -4767,37 +4778,31 @@ By using <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> class method
       <summary>
         <para>Occurs after a node&#39;s check state has been changed by an end-user.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.AfterCollapse">
       <summary>
         <para>Fires immediately after a node has been collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.AfterDragNode">
       <summary>
         <para>Fires immediately after a drag-and-drop operation on a node has been successfully completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.AfterDropNode">
       <summary>
         <para>Fires after a node is dropped.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.AfterExpand">
       <summary>
         <para>Fires immediately after a node has been expanded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.AfterFocusNode">
       <summary>
         <para>Fires in response to focus being moved between nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.AllNodesCount">
       <summary>
@@ -4985,6 +4990,13 @@ By using <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> class method
       <summary>
         <para>Contains a value which specifies the Automatic Filtering Row&#39;s ID.</para>
       </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XtraTreeList.TreeList.BackColor">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.BandPanelRowHeight">
       <summary>
@@ -5002,49 +5014,41 @@ By using <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> class method
       <summary>
         <para>Occurs when the band&#39;s width is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeCheckNode">
       <summary>
         <para>Occurs before a node&#39;s check state is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeCollapse">
       <summary>
         <para>Fires before a node is collapsed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeDragNode">
       <summary>
         <para>Fires when an attempt to drag a node is performed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeDropNode">
       <summary>
         <para>Fires when a node is about to be dropped, and allows you to cancel the operation.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeExpand">
       <summary>
         <para>Fires before a node is expanded. Allows you to implement dynamic node loading in unbound mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeFocusNode">
       <summary>
         <para>Fires before a node is focused.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.BeforeLoadLayout">
       <summary>
         <para>Occurs before a layout is restored from storage (a stream, xml file or the system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.BeginDelete">
       <summary>
@@ -5107,13 +5111,11 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Enables you to specify a custom image to be displayed in front of nodes when dragging.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CalcNodeHeight">
       <summary>
         <para>Allows you to assign custom node height.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CancelCurrentEdit">
       <summary>
@@ -5184,15 +5186,13 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CellValueChanged">
       <summary>
-        <para>Fires immediately after a cell editor is closed if the editor&#39;s value has been modified.</para>
+        <para>Fires immediately after a user closes a cell editor with a modified value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CellValueChanging">
       <summary>
         <para>Fires when an end-user starts to edit a cell value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CheckAll">
       <summary>
@@ -5256,7 +5256,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Repeatedly fires for each pasted row before updating the control, and allows you to modify pasted data and cancel pasting the currently processed row.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CloseEditor">
       <summary>
@@ -5278,19 +5277,16 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires when the column button is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ColumnChanged">
       <summary>
         <para>Fires immediately after the column collection or an individual column has been modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ColumnFilterChanged">
       <summary>
         <para>Occurs when a column&#39;s filter condition is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.ColumnPanelRowHeight">
       <summary>
@@ -5302,7 +5298,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires when a column is moved, hidden, or shown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.Columns">
       <summary>
@@ -5331,19 +5326,16 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires after a column&#39;s <see cref="P:DevExpress.XtraTreeList.Columns.TreeListColumn.UnboundExpression"/> property has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ColumnWidthChanged">
       <summary>
         <para>Fires after a column&#39;s width has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CompareNodeValues">
       <summary>
         <para>Enables you to implement custom sorting for columns whose <see cref="P:DevExpress.XtraTreeList.Columns.TreeListColumn.SortMode"/> property is set to Custom. For versions 17.1 and higher, the CompareNodeValues event is deprecated and replaced with the <see cref="E:DevExpress.XtraTreeList.TreeList.CustomColumnSort"/> event.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ConvertFormatConditionToFormatRules">
       <summary>
@@ -5405,7 +5397,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Provides the ability to create custom nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.CreateGraphicsCache">
       <summary>
@@ -5423,115 +5414,96 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires for both bound and unbound Tree List columns and allows you to provide a custom display text for any cell.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomColumnSort">
       <summary>
         <para>Allows you to apply custom sorting for those Tree List columns whose <see cref="P:DevExpress.XtraTreeList.Columns.TreeListColumn.SortMode"/> is set to Custom.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawBandHeader">
       <summary>
         <para>Provides the capability to custom paint band headers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawColumnHeader">
       <summary>
         <para>Provides the ability to custom paint column headers and the column button.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawEmptyArea">
       <summary>
         <para>Enables you to custom paint a Tree List&#39;s empty area.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawFilterPanel">
       <summary>
         <para>Enables you to custom paint the Filter Panel.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawFooter">
       <summary>
         <para>Gives you the ability to perform custom painting of the summary footer.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawFooterCell">
       <summary>
         <para>Gives you the ability to perform custom painting of column footer cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeButton">
       <summary>
         <para>Gives you the ability to perform custom painting of expand buttons.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeCell">
       <summary>
         <para>Provides the ability to perform custom painting of node cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeCheckBox">
       <summary>
         <para>Enables you to manually paint node check boxes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeImages">
       <summary>
         <para>Provides the ability to perform custom painting of node state and select images.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeIndent">
       <summary>
         <para>Enables tree indents to be painted manually.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodeIndicator">
       <summary>
         <para>Provides the ability to perform custom painting of indicator cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodePreview">
       <summary>
         <para>Allows you to custom paint preview sections.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawRow">
       <summary>
         <para>Provides the ability to perform custom painting of rows.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawRowFooter">
       <summary>
         <para>Provides the ability to perform custom painting of row footers.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomDrawRowFooterCell">
       <summary>
         <para>Provides the ability to perform custom painting of row footer cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomFilterDisplayText">
       <summary>
         <para>Allows the text displayed within the Filter Panel to be customized.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.CustomizationForm">
       <summary>
@@ -5555,31 +5527,26 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires when a node from another TreeList control is dropped onto the current TreeList control and thus, a new node in the current TreeList is about to be created. The event allows you to provide data for the new node that is to be created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomNodeCellEdit">
       <summary>
         <para>Enables editors to be assigned to cells on an individual basis.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomNodeCellEditForEditing">
       <summary>
         <para>Allows you to assign a custom editor to a column for in-place editing and override the default column editor, which is by default used both in display and edit modes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomRowFilter">
       <summary>
         <para>Allows you to specify the node visibility, regardless of the currently applied filter.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.CustomUnboundColumnData">
       <summary>
         <para>Allows you to provide data to unbound columns, and save their modified records to an external source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.DataMember">
       <summary>
@@ -5589,26 +5556,25 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.DataSource">
       <summary>
-        <para>Gets or sets the object used as the data source for the current <see cref="T:DevExpress.XtraTreeList.TreeList"/> control.</para>
+        <para>Gets or sets the data source for the current <see cref="T:DevExpress.XtraTreeList.TreeList"/> control.</para>
       </summary>
-      <value>The object used as the data source.</value>
+      <value>The data source object.</value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.DataSourceChanged">
       <summary>
         <para>Occurs whenever the <see cref="T:DevExpress.XtraTreeList.TreeList"/> changes its data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.DefaultPaintHelperChanged">
       <summary>
         <para>Fires when a different paint helper is assigned to the TreeList control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraTreeList.TreeList.DefaultTreeLevelWidth">
       <summary>
         <para>The default value for the <see cref="P:DevExpress.XtraTreeList.TreeList.TreeLevelWidth"/> property.</para>
       </summary>
+      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.DeleteNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -5657,7 +5623,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires immediately after a drag-and-drop operation over a node has been canceled.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.DragExpandDelay">
       <summary>
@@ -5675,19 +5640,16 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires immediately after the drag and drop operation has been completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.DragObjectOver">
       <summary>
         <para>Enables you to control whether the dragged column header can be dropped at the current position.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.DragObjectStart">
       <summary>
         <para>Fires when an end-user attempts to drag a column header.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.EditingValue">
       <summary>
@@ -5731,7 +5693,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       <summary>
         <para>Fires after a sorting operation has finished.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.EndUnboundLoad">
       <summary>
@@ -5786,11 +5747,25 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       </summary>
       <param name="stream">A System.IO.Stream object to which the created document should be exported.</param>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="stream"></param>
+      <param name="options"></param>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ExportToDocx(System.String)">
       <summary>
         <para>Exports the control&#39;s data in the Office Open XML file format and saves it to the specified DOCX file.</para>
       </summary>
       <param name="fileName">A System.String value which specifies the full path (including the file name and extension) where the DOCX file should be created.</param>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxExportOptions)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="fileName"></param>
+      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ExportToHtml(System.IO.Stream)">
       <summary>
@@ -5996,13 +5971,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to customize the Filter Editor before it is displayed on screen.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.FilterNode">
       <summary>
         <para>This event is obsolete. Use the <see cref="E:DevExpress.XtraTreeList.TreeList.CustomRowFilter"/> event instead.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.FilterNodes">
       <summary>
@@ -6025,25 +5998,21 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to customize templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelData">
       <summary>
         <para>Allows you to remove and modify items in the Excel-style Filter Dropdown, as well as add your own custom items that apply specific filtering conditions.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelPrepareTemplate">
       <summary>
         <para>Allows you to replace templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelQueryFilterCriteria">
       <summary>
         <para>Fires when a new data filter is about to be applied to the control using the Excel-style Filter Dropdown, and allows you to substitute the filter.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.FindFilterText">
       <summary>
@@ -6114,7 +6083,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires immediately after focus has been moved from a column.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.FocusedNode">
       <summary>
@@ -6126,7 +6094,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires immediately after changing the focused node.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.FocusedValue">
       <summary>
@@ -6218,19 +6185,16 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Provides the ability to assign editors to individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetCustomNodeCellStyle">
       <summary>
         <para>Provides the ability to assign custom style to individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetCustomSummaryValue">
       <summary>
         <para>Enables you to perform custom summary value calculations.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetDataRecordByNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -6326,7 +6290,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Provides the ability to display custom values within cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetNodeIndex(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -6345,19 +6308,16 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Enables you to supply custom text for nodes&#39; preview sections.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetPrintCustomSummaryValue">
       <summary>
         <para>Permits manual calculations of summary values for the printed version of the Tree List control.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetPrintPreviewText">
       <summary>
         <para>Enables you to display custom text in preview sections when the control is printed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetRow(System.Int32)">
       <summary>
@@ -6399,7 +6359,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to dynamically assign select images to nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetSortColumn(System.Int32)">
       <summary>
@@ -6412,7 +6371,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to assign state images to nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetSummaryValue(DevExpress.XtraTreeList.Columns.TreeListColumn)">
       <summary>
@@ -6458,13 +6416,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires immediately after a cell editor has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.HideCustomizationForm">
       <summary>
         <para>Fires immediately after the Customization Form has been closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.HideEditor">
       <summary>
@@ -6609,13 +6565,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires when a node fails validation or when its data cannot be saved to the data source.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.InvalidValueException">
       <summary>
         <para>Enables you to handle exceptions raised as a result of assigning invalid values to cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.InvokeMenuItemClick(DevExpress.XtraTreeList.TreeListMenuItemClickEventArgs)">
       <summary>
@@ -6691,9 +6645,9 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.KeyFieldName">
       <summary>
-        <para>Gets or sets the name of the key field that uniquely identifies records in the data source.</para>
+        <para>Gets or sets the data source field that uniquely identifies records in the data source.</para>
       </summary>
-      <value>A string value representing the name of the field used as the unique record identifier.</value>
+      <value>The key identifier field name.</value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.LayoutChanged">
       <summary>
@@ -6704,13 +6658,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires after a Tree List&#39;s layout has been changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.LayoutUpgrade">
       <summary>
         <para>Occurs after a layout the version of which doesn&#39;t match the current layout version used has been loaded from storage (a stream, xml file or system registry).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.LayoutVersion">
       <summary>
@@ -6728,13 +6680,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires when the control&#39;s content is scrolled horizontally.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.Load">
       <summary>
         <para>Occurs when a <see cref="T:DevExpress.XtraTreeList.TreeList"/> control is displayed for the first time.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.LoadingPanelVisible">
       <summary>
@@ -6770,7 +6720,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to specify the height of individual preview sections in pixels.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.MinWidth">
       <summary>
@@ -6867,13 +6816,11 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to customize the appearance of individual cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.NodeChanged">
       <summary>
         <para>Fires after the node&#39;s property has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.Nodes">
       <summary>
@@ -6891,7 +6838,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires when the Tree List control reloads all nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.NonColumnFilterCriteria">
       <summary>
@@ -6994,13 +6940,12 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>A DirectX-compatible method that replaces the standard Control.Paint method.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.ParentFieldName">
       <summary>
-        <para>Gets or sets the name of the data source field that identifies each record&#39;s parent. This Parent field contains corresponding parent records&#39; key fields (<see cref="P:DevExpress.XtraTreeList.TreeList.KeyFieldName"/> field values).</para>
+        <para>Gets or sets the data source field that identifies each record&#39;s parent.</para>
       </summary>
-      <value>The name of the field used as an identifier of a parent record within a data source.</value>
+      <value>The parent identifier field name.</value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.PasteFromClipboard">
       <summary>
@@ -7016,7 +6961,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Allows you to customize the default menus for column headers, summary footers and nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.PostEditor">
       <summary>
@@ -7049,7 +6993,6 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       <summary>
         <para>Fires repeatedly while the TreeList&#39;s data is being printed/exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.Refresh">
       <summary>
@@ -7086,10 +7029,22 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
       </summary>
       <param name="node">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> to be refreshed.</param>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.ResetAutoFilterCondition(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="column"></param>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ResetAutoFilterConditions">
       <summary>
         <para>Resets all automatic filtering row conditions to their defaults.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.ResetAutoFilterConditions(System.Collections.Generic.IEnumerable{DevExpress.XtraTreeList.Columns.TreeListColumn})">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="columns"></param>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.RestoreLayoutFromRegistry(System.String)">
       <summary>
@@ -7143,13 +7098,11 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to r
       <summary>
         <para>Fires when a cell is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.RowClick">
       <summary>
         <para>Fires when a row (node) is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.RowHeight">
       <summary>
@@ -7161,13 +7114,11 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to r
       <summary>
         <para>Fires when a row&#39;s select image is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.RowStateImageClick">
       <summary>
         <para>Fires when a row&#39;s state image is clicked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.SaveLayoutToRegistry(System.String)">
       <summary>
@@ -7245,7 +7196,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires when the user clicks a node&#39;s select image.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.SelectImageList">
       <summary>
@@ -7263,7 +7213,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires in response to changing selection when the TreeList is in multiselect mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.SelectNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -7445,7 +7394,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires immediately after the Customization Form has been displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowEditor">
       <summary>
@@ -7468,25 +7416,21 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Allows you to customize checked Column&#39;s Filter DropDown lists before they are displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ShowFilterPopupDate">
       <summary>
         <para>Allows you to customize a column&#39;s dropdown calendar before it is displayed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ShowFilterPopupExcel">
       <summary>
         <para>Allows you to hide specific filtering conditions from the &quot;Filters&quot; tab of the Excel-style Filter Dropdown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ShowFilterPopupListBox">
       <summary>
         <para>Enables you to customize a particular Column&#39;s Filter DropDown.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowFindPanel">
       <summary>
@@ -7497,7 +7441,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires before the TreeList is switched to edit mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowLoadingPanel">
       <summary>
@@ -7508,7 +7451,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires immediately after a cell editor has been invoked.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowPrintPreview">
       <summary>
@@ -7524,7 +7466,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Allows you to customize the default menus for column headers, summary footers and nodes.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowUnboundExpressionEditor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
       <summary>
@@ -7548,7 +7489,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires  before a sorting operation is started.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.State">
       <summary>
@@ -7560,13 +7500,11 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires after the Tree List&#39;s state has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.StateImageClick">
       <summary>
         <para>Fires when the user clicks a node&#39;s state image.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.StateImageList">
       <summary>
@@ -7583,7 +7521,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Allows you to replace the applied filter with another filter.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.SyncCheckStateWithSourceOnChecking">
       <summary>
@@ -7601,7 +7538,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires when the control&#39;s content is scrolled vertically.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.TopVisibleNodePixel">
       <summary>
@@ -7631,7 +7567,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Provides the ability to perform custom handling of a context menu item click.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.TreeViewColumn">
       <summary>
@@ -7649,7 +7584,6 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Fires after an Expression Editor has been created for an unbound column.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.UncheckAll">
       <summary>
@@ -7728,13 +7662,11 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>Gives you the ability to specify whether a modified node&#39;s data is valid, and if this node can lose focus.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ValidatingEditor">
       <summary>
         <para>Fires when an editor is validated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.VertScrollVisibility">
       <summary>
@@ -7758,19 +7690,16 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>This event allows you to initialize cells (and optionally the check state) of the processed node, when populating the Tree List control with data dynamically.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetChildNodes">
       <summary>
         <para>This event allows you to provide root and child nodes, when populating the Tree List control with data dynamically.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.VirtualTreeSetCellValue">
       <summary>
         <para>Allows changes that are made to node cells and check state to be stored.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.VisibleColumnCount">
       <summary>

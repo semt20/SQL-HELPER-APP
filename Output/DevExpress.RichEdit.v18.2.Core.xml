@@ -59,6 +59,7 @@
       <summary>
         <para>100000</para>
       </summary>
+      <value>An integer value.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.RichTextBrick.NoClip">
       <summary>
@@ -369,13 +370,11 @@
       <summary>
         <para>Fires after the document layout is calculated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.DocumentLayoutInvalidated">
       <summary>
         <para>Fires after any document modification which makes the current layout outdated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.EndUpdateDocument(DevExpress.XtraRichEdit.API.Native.SubDocument)">
       <summary>
@@ -458,7 +457,6 @@
       <summary>
         <para>Fires after a page layout is recalculated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.Split(DevExpress.XtraRichEdit.API.Layout.PlainTextBox)">
       <summary>
@@ -594,6 +592,23 @@
       <summary>
         <para>Initial position at the document&#39;s start.</para>
       </summary>
+    </member>
+    <member name="T:DevExpress.XtraRichEdit.API.Layout.InlineDrawingObjectBox">
+      <summary>
+        <para>Layout element that relates to the drawing objects.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraRichEdit.API.Layout.InlineDrawingObjectBox.Accept(DevExpress.XtraRichEdit.API.Layout.LayoutVisitor)">
+      <summary>
+        <para>Accepts a visitor.</para>
+      </summary>
+      <param name="visitor">A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> object that is the visitor.</param>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Layout.InlineDrawingObjectBox.ParagraphFrames">
+      <summary>
+        <para>Provides access to the collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> objects.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBoxCollection"/> object that is the paragraph frame box collection.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Layout.InlinePictureBox">
       <summary>
@@ -967,7 +982,7 @@
       <summary>
         <para>Accepts a visitor.</para>
       </summary>
-      <param name="visitor">A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> object  that is the visitor.</param>
+      <param name="visitor">A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> object that is the visitor.</param>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.ParagraphFrames">
       <summary>
@@ -2300,6 +2315,12 @@
       </summary>
       <param name="hyphen">A layout element to draw.</param>
     </member>
+    <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawInlineDrawingObject(DevExpress.XtraRichEdit.API.Layout.InlineDrawingObjectBox)">
+      <summary>
+        <para>Draws the <see cref="T:DevExpress.XtraRichEdit.API.Layout.InlineDrawingObjectBox"/> element. Override it in a class descendant to customize the element appearance.</para>
+      </summary>
+      <param name="inlineDrawingObjectBox">A layout element to draw.</param>
+    </member>
     <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawInlinePictureBox(DevExpress.XtraRichEdit.API.Layout.InlinePictureBox)">
       <summary>
         <para>Draws the <see cref="T:DevExpress.XtraRichEdit.API.Layout.InlinePictureBox"/> element. Override it in a class descendant to customize the element appearance.</para>
@@ -3364,11 +3385,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
         <para>Enables you to specify application-wide settings to ensure compatibility with previous versions of rich text editors.</para>
       </summary>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.AlignEachTableRow">
+      <summary>
+        <para>Specifies whether to align each row within a table independently.</para>
+      </summary>
+      <value>true to align each table row independently; otherwise, false. Default value is false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.AllowHyphenationAtTrackBottom">
       <summary>
         <para>Gets or sets whether a line that ends with a hyphenated word is allowed to be the last line in a page or column.</para>
       </summary>
       <value>True, if a line that ends with a hyphenated word is allowed to be the last line in a page or column; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.AllowTablesOutstepMargins">
+      <summary>
+        <para>Specifies whether to allow tables with enabled AutoFit feature to extend beyond the page margins.</para>
+      </summary>
+      <value>true to allow tables to outstep page margins; otherwise, false. Default value is false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.AllowTextAfterFloatingTableBreak">
       <summary>
@@ -3388,6 +3421,12 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
       </summary>
       <value>true, to apply the conditional formatting to every row separately in the multi-row header; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.DisableColumnBalance">
+      <summary>
+        <para>Specifies whether to disable balancing column height.</para>
+      </summary>
+      <value>true, to disable column balance; otherwise, false. Default value is false.</value>
+    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.DoNotFlipMirrorIndents">
       <summary>
         <para>Specifies whether to swap the mirrored paragraph indents.</para>
@@ -3405,6 +3444,18 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
         <para>Specifies whether the font size and the justification determined by the document table style should be overridden.</para>
       </summary>
       <value>true, to override the table style&#39;s font size and justification parameters; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.SplitPageBreakAndParagraphMark">
+      <summary>
+        <para>Specifies whether to move the paragraph mark to a new line on the next page if it is located after the page break.</para>
+      </summary>
+      <value>true, to split page break and paragraph mark; otherwise, false. Default value is false.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.StretchLinesWithLineBreaks">
+      <summary>
+        <para>Specifies whether to stretch lines which end in a line break when the parent paragraph is fully justified.</para>
+      </summary>
+      <value>true, to stretch lines with line breaks; otherwise, false. Default value is true.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.UseWord2013TrackBottomHyphenation">
       <summary>
@@ -3539,7 +3590,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
       <summary>
         <para>Fires when the DOCVARIABLE field is updated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Document.CaretPosition">
       <summary>
@@ -3569,7 +3619,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
       <summary>
         <para>Occurs when the document content was changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.Document.Copy">
       <summary>
@@ -3792,7 +3841,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
       <summary>
         <para>Occurs when the document content has been modified since it was last saved.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Document.NumberingLists">
       <summary>
@@ -3820,7 +3868,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.</par
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.Document.Paste">
       <summary>
-        <para>Insert a text from the Clipboard into the current <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.CaretPosition"/>.</para>
+        <para>Insert a text from the Clipboard into the current CaretPosition.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.Document.Paste(DevExpress.XtraRichEdit.DocumentFormat)">
@@ -5841,9 +5889,9 @@ context.</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Implementation.TextFragmentOptions.PreserveOriginalNumbering">
       <summary>
-        <para>Specifies whether to maintain the original page numbering in an acquired document range.</para>
+        <para>Specifies whether to maintain the original list numbering in an acquired document range.</para>
       </summary>
-      <value>true to preserve the original page numbers; false to reset the page numbers.</value>
+      <value>true to preserve the original numbering; false to reset numbering.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.InsertOptions">
       <summary>
@@ -5947,13 +5995,13 @@ context.</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ListLevel.CharacterProperties">
       <summary>
-        <para>Provides access to character formatting specified for the current list level.</para>
+        <para>Provides access to the level&#39;s character formatting options.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.CharacterPropertiesBase"/> object that contains character formatting.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.CharacterPropertiesBase"/> object that contains character format options.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ListLevel.ParagraphProperties">
       <summary>
-        <para>Provides access to paragraph characteristics specified for the current list level.</para>
+        <para>Provides access to the level&#39;s paragraph formatting options.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphPropertiesBase"/> object that contains paragraph formatting.</value>
     </member>
@@ -6185,12 +6233,12 @@ context.</para>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.ArabicAbjad">
       <summary>
-        <para>Specifies that the sequence shall consist of ascending Abjad numerals.Currently not supported.</para>
+        <para>Specifies that the sequence shall consist of ascending Abjad numerals.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.ArabicAlpha">
       <summary>
-        <para>Specifies that the sequence shall consist of characters in the Arabic alphabet.Currently not supported.</para>
+        <para>Specifies that the sequence shall consist of characters in the Arabic alphabet.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.Bullet">
@@ -6291,12 +6339,12 @@ Example: 01, 02, 03, ..., 09, 10</para>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.Hebrew1">
       <summary>
-        <para>Specifies that the sequence shall consist of Hebrew numerals.Currently not supported.</para>
+        <para>Specifies that the sequence shall consist of Hebrew numerals.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.Hebrew2">
       <summary>
-        <para>Specifies that the sequence shall consist of the Hebrew alphabet.Currently not supported.</para>
+        <para>Specifies that the sequence shall consist of the Hebrew alphabet.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.Hex">
@@ -6595,26 +6643,26 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.OverrideListLevel">
       <summary>
-        <para></para>
+        <para>Provides override options for the ListLevel class.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.OverrideListLevel.NewStart">
       <summary>
-        <para></para>
+        <para>Specifies a new starting number for a list level.</para>
       </summary>
-      <value></value>
+      <value>A new starting number.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.OverrideListLevel.OverrideStart">
       <summary>
-        <para></para>
+        <para>Indicates whether the overriding the level&#39;s starting number is enabled.</para>
       </summary>
-      <value></value>
+      <value>true, if overriding the level&#39;s starting number is enabled; otherwise, false.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.OverrideListLevel.SetOverrideStart(System.Boolean)">
       <summary>
-        <para></para>
+        <para>Specifies whether to override the level&#39;s starting number.</para>
       </summary>
-      <param name="value"></param>
+      <param name="value">true, to override the level&#39;s starting number; otherwise, false.</param>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.Paragraph">
       <summary>
@@ -6889,7 +6937,7 @@ Example: I, II, III</para>
         <para>Inserts a new Paragraph at a specified position.</para>
       </summary>
       <param name="pos">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> object that specifies a position to insert a new paragraph.</param>
-      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Paragraph"/> object representing the newly inserted paragraph. A newly inserted paragraph is a paragraph which follows the position specified in the method.</returns>
+      <returns>A paragraph that follows the inserted paragraph.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ParagraphCollection.Insert(DevExpress.XtraRichEdit.API.Native.DocumentPosition,DevExpress.XtraRichEdit.API.Native.InsertOptions)">
       <summary>
@@ -6897,7 +6945,7 @@ Example: I, II, III</para>
       </summary>
       <param name="pos">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> object that specifies a position to insert a new paragraph.</param>
       <param name="insertOptions">An <see cref="T:DevExpress.XtraRichEdit.API.Native.InsertOptions"/> enumeration value, specifying how destination formatting is applied to inserted content.</param>
-      <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Paragraph"/> object representing the newly inserted paragraph.</returns>
+      <returns>A paragraph that follows the inserted paragraph.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.ParagraphCollection.RemoveNumberingFromParagraph(DevExpress.XtraRichEdit.API.Native.Paragraph)">
       <summary>
@@ -7648,9 +7696,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.RightToLeft">
       <summary>
-        <para></para>
+        <para>Gets whether the paragraph&#39;s text direction is right-to-left.</para>
       </summary>
-      <value></value>
+      <value>true, if the paragraph&#39;s direction is right-to-left; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.SpacingAfter">
       <summary>
@@ -8877,6 +8925,12 @@ Example: I, II, III</para>
         <para>Gets or sets how the shape is surrounded by the text.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TextWrappingType"/> enumeration member.</value>
+    </member>
+    <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.TextWrappingSide">
+      <summary>
+        <para>Specifies how text should wrap around the shape&#39;s sides.</para>
+      </summary>
+      <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.TextWrappingSide"/> enumeration values indicating the wrap side.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.Shape.VerticalAlignment">
       <summary>
@@ -10823,9 +10877,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.ContentRange">
       <summary>
-        <para>Gets the document range that corresponds to the table cell.</para>
+        <para>Gets the document range occupied by the cell content.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> that is the range in the document which comprises the current cell.</value>
+      <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> that is the target range.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.TableCell.Delete">
       <summary>
@@ -10888,7 +10942,7 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.Range">
       <summary>
-        <para>Gets a document range occupying by the current cell.</para>
+        <para>Gets a document range occupied by the current cell.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> occupied by a cell.</value>
     </member>
@@ -11983,6 +12037,31 @@ Example: I, II, III</para>
     <member name="F:DevExpress.XtraRichEdit.API.Native.TextBoxSizeRule.Exact">
       <summary>
         <para>Sets the height to an exact value specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Shape.Size"/> property.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraRichEdit.API.Native.TextWrappingSide">
+      <summary>
+        <para>Lists values used to specify how the text should wrap around the shape&#39;s sides.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Both">
+      <summary>
+        <para>The text is wrapped around both the shape&#39;s sides.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Largest">
+      <summary>
+        <para>The text is wrapped around the shape&#39;s largest side.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Left">
+      <summary>
+        <para>The text is wrapped around the shape&#39;s left side.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.API.Native.TextWrappingSide.Right">
+      <summary>
+        <para>The text is wrapped around the shape&#39;s right side.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Native.TextWrappingType">
@@ -18292,411 +18371,493 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value></value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.AddSpacingAfterParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.AddSpacingAfterParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.AddSpacingBeforeParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.AddSpacingBeforeParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.AddWordToDictionary">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.AddWordToDictionaryCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.BackSpaceKey">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.BackSpaceKeyCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CapitalizeEachWordTextCase">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CapitalizeEachWordCaseCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeCase">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeCaseCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeDoubleFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeDoubleFontSizeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFloatingObjectAlignment">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFloatingObjectFillColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFloatingObjectFillColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFloatingObjectOutlineColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFloatingObjectOutlineColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFloatingObjectOutlineWeight">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFloatingObjectOutlineWidthCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFloatingObjectTextWrapType">
       <summary>
         <para>Identifies a command that serves as the placeholder for command buttons in bar or Ribbon UI.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontBackColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontBackColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontForeColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontColorCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontHighlightColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontName">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontNameCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontSizeCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontStyle">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeLanguage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeLanguageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeNoProof">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeNoProofCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangePageColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangePageColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeParagraphBackColor">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeParagraphBackColorCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeParagraphLineSpacing">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeParagraphLineSpacingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionLineNumbering">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionPageMargins">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionPageOrientation">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionPaperKind">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionPaperKindPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSelectionShading">
       <summary>
         <para>ChangeSelectionShadingCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableBordersPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableCellsBorderColor">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableCellsBorderLineStyle">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableCellsBorderLineWeight">
       <summary>
         <para>DevExpress.XtraRichEdit.Commands.ChangeCurrentBorderRepositoryItemLineThicknessCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableCellsContentAlignmentPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableCellsShading">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTableStyle">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeTableStyleCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeTextCasePlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CheckSpelling">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CheckSpellingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ClearFormatting">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ClearFormattingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ClearUndo">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ClearUndoCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ClosePageHeaderFooter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ClosePageHeaderFooterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CollapseOrExpandFormulaBar">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CollapseOrExpandFormulaBarCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CopySelection">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CopySelectionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CreateBookmark">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CreateBookmarkCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CreateField">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CreateFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CreateHyperlink">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.CutSelection">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CutSelectionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DecreaseFontSizeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseIndent">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DecrementIndentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseNumerationParagraphIndent">
       <summary>
         <para><see cref="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseNumerationParagraphIndent"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseParagraphLeftIndent">
       <summary>
         <para><see cref="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecreaseParagraphLeftIndent"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecrementFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DecrementFontSizeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecrementNumerationFromParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DecrementNumerationFromParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DecrementParagraphOutlineLevel">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DecrementParagraphOutlineLevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Delete">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteAllComments">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteAllCommentsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteAllCommentsShown">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteAllCommentsShownCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteCommentsPlaceholder">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteNonEmptySelection">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteOneComment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteOneCommentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteOneCommentContentMenu">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteOneCommentCommand"/> descendant ID for use in context menu.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteRepeatedWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteRepeatedWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTable">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteTableCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTableColumns">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteTableColumnsCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTableColumnsMenuItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteTableColumnsMenuCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTablePlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTableRows">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteTableRowsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTableRowsMenuItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteTableRowsMenuCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteTableStyle">
       <summary>
         <para>DeleteTableStyleCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeleteWordBack">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeleteWordBackCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeselectAll">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeselectAllCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragCopyContent">
       <summary>
         <para>DragCopyContentCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragCopyExternalContent">
       <summary>
         <para>DragCopyExternatContentCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragMoveContent">
       <summary>
         <para>DragMoveContentCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EditHyperlink">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EditHyperlinkCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EditPageFooter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EditPageFooterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EditPageHeader">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EditPageHeaderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EndOfDocument">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EndOfDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EndOfLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EndOfLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.EnterKey">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.EnterKeyCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Equals(DevExpress.XtraRichEdit.Commands.RichEditCommandId)">
       <summary>
@@ -18716,186 +18877,223 @@ Example: I, II, III</para>
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendEndOfDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendEndOfLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendEndOfLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextCharacter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextCharacterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextScreen">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextScreenCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendNextWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendNextWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousCharacter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousCharacterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousScreen">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousScreenCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendPreviousWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendPreviousWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendStartOfDocument">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendStartOfDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ExtendStartOfLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ExtendStartOfLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FileNew">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.CreateEmptyDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FileOpen">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.LoadDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FileSave">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SaveDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FileSaveAs">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SaveDocumentAsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Find">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FindCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FindBackward">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FindForward">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FindNext">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FindNextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FindPrev">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FindPrevCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FirstDataRecord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FirstDataRecordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FitHeight">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FitHeightCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FitToPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FitToPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FitWidth">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FitWidthCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectBringForward">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectBringForwardCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectBringForwardPlaceholder">
       <summary>
         <para>Identifies a command that serves as the placeholder for command buttons in bar or Ribbon UI.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectBringInFrontOfText">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectBringInFrontOfTextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectBringToFront">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectBringToFrontCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectSendBackward">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectSendBackwardCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectSendBackwardPlaceholder">
       <summary>
         <para>Identifies a command that serves as the placeholder for command buttons in bar or Ribbon UI.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectSendBehindText">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectSendBehindTextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.FloatingObjectSendToBack">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.FloatingObjectSendToBackCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.Commands.RichEditCommandId.GetHashCode">
       <summary>
@@ -18907,396 +19105,475 @@ Example: I, II, III</para>
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.GoToNextPageHeaderFooterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.GoToPage">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.GoToPageFooter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.GoToPageFooterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.GoToPageHeader">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.GoToPageHeaderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.GoToPreviousHeaderFooter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.GoToPreviousPageHeaderFooterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IgnoreAllMisspellings">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IgnoreAllMisspellingsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IgnoreMisspelling">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IgnoreMisspellingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ImeUndo">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IncreaseFontSizeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseIndent">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IncrementIndentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseNumerationParagraphIndent">
       <summary>
         <para><see cref="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseNumerationParagraphIndent"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseParagraphLeftIndent">
       <summary>
         <para><see cref="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncreaseParagraphLeftIndent"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncrementFontSize">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IncrementFontSizeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncrementNumerationFromParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IncrementNumerationFromParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.IncrementParagraphOutlineLevel">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.IncrementParagraphOutlineLevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InnerReplace">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertBreak">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertCaptionPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertColumnBreak">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertColumnBreakCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertCopyrightSymbol">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertCopyrightSymbolCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertEllipsis">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertEllipsisCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertEmDash">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertEmDashCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertEnDash">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertEnDashCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertEquationsCaption">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertEquationsCaptionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertFiguresCaption">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertFiguresCaptionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertFloatingPicture">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertFloatingObjectPictureCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertLineBreak">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertLineBreakCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertMailMergeField">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertMergeFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertMailMergeFieldPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertNonBreakingSpace">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertNonBreakingSpaceCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPageBreak">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertPageBreakCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPageBreak2">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertPageBreakCommand2"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPageCountField">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertPageCountFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPageNumberField">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertPageNumberFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPicture">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertPictureCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertPictureInner">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertRegisteredTrademarkSymbol">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertRegisteredTrademarkSymbolCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertSectionBreakContinuous">
       <summary>
         <para>Reserved. Currently not in use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertSectionBreakEvenPage">
       <summary>
         <para>Reserved. Currently not in use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertSectionBreakNextPage">
       <summary>
         <para>Reserved. Currently not in use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertSectionBreakOddPage">
       <summary>
         <para>Reserved. Currently not in use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertSymbol">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTab">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTabCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTable">
       <summary>
         <para>Gets the ID of the <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/>.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableColumnToTheLeft">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableColumnToTheLeftCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableColumnToTheRight">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableColumnToTheRightCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableInner">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableOfContents">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableOfContentsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableOfEquations">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableOfEquationsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableOfFigures">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableOfFiguresCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableOfFiguresPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableOfTables">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableOfTablesCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableRowAbove">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableRowAboveCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTableRowBelow">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTableRowBelowCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTablesCaption">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTablesCaptionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertText">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTextBox">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTextBoxCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.InsertTrademarkSymbol">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.InsertTrademarkSymbolCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.LastDataRecord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.LastDataRecordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.LockFieldCommand">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.LockFieldCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.MailMergeSaveDocumentAs">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.MailMergeSaveDocumentAsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.MakeTextLowerCase">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.MakeTextLowerCaseCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.MakeTextUpperCase">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.MakeTextUpperCaseCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.MergeTableCells">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.MergeTableCellsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.MergeTableElement">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ModifyTableStyle">
       <summary>
         <para>ModifyTableStyleCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NewComment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NewCommentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NewCommentContentMenu">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NewCommentCommand"/> descendant ID for use in context menu.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NewTableStyle">
       <summary>
         <para>NewTableStyleCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextCharacter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextCharacterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextComment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextCommentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextDataRecord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextDataRecordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextScreen">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextScreenCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.NextWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.NextWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.None">
       <summary>
         <para>Empty or invalid command ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.Commands.RichEditCommandId.op_Equality(DevExpress.XtraRichEdit.Commands.RichEditCommandId,DevExpress.XtraRichEdit.Commands.RichEditCommandId)">
       <summary>
@@ -19318,926 +19595,1111 @@ Example: I, II, III</para>
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.OpenHyperlinkCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.OvertypeText">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.OvertypeTextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PasteSelection">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PasteSelectionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousCharacter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousCharacterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousComment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousCommentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousDataRecord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousDataRecordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousScreen">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousScreenCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PreviousWord">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PreviousWordCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Print">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PrintCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.PrintPreview">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.PrintPreviewCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ProtectDocument">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ProtectDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.QuickPrint">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.QuickPrintCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Redo">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.RedoCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RemoveHyperlink">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.RemoveHyperlinkFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RemoveSpacingAfterParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.RemoveSpacingAfterParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RemoveSpacingBeforeParagraph">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.RemoveSpacingBeforeParagraphCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Replace">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ReplaceCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ReplaceAllForward">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ReplaceForward">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ReplaceMisspelling">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ReplaceMisspellingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ResetMerging">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ResetTableCellsAllBorders">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ResetTableCellsBordersCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ResizeInlinePicture">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ResizeInlinePictureCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Reviewers">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ReviewersCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.RotateInlinePicture">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectAll">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SelectAllCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectTable">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SelectTableCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectTableCell">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectTableColumns">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectTablePlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectTableRow">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SelectUpperLevelObject">
       <summary>
         <para>For internal use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetDoubleParagraphSpacing">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetDoubleParagraphSpacingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectBehindTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectBehindTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectBottomCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectBottomCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectBottomLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectBottomLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectBottomRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectBottomRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectInFrontOfTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectInFrontOfTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectInlineWithTextWrapType">
       <summary>
         <para>SetFloatingObjectInlineWithTextWrapTypeCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectMiddleCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectMiddleCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectMiddleLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectMiddleLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectMiddleRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectMiddleRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectSquareTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectSquareTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectThroughTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectThroughTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectTightTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectTightTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectTopAndBottomTextWrapType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectTopAndBottomTextWrapTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectTopCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectTopCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectTopLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectTopLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetFloatingObjectTopRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetFloatingObjectTopRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetLandscapePageOrientation">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetLandscapePageOrientationCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetModerateSectionPageMargins">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetModerateSectionPageMarginsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetNarrowSectionPageMargins">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetNarrowSectionPageMarginsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetNormalSectionPageMargins">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetNormalSectionPageMarginsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphBodyTextLevel">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphBodyTextLevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading1Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading1LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading2Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading2LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading3Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading4Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading4LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading5Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading5LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading6Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading6LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading7Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading7LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading8Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading8LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetParagraphHeading9Level">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading9LevelCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetPortraitPageOrientation">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetPortraitPageOrientationCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionColumnsPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionLineNumberingContinuous">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionLineNumberingContinuousCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionLineNumberingNone">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionLineNumberingNoneCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionLineNumberingRestartNewPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionLineNumberingRestartNewPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionLineNumberingRestartNewSection">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionLineNumberingRestartNewSectionCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionOneColumn">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionOneColumnCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionThreeColumns">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionThreeColumnsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSectionTwoColumns">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSectionTwoColumnsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSesquialteralParagraphSpacing">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSesquialteralParagraphSpacingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetSingleParagraphSpacing">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetSingleParagraphSpacingCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SetWideSectionPageMargins">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SetWideSectionPageMarginsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShiftTabKey">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShiftTabKeyCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowAllFieldCodes">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowAllFieldCodesCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowAllFieldResults">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowAllFieldResultsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowBookmarkForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowBookmarkFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowBorderShadingForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowColumnsSetupForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowColumnsSetupFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowDeleteTableCellsForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowDeleteTableCellsFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowDeleteTableCellsFormMenuItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowDeleteTableCellsFormMenuCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowDocumentPropertiesForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowDocumentPropertiesFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowEditStyleForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowEditStyleFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowFloatingObjectLayoutOptionsForm">
       <summary>
         <para>Reserved for future use.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowFontForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowFontFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowHyperlinkForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowHyperlinkFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowInsertMergeFieldForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowInsertMergeFieldFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowInsertTableCellsForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowInsertTableCellsFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowLanguageForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowLanguageFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowLineNumberingForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowLineNumberingFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowLineSpacingForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowLineSpacingFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowNumberingListForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowNumberingListFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowPageMarginsSetupForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowPageMarginsSetupFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowPagePaperSetupForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowPagePaperSetupFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowPageSetupForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowPageSetupFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowParagraphForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowParagraphFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowPasteSpecialForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowPasteSpecialFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowRangeEditingPermissionsForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowRangeEditingPermissionsFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowReviewingPane">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowReviewingPaneCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowSplitTableCellsForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowSplitTableCellsFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowSplitTableCellsFormMenuItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowSplitTableCellsFormMenuCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowSymbolForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowSymbolFormCommand"/> and <see cref="T:DevExpress.XtraRichEdit.Commands.InsertSymbolCommand"/> identifiers.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowTableOptionsForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowTableOptionsFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowTablePropertiesForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowTablePropertiesFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowTablePropertiesFormMenuItem">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowTOCForm">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowTOCFormCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SplitTable">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SplitTableCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.StartOfDocument">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.StartOfDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.StartOfLine">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.StartOfLineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SwitchToDraftView">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SwitchToDraftViewCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SwitchToPrintLayoutView">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SwitchToPrintLayoutViewCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.SwitchToSimpleView">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.SwitchToSimpleViewCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.TabKey">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.TabKeyCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleAllFields">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleBandedColumns">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleBandedColumnsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleBandedRows">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleBandedRowsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleBulletedListItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleBulletedListCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleDifferentFirstPage">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleDifferentFirstPageCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleDifferentOddAndEvenPages">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleDifferentOddAndEvenPagesCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFieldCodes">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFieldCodesCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFieldLockedCommand">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFieldLockedCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFirstColumn">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFirstColumnCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFirstRow">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFirstRowCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontBold">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontBoldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontDoubleStrikeout">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontDoubleStrikeoutCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontDoubleUnderline">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontDoubleUnderlineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontItalic">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontItalicCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontStrikeout">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontStrikeoutCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontSubscript">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontSubscriptCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontSuperscript">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontSuperscriptCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleFontUnderline">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleFontUnderlineCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleHeaderFooterLinkToPrevious">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleHeaderFooterLinkToPreviousCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleHiddenText">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleHiddenTextCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleLastColumn">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleLastColumnCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleLastRow">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleLastRowCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleMultilevelListItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleMultiLevelListCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleNumberingListItem">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleSimpleNumberingListCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleOvertype">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleOvertypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphAlignmentCenter">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleParagraphAlignmentCenterCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphAlignmentJustify">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleParagraphAlignmentJustifyCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphAlignmentLeft">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleParagraphAlignmentLeftCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphAlignmentRight">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleParagraphAlignmentRightCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphLeftToRight">
       <summary>
         <para>ToggleParagraphLeftToRightCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphRightToLeft">
       <summary>
         <para>ToggleParagraphRightToLeftCommand ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphSuppressHyphenation">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleParagraphSuppressLineNumbers">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleParagraphSuppressLineNumbersCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleReviewingPane">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleReviewingPaneCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleShowHorizontalRuler">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleShowHorizontalRulerCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleShowTableGridLines">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleShowVerticalRuler">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleShowVerticalRulerCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleShowWhitespace">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleShowWhitespaceCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleSpellCheckAsYouType">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleSpellCheckAsYouTypeCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableAutoFitContents">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableAutoFitContentsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableAutoFitMenuPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableAutoFitPlaceholder">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableAutoFitWindow">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableAutoFitWindowCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsAllBorders">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsAllBordersCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsBottomBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsBottomBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsBottomCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsBottomCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsBottomLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsBottomLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsBottomRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsBottomRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsInsideBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsInsideBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsInsideHorizontalBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsInsideHorizontalBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsInsideVerticalBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsInsideVerticalBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsLeftBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsLeftBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsMiddleCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsMiddleCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsMiddleLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsMiddleLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsMiddleRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsMiddleRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsOutsideBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsOutsideBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsRightBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsRightBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsTopBorder">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsTopBorderCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsTopCenterAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsTopCenterAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsTopLeftAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsTopLeftAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableCellsTopRightAlignment">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableCellsTopRightAlignmentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTableFixedColumnWidth">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTableFixedColumnWidthCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleTextCase">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleTextCaseCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToggleViewMergedData">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ToggleViewMergedDataCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToolsFloatingPictureCommandGroup">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToolsHeaderFooterCommandGroup">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToolsTableCommandGroup">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ToString">
       <summary>
@@ -20249,61 +20711,73 @@ Example: I, II, III</para>
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UndoCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UnlockFieldCommand">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UnlockFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UnprotectDocument">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UnprotectDocumentCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UpdateField">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UpdateFieldCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UpdateFields">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UpdateFieldsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UpdateTableOfContents">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UpdateTableOfContentsCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.UpdateTableOfFigures">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.UpdateTableOfFiguresCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ViewComments">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ViewCommentsCommand"/> ID</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.Zoom">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ZoomIn">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ZoomInCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ZoomOut">
       <summary>
         <para><see cref="T:DevExpress.XtraRichEdit.Commands.ZoomOutCommand"/> ID.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ZoomPercent">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+      <value>A command ID.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.Commands.RichEditMenuItemSimpleCommand">
       <summary>
@@ -22438,12 +22912,6 @@ Example: I, II, III</para>
         <para>Gets a string resource identifier of a menu caption corresponding to <see cref="T:DevExpress.XtraRichEdit.Commands.ShowLanguageFormCommand"/>.</para>
       </summary>
       <value>An XtraRichEditStringId enumeration value, identifying the resource string.</value>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.Commands.ShowLanguageFormCommand.UpdateUIState(DevExpress.Utils.Commands.ICommandUIState)">
-      <summary>
-        <para>Updates the command state and applies restrictions.</para>
-      </summary>
-      <param name="state">An <see cref="T:DevExpress.Utils.Commands.ICommandUIState"/> interface defining the state of a command.</param>
     </member>
     <member name="T:DevExpress.XtraRichEdit.Commands.ShowLineNumberingFormCommand">
       <summary>
@@ -26701,11 +27169,13 @@ Example: I, II, III</para>
       <summary>
         <para>MS Word 97-2003 binary file format.</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.ePub">
       <summary>
         <para>EPUB&#174; - standard format for electronic books and other digital publications.</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.DocumentFormat.Equals(System.Object)">
       <summary>
@@ -26724,11 +27194,13 @@ Example: I, II, III</para>
       <summary>
         <para>The HTML format.</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.Mht">
       <summary>
         <para>The MHT format - web page archive format used to save HTML code with resources represented by external links (images etc.), in a single file</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.DocumentFormat.op_Equality(DevExpress.XtraRichEdit.DocumentFormat,DevExpress.XtraRichEdit.DocumentFormat)">
       <summary>
@@ -26750,21 +27222,25 @@ Example: I, II, III</para>
       <summary>
         <para>The OpenDocument text format (.odt, implemented by OpenOffice.org office suite).</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.OpenXml">
       <summary>
         <para>The OpenXML file format (aka default MS Office 2007 format or .docx)</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.PlainText">
       <summary>
         <para>The plain text format.</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.Rtf">
       <summary>
         <para>The Rich Text Format (RTF).</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.DocumentFormat.ToString">
       <summary>
@@ -26776,11 +27252,13 @@ Example: I, II, III</para>
       <summary>
         <para>The document&#39;s format is undefined.</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="F:DevExpress.XtraRichEdit.DocumentFormat.WordML">
       <summary>
         <para>The WordprocessingML format (.xml, implemented in MS Office 2003).</para>
       </summary>
+      <value>A document format.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.DocumentLayoutUnit">
       <summary>
@@ -26983,6 +27461,7 @@ Example: I, II, III</para>
       <summary>
         <para>Specifies the current value of the DOCVARIABLE field.</para>
       </summary>
+      <value>The current field value.</value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.DraftView">
       <summary>
@@ -27447,7 +27926,7 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.IgnoreHangingIndentOnNumberingList">
       <summary>
-        <para>Gets or sets whether to ignore the paragraph&#39;s hanging indent value when exporting the numbering and bulleted lists to HTML as plain text.</para>
+        <para>Gets or sets whether to ignore the paragraph&#39;s hanging indent value when exporting the numbering and bulleted lists to HTML.</para>
       </summary>
       <value>true, to ignore the hanging parameter; otherwise, false.</value>
     </member>
@@ -27582,6 +28061,26 @@ Example: I, II, III</para>
         <para>Gets or sets whether style with names longer than 253 characters should be automatically renamed in the exported file.</para>
       </summary>
       <value>True, to rename styles with names longer than 253 characters; otherwise, false.</value>
+    </member>
+    <member name="N:DevExpress.XtraRichEdit.Export.PlainText">
+      <summary>
+        <para>Contains classes specific for plain text document export.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark">
+      <summary>
+        <para>Lists criteria used to decide whether to add a final paragraph mark to exported content.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark.Always">
+      <summary>
+        <para>Always adds the &#39;\par&#39; tag to the end of exported plain content.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraRichEdit.Export.PlainText.ExportFinalParagraphMark.Never">
+      <summary>
+        <para>Never adds the &#39;\par&#39; tag to the end of exported plain content.</para>
+      </summary>
     </member>
     <member name="T:DevExpress.XtraRichEdit.Export.PlainTextDocumentExporterOptions">
       <summary>
@@ -29276,31 +29775,26 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs after the document is successfully exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.BeforeExport">
       <summary>
         <para>Occurs before the document is saved (exported to a certain format).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.BeforeImport">
       <summary>
         <para>Occurs before a document is loaded (imported from an external source).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.CalculateDocumentVariable">
       <summary>
         <para>Fires when the DOCVARIABLE field is updated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.ContentChanged">
       <summary>
         <para>Occurs when the document content was changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.IRichEditDocumentServer.CreateMailMergeOptions">
       <summary>
@@ -29319,7 +29813,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.DocBytes">
       <summary>
@@ -29337,19 +29830,16 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when a document that has not yet been saved is about to be closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.DocumentLoaded">
       <summary>
         <para>Occurs after a document is loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.DocumentPropertiesChanged">
       <summary>
         <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.DpiX">
       <summary>
@@ -29367,7 +29857,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when a new document is created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.IRichEditDocumentServer.GetService``1">
       <summary>
@@ -29385,13 +29874,11 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.InitializeDocument">
       <summary>
         <para>Occurs before a document is loaded. Handle this event to set initial document settings.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.IsDisposed">
       <summary>
@@ -29481,25 +29968,21 @@ Example: I, II, III</para>
       <summary>
         <para>Fires when mail merge is completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.MailMergeRecordFinished">
       <summary>
         <para>Fires after each data record is merged with the document in the mail merge process.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.MailMergeRecordStarted">
       <summary>
         <para>Fires before each data record is merged with the document in the mail merge process.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.MailMergeStarted">
       <summary>
         <para>Fires before mail merge starts.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.MhtText">
       <summary>
@@ -29511,11 +29994,10 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.Model">
       <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
+        <para>For internal use.</para>
       </summary>
       <value></value>
     </member>
@@ -29529,7 +30011,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when the value of the <see cref="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.Modified"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.OpenDocumentBytes">
       <summary>
@@ -29541,7 +30022,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.OpenXmlBytes">
       <summary>
@@ -29553,7 +30033,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.Options">
       <summary>
@@ -29578,7 +30057,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.IRichEditDocumentServer.SaveDocument(System.IO.Stream,DevExpress.XtraRichEdit.DocumentFormat)">
       <summary>
@@ -29591,7 +30069,6 @@ Example: I, II, III</para>
       <summary>
         <para>Fires in response to changing a selection in the document.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.Text">
       <summary>
@@ -29609,13 +30086,11 @@ Example: I, II, III</para>
       <summary>
         <para>Fires after the Unit property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.UnitChanging">
       <summary>
         <para>Fires before the Unit property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.IRichEditDocumentServer.WordMLText">
       <summary>
@@ -29627,7 +30102,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.IRichEditViewVisitor">
       <summary>
@@ -31012,7 +31486,7 @@ Example: I, II, III</para>
     </member>
     <member name="T:DevExpress.XtraRichEdit.RichEditDocumentServer">
       <summary>
-        <para>A non-visual rich text engine providing all the RichEditControl functionality except user interface features.</para>
+        <para>A non-visual .NET library providing all the word processing functionality.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.#ctor">
@@ -31054,25 +31528,21 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs after the document is successfully exported.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.BeforeExport">
       <summary>
         <para>Occurs before the document is saved (exported to a certain format).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.BeforeImport">
       <summary>
         <para>Occurs before a document is loaded (imported from an external source).</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.BeforePagePaint">
       <summary>
         <para>Enables you to specify a custom <see cref="T:DevExpress.XtraRichEdit.API.Layout.PagePainter"/> descendant to alter the way the layout elements are drawn.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.BeginInitialize">
       <summary>
@@ -31081,31 +31551,28 @@ Example: I, II, III</para>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.BeginUpdate">
       <summary>
-        <para>Locks the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"></see> object by disallowing visual updates until the EndUpdate or CancelUpdate method is called.</para>
+        <para>Locks the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"/> object until the <see cref="M:DevExpress.XtraRichEdit.RichEditDocumentServer.EndUpdate"/> method is called.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.CalculateDocumentVariable">
       <summary>
         <para>Fires when the DOCVARIABLE field is updated.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.CancelUpdate">
       <summary>
-        <para>Unlocks the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"></see> object after it has been locked by the BeginUpdate method, without causing an immediate visual update.</para>
+        <para>This method supports the internal infrastructure and is not intended to be called directly from your code. Use the <see cref="M:DevExpress.XtraRichEdit.RichEditDocumentServer.EndUpdate"/> method instead.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.CommentInserted">
       <summary>
         <para>Occurs after a new comment is created in the document.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.ContentChanged">
       <summary>
         <para>Occurs when the document content was changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.CreateMailMergeOptions">
       <summary>
@@ -31124,7 +31591,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.Dispose">
       <summary>
@@ -31141,7 +31607,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Document">
       <summary>
@@ -31153,7 +31618,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when a document that has not yet been saved is about to be closed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.DocumentLayout">
       <summary>
@@ -31165,13 +31629,11 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs after a document is loaded.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.DocumentPropertiesChanged">
       <summary>
         <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> has changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.DpiX">
       <summary>
@@ -31189,11 +31651,10 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when a new document is created.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.EndUpdate">
       <summary>
-        <para>Unlocks the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"></see> object after a call to the BeginUpdate method and causes an immediate visual update.</para>
+        <para>Unlocks the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"/> object.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.ExportToPdf(System.IO.Stream)">
@@ -31253,19 +31714,16 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.InitializeDocument">
       <summary>
         <para>Occurs before a document is loaded. Handle this event to set initial document settings.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.InvalidFormatException">
       <summary>
         <para>Fires when the supplied data could not be recognized as data in the assumed format for import.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.IsPrintingAvailable">
       <summary>
@@ -31275,9 +31733,9 @@ Example: I, II, III</para>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.IsUpdateLocked">
       <summary>
-        <para>Gets whether the object has been locked for updating.</para>
+        <para>Returns a value indicating whether the <see cref="T:DevExpress.XtraRichEdit.RichEditDocumentServer"/> object is locked for update.</para>
       </summary>
-      <value>true if the object is locked; otherwise, false.</value>
+      <value>true, if the object is locked; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.LayoutCalculationMode">
       <summary>
@@ -31429,25 +31887,21 @@ Example: I, II, III</para>
       <summary>
         <para>Fires when mail merge is completed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.MailMergeRecordFinished">
       <summary>
         <para>Fires after each data record is merged with the document in the mail merge process.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.MailMergeRecordStarted">
       <summary>
         <para>Fires before each data record is merged with the document in the mail merge process.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.MailMergeStarted">
       <summary>
         <para>Fires before mail merge starts.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.MhtText">
       <summary>
@@ -31459,11 +31913,10 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Model">
       <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
+        <para>For internal use.</para>
       </summary>
       <value></value>
     </member>
@@ -31477,7 +31930,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when the value of the <see cref="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Modified"/> property is changed.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.OpenDocumentBytes">
       <summary>
@@ -31489,7 +31941,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.OpenXmlBytes">
       <summary>
@@ -31501,7 +31952,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Options">
       <summary>
@@ -31557,7 +32007,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.SaveDocument(System.IO.Stream,DevExpress.XtraRichEdit.DocumentFormat)">
       <summary>
@@ -31577,7 +32026,6 @@ Example: I, II, III</para>
       <summary>
         <para>Fires in response to changing a selection in the document.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Text">
       <summary>
@@ -31589,7 +32037,6 @@ Example: I, II, III</para>
       <summary>
         <para>This event is raised when an exception unhandled by the RichEditDocumentServer occurs.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditDocumentServer.Unit">
       <summary>
@@ -31607,7 +32054,6 @@ Example: I, II, III</para>
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraRichEdit.RichEditFormattingMarkVisibility">
       <summary>
@@ -31766,7 +32212,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs when the options are modified.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditNotificationOptions.Reset">
       <summary>
@@ -31921,9 +32366,9 @@ Example: I, II, III</para>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditView.GetCursorBounds">
       <summary>
-        <para>Gets the cursor coordinates in the current document&#39;s view.</para>
+        <para>Gets the caret coordinates in the current document&#39;s view.</para>
       </summary>
-      <returns>A <see cref="T:System.Drawing.Rectangle"/> representing the cursor. The units of measurement are documents.</returns>
+      <returns>The rectangle encompassing the caret measured in <see cref="F:DevExpress.Office.DocumentUnit.Document"/>.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditView.GetDocumentLayoutPosition(System.Drawing.Point)">
       <summary>
@@ -31955,7 +32400,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs every time any of the RichEditView class properties has changed its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraRichEdit.RichEditView.ToString">
       <summary>
@@ -32597,7 +33041,6 @@ Example: I, II, III</para>
       <summary>
         <para>Occurs every time any of the <see cref="T:DevExpress.XtraRichEdit.Utils.SymbolProperties"/> class properties has changed its value.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.Utils.SymbolProperties.UnicodeChar">
       <summary>
