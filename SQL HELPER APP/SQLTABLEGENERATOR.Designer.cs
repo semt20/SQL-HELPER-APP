@@ -36,12 +36,21 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.TE_P2TYPE = new DevExpress.XtraEditors.TextEdit();
+            this.TE_P1TYPE = new DevExpress.XtraEditors.TextEdit();
+            this.CE_P2 = new System.Windows.Forms.CheckBox();
+            this.CE_P1 = new System.Windows.Forms.CheckBox();
+            this.TE_P2NAME = new DevExpress.XtraEditors.TextEdit();
+            this.TE_P1NAME = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.fIELDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,9 +64,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P2TYPE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P1TYPE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P2NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P1NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fIELDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -69,6 +83,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton2);
+            this.panel1.Controls.Add(this.TE_P2TYPE);
+            this.panel1.Controls.Add(this.TE_P1TYPE);
+            this.panel1.Controls.Add(this.CE_P2);
+            this.panel1.Controls.Add(this.CE_P1);
+            this.panel1.Controls.Add(this.TE_P2NAME);
+            this.panel1.Controls.Add(this.TE_P1NAME);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.textEdit2);
             this.panel1.Controls.Add(this.textEdit1);
@@ -77,28 +98,91 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 105);
+            this.panel1.Size = new System.Drawing.Size(1055, 72);
             this.panel1.TabIndex = 0;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(496, 39);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(313, 24);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "SATIRLARI SİL";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // TE_P2TYPE
+            // 
+            this.TE_P2TYPE.EditValue = "int";
+            this.TE_P2TYPE.Location = new System.Drawing.Point(978, 40);
+            this.TE_P2TYPE.Name = "TE_P2TYPE";
+            this.TE_P2TYPE.Size = new System.Drawing.Size(46, 20);
+            this.TE_P2TYPE.TabIndex = 10;
+            // 
+            // TE_P1TYPE
+            // 
+            this.TE_P1TYPE.EditValue = "int";
+            this.TE_P1TYPE.Location = new System.Drawing.Point(978, 7);
+            this.TE_P1TYPE.Name = "TE_P1TYPE";
+            this.TE_P1TYPE.Size = new System.Drawing.Size(47, 20);
+            this.TE_P1TYPE.TabIndex = 9;
+            // 
+            // CE_P2
+            // 
+            this.CE_P2.AutoSize = true;
+            this.CE_P2.Checked = true;
+            this.CE_P2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CE_P2.Location = new System.Drawing.Point(841, 43);
+            this.CE_P2.Name = "CE_P2";
+            this.CE_P2.Size = new System.Drawing.Size(15, 14);
+            this.CE_P2.TabIndex = 8;
+            this.CE_P2.UseVisualStyleBackColor = true;
+            // 
+            // CE_P1
+            // 
+            this.CE_P1.AutoSize = true;
+            this.CE_P1.Checked = true;
+            this.CE_P1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CE_P1.Location = new System.Drawing.Point(841, 10);
+            this.CE_P1.Name = "CE_P1";
+            this.CE_P1.Size = new System.Drawing.Size(15, 14);
+            this.CE_P1.TabIndex = 7;
+            this.CE_P1.UseVisualStyleBackColor = true;
+            // 
+            // TE_P2NAME
+            // 
+            this.TE_P2NAME.EditValue = "IsCancelled";
+            this.TE_P2NAME.Location = new System.Drawing.Point(862, 40);
+            this.TE_P2NAME.Name = "TE_P2NAME";
+            this.TE_P2NAME.Size = new System.Drawing.Size(109, 20);
+            this.TE_P2NAME.TabIndex = 6;
+            // 
+            // TE_P1NAME
+            // 
+            this.TE_P1NAME.EditValue = "IsActive";
+            this.TE_P1NAME.Location = new System.Drawing.Point(862, 7);
+            this.TE_P1NAME.Name = "TE_P1NAME";
+            this.TE_P1NAME.Size = new System.Drawing.Size(110, 20);
+            this.TE_P1NAME.TabIndex = 5;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(496, 23);
+            this.simpleButton1.Location = new System.Drawing.Point(496, 7);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(313, 54);
+            this.simpleButton1.Size = new System.Drawing.Size(313, 26);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "CONVERT";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(102, 57);
+            this.textEdit2.Location = new System.Drawing.Point(102, 41);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(359, 20);
             this.textEdit2.TabIndex = 3;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(102, 23);
+            this.textEdit1.Location = new System.Drawing.Point(102, 7);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(359, 20);
             this.textEdit1.TabIndex = 2;
@@ -106,7 +190,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 60);
+            this.label2.Location = new System.Drawing.Point(24, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 1;
@@ -115,7 +199,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 23);
+            this.label1.Location = new System.Drawing.Point(24, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -123,12 +207,34 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.memoEdit2);
             this.panel2.Controls.Add(this.gridControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 105);
+            this.panel2.Location = new System.Drawing.Point(0, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(840, 573);
+            this.panel2.Size = new System.Drawing.Size(1055, 516);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(584, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "DESTEKLENEN TİPLER(TYPE)";
+            // 
+            // memoEdit2
+            // 
+            this.memoEdit2.EditValue = "datetimeoffset\r\ndecimal\r\nnchar\r\nnumeric\r\nnvarchar\r\nnvarchar(max)\r\ntime\r\nvarbinary" +
+    "\r\nvarbinary(max)\r\nvarchar\r\nvarchar(max)";
+            this.memoEdit2.Location = new System.Drawing.Point(586, 42);
+            this.memoEdit2.Name = "memoEdit2";
+            this.memoEdit2.Properties.ReadOnly = true;
+            this.memoEdit2.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.memoEdit2.Size = new System.Drawing.Size(142, 157);
+            this.memoEdit2.TabIndex = 1;
             // 
             // gridControl1
             // 
@@ -140,7 +246,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBoxTYPE,
             this.repositoryItemButtonEditSIL});
-            this.gridControl1.Size = new System.Drawing.Size(840, 573);
+            this.gridControl1.Size = new System.Drawing.Size(1055, 516);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -159,8 +265,11 @@
             this.SIL});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colNAME
             // 
@@ -168,6 +277,7 @@
             this.colNAME.Name = "colNAME";
             this.colNAME.Visible = true;
             this.colNAME.VisibleIndex = 0;
+            this.colNAME.Width = 162;
             // 
             // colTYPE
             // 
@@ -175,6 +285,7 @@
             this.colTYPE.Name = "colTYPE";
             this.colTYPE.Visible = true;
             this.colTYPE.VisibleIndex = 1;
+            this.colTYPE.Width = 109;
             // 
             // colLENGTH
             // 
@@ -187,6 +298,7 @@
             this.colISNULL.Name = "colISNULL";
             this.colISNULL.Visible = true;
             this.colISNULL.VisibleIndex = 2;
+            this.colISNULL.Width = 47;
             // 
             // SIL
             // 
@@ -252,9 +364,9 @@
             // 
             this.panel3.Controls.Add(this.memoEdit1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 499);
+            this.panel3.Location = new System.Drawing.Point(0, 588);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(840, 179);
+            this.panel3.Size = new System.Drawing.Size(1055, 160);
             this.panel3.TabIndex = 2;
             // 
             // memoEdit1
@@ -262,24 +374,30 @@
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.Location = new System.Drawing.Point(0, 0);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(840, 179);
+            this.memoEdit1.Size = new System.Drawing.Size(1055, 160);
             this.memoEdit1.TabIndex = 0;
             // 
             // SQLTABLEGENERATOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 678);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1055, 748);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "SQLTABLEGENERATOR";
             this.Text = "SQLTABLEGENERATOR";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P2TYPE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P1TYPE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P2NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P1NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fIELDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -312,5 +430,14 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn SIL;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEditSIL;
+        private DevExpress.XtraEditors.TextEdit TE_P2NAME;
+        private DevExpress.XtraEditors.TextEdit TE_P1NAME;
+        private System.Windows.Forms.CheckBox CE_P2;
+        private System.Windows.Forms.CheckBox CE_P1;
+        private DevExpress.XtraEditors.TextEdit TE_P2TYPE;
+        private DevExpress.XtraEditors.TextEdit TE_P1TYPE;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.MemoEdit memoEdit2;
     }
 }
