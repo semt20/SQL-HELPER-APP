@@ -106,7 +106,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(496, 39);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(313, 24);
-            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "SATIRLARI SİL";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -116,7 +116,7 @@
             this.TE_P2TYPE.Location = new System.Drawing.Point(978, 40);
             this.TE_P2TYPE.Name = "TE_P2TYPE";
             this.TE_P2TYPE.Size = new System.Drawing.Size(46, 20);
-            this.TE_P2TYPE.TabIndex = 10;
+            this.TE_P2TYPE.TabIndex = 9;
             // 
             // TE_P1TYPE
             // 
@@ -124,7 +124,7 @@
             this.TE_P1TYPE.Location = new System.Drawing.Point(978, 7);
             this.TE_P1TYPE.Name = "TE_P1TYPE";
             this.TE_P1TYPE.Size = new System.Drawing.Size(47, 20);
-            this.TE_P1TYPE.TabIndex = 9;
+            this.TE_P1TYPE.TabIndex = 6;
             // 
             // CE_P2
             // 
@@ -134,7 +134,7 @@
             this.CE_P2.Location = new System.Drawing.Point(841, 43);
             this.CE_P2.Name = "CE_P2";
             this.CE_P2.Size = new System.Drawing.Size(15, 14);
-            this.CE_P2.TabIndex = 8;
+            this.CE_P2.TabIndex = 7;
             this.CE_P2.UseVisualStyleBackColor = true;
             // 
             // CE_P1
@@ -145,7 +145,7 @@
             this.CE_P1.Location = new System.Drawing.Point(841, 10);
             this.CE_P1.Name = "CE_P1";
             this.CE_P1.Size = new System.Drawing.Size(15, 14);
-            this.CE_P1.TabIndex = 7;
+            this.CE_P1.TabIndex = 4;
             this.CE_P1.UseVisualStyleBackColor = true;
             // 
             // TE_P2NAME
@@ -154,7 +154,7 @@
             this.TE_P2NAME.Location = new System.Drawing.Point(862, 40);
             this.TE_P2NAME.Name = "TE_P2NAME";
             this.TE_P2NAME.Size = new System.Drawing.Size(109, 20);
-            this.TE_P2NAME.TabIndex = 6;
+            this.TE_P2NAME.TabIndex = 8;
             // 
             // TE_P1NAME
             // 
@@ -169,7 +169,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(496, 7);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(313, 26);
-            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "CONVERT";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -178,14 +178,14 @@
             this.textEdit2.Location = new System.Drawing.Point(102, 41);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(359, 20);
-            this.textEdit2.TabIndex = 3;
+            this.textEdit2.TabIndex = 1;
             // 
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(102, 7);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(359, 20);
-            this.textEdit1.TabIndex = 2;
+            this.textEdit1.TabIndex = 0;
             // 
             // label2
             // 
