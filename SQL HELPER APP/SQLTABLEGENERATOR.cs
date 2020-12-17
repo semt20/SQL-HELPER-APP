@@ -22,6 +22,9 @@ namespace SQL_HELPER_APP {
             string IMAGEFIELD = "0";
             memoEdit1.Text += "CREATE TABLE [dbo].[" + textEdit1.Text + "](" + Environment.NewLine;
             memoEdit1.Text += "[" + textEdit2.Text + "] [INT] IDENTITY(1,1) NOT NULL," + Environment.NewLine;
+            if (CE_P3.Checked == true) {
+                memoEdit1.Text += "[" + TE_P3NAME.Text + "]  " + TE_P3TYPE.Text + "  NULL, " + Environment.NewLine;
+            }
             for (int i = 0; i < gridView1.RowCount; i++) {
                 string NAME = "[" + gridView1.GetRowCellValue(i, "NAME").ToString() + "]";
                 string TYPE = "[" + gridView1.GetRowCellValue(i, "TYPE").ToString().ToLower() + "]";
@@ -55,6 +58,7 @@ namespace SQL_HELPER_APP {
             if (CE_P2.Checked == true) {
                 memoEdit1.Text += "[" + TE_P2NAME.Text + "] [" + TE_P2TYPE.Text + "] NULL, " + Environment.NewLine;
             }
+    
             memoEdit1.Text += "[created_day] [datetime] NULL, " + Environment.NewLine;
             memoEdit1.Text += "[created_by] [int] NULL, " + Environment.NewLine;
             memoEdit1.Text += "[modified_day] [datetime] NULL, " + Environment.NewLine;
@@ -74,7 +78,7 @@ namespace SQL_HELPER_APP {
             if (e.Column.FieldName == "NAME") {
                 string NAME = gridView1.GetFocusedRowCellValue(colNAME).ToString();
                 string TYPE = "nvarchar";
-                TYPE = NAME.StartsWith("Id_") ? "int" : TYPE;
+                TYPE = NAME.StartsWith("id_") ? "int" : TYPE;
                 //TYPE = NAME.EndsWith("edDay") ? "datetime" : TYPE;
                 gridView1.SetFocusedRowCellValue(colTYPE, TYPE);
             }

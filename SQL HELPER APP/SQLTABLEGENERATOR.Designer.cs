@@ -30,12 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLTABLEGENERATOR));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TE_P3TYPE = new DevExpress.XtraEditors.TextEdit();
+            this.CE_P3 = new System.Windows.Forms.CheckBox();
+            this.TE_P3NAME = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.TE_P2TYPE = new DevExpress.XtraEditors.TextEdit();
             this.TE_P1TYPE = new DevExpress.XtraEditors.TextEdit();
@@ -65,6 +68,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P3TYPE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P3NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P2TYPE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P1TYPE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P2NAME.Properties)).BeginInit();
@@ -84,6 +89,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.TE_P3TYPE);
+            this.panel1.Controls.Add(this.CE_P3);
+            this.panel1.Controls.Add(this.TE_P3NAME);
             this.panel1.Controls.Add(this.simpleButton2);
             this.panel1.Controls.Add(this.TE_P2TYPE);
             this.panel1.Controls.Add(this.TE_P1TYPE);
@@ -99,8 +107,35 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1055, 72);
+            this.panel1.Size = new System.Drawing.Size(1128, 72);
             this.panel1.TabIndex = 0;
+            // 
+            // TE_P3TYPE
+            // 
+            this.TE_P3TYPE.EditValue = "nvarchar(3)";
+            this.TE_P3TYPE.Location = new System.Drawing.Point(977, 49);
+            this.TE_P3TYPE.Name = "TE_P3TYPE";
+            this.TE_P3TYPE.Size = new System.Drawing.Size(75, 20);
+            this.TE_P3TYPE.TabIndex = 12;
+            // 
+            // CE_P3
+            // 
+            this.CE_P3.AutoSize = true;
+            this.CE_P3.Checked = true;
+            this.CE_P3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CE_P3.Location = new System.Drawing.Point(840, 52);
+            this.CE_P3.Name = "CE_P3";
+            this.CE_P3.Size = new System.Drawing.Size(15, 14);
+            this.CE_P3.TabIndex = 10;
+            this.CE_P3.UseVisualStyleBackColor = true;
+            // 
+            // TE_P3NAME
+            // 
+            this.TE_P3NAME.EditValue = "firma_nr";
+            this.TE_P3NAME.Location = new System.Drawing.Point(860, 49);
+            this.TE_P3NAME.Name = "TE_P3NAME";
+            this.TE_P3NAME.Size = new System.Drawing.Size(110, 20);
+            this.TE_P3NAME.TabIndex = 11;
             // 
             // simpleButton2
             // 
@@ -114,17 +149,17 @@
             // TE_P2TYPE
             // 
             this.TE_P2TYPE.EditValue = "int";
-            this.TE_P2TYPE.Location = new System.Drawing.Point(978, 40);
+            this.TE_P2TYPE.Location = new System.Drawing.Point(978, 28);
             this.TE_P2TYPE.Name = "TE_P2TYPE";
-            this.TE_P2TYPE.Size = new System.Drawing.Size(46, 20);
+            this.TE_P2TYPE.Size = new System.Drawing.Size(74, 20);
             this.TE_P2TYPE.TabIndex = 9;
             // 
             // TE_P1TYPE
             // 
             this.TE_P1TYPE.EditValue = "int";
-            this.TE_P1TYPE.Location = new System.Drawing.Point(978, 7);
+            this.TE_P1TYPE.Location = new System.Drawing.Point(978, 4);
             this.TE_P1TYPE.Name = "TE_P1TYPE";
-            this.TE_P1TYPE.Size = new System.Drawing.Size(47, 20);
+            this.TE_P1TYPE.Size = new System.Drawing.Size(75, 20);
             this.TE_P1TYPE.TabIndex = 6;
             // 
             // CE_P2
@@ -132,7 +167,7 @@
             this.CE_P2.AutoSize = true;
             this.CE_P2.Checked = true;
             this.CE_P2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CE_P2.Location = new System.Drawing.Point(841, 43);
+            this.CE_P2.Location = new System.Drawing.Point(841, 31);
             this.CE_P2.Name = "CE_P2";
             this.CE_P2.Size = new System.Drawing.Size(15, 14);
             this.CE_P2.TabIndex = 7;
@@ -143,7 +178,7 @@
             this.CE_P1.AutoSize = true;
             this.CE_P1.Checked = true;
             this.CE_P1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CE_P1.Location = new System.Drawing.Point(841, 10);
+            this.CE_P1.Location = new System.Drawing.Point(841, 7);
             this.CE_P1.Name = "CE_P1";
             this.CE_P1.Size = new System.Drawing.Size(15, 14);
             this.CE_P1.TabIndex = 4;
@@ -152,7 +187,7 @@
             // TE_P2NAME
             // 
             this.TE_P2NAME.EditValue = "is_cancelled";
-            this.TE_P2NAME.Location = new System.Drawing.Point(862, 40);
+            this.TE_P2NAME.Location = new System.Drawing.Point(862, 28);
             this.TE_P2NAME.Name = "TE_P2NAME";
             this.TE_P2NAME.Size = new System.Drawing.Size(109, 20);
             this.TE_P2NAME.TabIndex = 8;
@@ -160,7 +195,7 @@
             // TE_P1NAME
             // 
             this.TE_P1NAME.EditValue = "is_active";
-            this.TE_P1NAME.Location = new System.Drawing.Point(862, 7);
+            this.TE_P1NAME.Location = new System.Drawing.Point(862, 4);
             this.TE_P1NAME.Name = "TE_P1NAME";
             this.TE_P1NAME.Size = new System.Drawing.Size(110, 20);
             this.TE_P1NAME.TabIndex = 5;
@@ -215,7 +250,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1055, 516);
+            this.panel2.Size = new System.Drawing.Size(1128, 516);
             this.panel2.TabIndex = 1;
             // 
             // textBox1
@@ -258,7 +293,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBoxTYPE,
             this.repositoryItemButtonEditSIL});
-            this.gridControl1.Size = new System.Drawing.Size(1055, 516);
+            this.gridControl1.Size = new System.Drawing.Size(1128, 516);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -324,9 +359,9 @@
             // repositoryItemButtonEditSIL
             // 
             this.repositoryItemButtonEditSIL.AutoHeight = false;
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.repositoryItemButtonEditSIL.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEditSIL.Name = "repositoryItemButtonEditSIL";
             this.repositoryItemButtonEditSIL.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonEditSIL.Click += new System.EventHandler(this.repositoryItemButtonEditSIL_Click);
@@ -379,7 +414,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 588);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1055, 160);
+            this.panel3.Size = new System.Drawing.Size(1128, 160);
             this.panel3.TabIndex = 2;
             // 
             // memoEdit1
@@ -387,14 +422,14 @@
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.Location = new System.Drawing.Point(0, 0);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(1055, 160);
+            this.memoEdit1.Size = new System.Drawing.Size(1128, 160);
             this.memoEdit1.TabIndex = 0;
             // 
             // SQLTABLEGENERATOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 748);
+            this.ClientSize = new System.Drawing.Size(1128, 748);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -402,6 +437,8 @@
             this.Text = "SQLTABLEGENERATOR";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P3TYPE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TE_P3NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P2TYPE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P1TYPE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P2NAME.Properties)).EndInit();
@@ -453,5 +490,8 @@
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.MemoEdit memoEdit2;
         private System.Windows.Forms.TextBox textBox1;
+        private DevExpress.XtraEditors.TextEdit TE_P3TYPE;
+        private System.Windows.Forms.CheckBox CE_P3;
+        private DevExpress.XtraEditors.TextEdit TE_P3NAME;
     }
 }
