@@ -8,11 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace SQL_HELPER_APP {
     public partial class SQLTABLEGENERATOR : DevExpress.XtraEditors.XtraForm {
         public SQLTABLEGENERATOR() {
             InitializeComponent();
+ 
         }
 
         private void simpleButton1_Click(object sender, EventArgs e) {
@@ -46,17 +48,17 @@ namespace SQL_HELPER_APP {
                 memoEdit1.Text += NAME + " " + TYPE + ISNULL;
                 memoEdit1.Text += Environment.NewLine;
             }
-            if (CE_P1.Checked==true) {
-                memoEdit1.Text += "["+TE_P1NAME.Text+"] ["+TE_P1TYPE.Text+"] NULL, " + Environment.NewLine;
+            if (CE_P1.Checked == true) {
+                memoEdit1.Text += "[" + TE_P1NAME.Text + "] [" + TE_P1TYPE.Text + "] NULL, " + Environment.NewLine;
             }
 
             if (CE_P2.Checked == true) {
                 memoEdit1.Text += "[" + TE_P2NAME.Text + "] [" + TE_P2TYPE.Text + "] NULL, " + Environment.NewLine;
             }
-            memoEdit1.Text += "[CreatedDay] [datetime] NULL, " + Environment.NewLine;
-            memoEdit1.Text += "[CreatedBy] [int] NULL, " + Environment.NewLine;
-            memoEdit1.Text += "[ModifiedDay] [datetime] NULL, " + Environment.NewLine;
-            memoEdit1.Text += "[ModifiedBy] [int] NULL, " + Environment.NewLine;
+            memoEdit1.Text += "[created_day] [datetime] NULL, " + Environment.NewLine;
+            memoEdit1.Text += "[created_by] [int] NULL, " + Environment.NewLine;
+            memoEdit1.Text += "[modified_day] [datetime] NULL, " + Environment.NewLine;
+            memoEdit1.Text += "[modified_by] [int] NULL, " + Environment.NewLine;
             memoEdit1.Text += "CONSTRAINT [PK_" + textEdit1.Text + "] PRIMARY KEY CLUSTERED " + Environment.NewLine;
             memoEdit1.Text += "(" + Environment.NewLine;
             memoEdit1.Text += "[" + textEdit2.Text + "] ASC" + Environment.NewLine;
@@ -65,7 +67,7 @@ namespace SQL_HELPER_APP {
         }
 
         private void repositoryItemButtonEditSIL_Click(object sender, EventArgs e) {
-            gridView1.DeleteSelectedRows(); 
+            gridView1.DeleteSelectedRows();
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e) {
@@ -79,9 +81,14 @@ namespace SQL_HELPER_APP {
         }
 
         private void simpleButton2_Click(object sender, EventArgs e) {
-            for (int i = 0; i < gridView1.RowCount; ) {
+            for (int i = 0; i < gridView1.RowCount;) {
                 gridView1.DeleteRow(i);
             }
+        }
+   
+ 
+        private void gridControl1_ProcessGridKey(object sender, KeyEventArgs e) {
+         
         }
     }
 }
