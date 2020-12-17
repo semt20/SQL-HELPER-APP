@@ -122,7 +122,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Departmanlar";
+            this.ribbonPageGroup1.Text = "HELPER";
             // 
             // ribbonPage2
             // 

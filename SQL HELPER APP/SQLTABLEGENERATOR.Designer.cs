@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLTABLEGENERATOR));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLTABLEGENERATOR));
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.TE_P2TYPE = new DevExpress.XtraEditors.TextEdit();
@@ -63,6 +63,7 @@
             this.repositoryItemComboBoxTYPE = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P2TYPE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P1TYPE.Properties)).BeginInit();
@@ -207,6 +208,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.memoEdit2);
             this.panel2.Controls.Add(this.gridControl1);
@@ -377,6 +379,16 @@
             this.memoEdit1.Size = new System.Drawing.Size(1055, 160);
             this.memoEdit1.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(496, 205);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(333, 185);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
             // SQLTABLEGENERATOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,5 +451,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.MemoEdit memoEdit2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

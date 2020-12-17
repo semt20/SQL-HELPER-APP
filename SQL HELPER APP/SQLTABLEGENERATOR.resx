@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>sql server db tablo yapı tavsiyeleri
+
+full kucuk harf ingilizce karakter kullan,Ornek İplik Adı = iplik_adi gibi
+
+referanslı int alanların başında id_malzeme gibi şeklinde kullan(böyle olmasının sebebi id_ görürse otomatik olarak int varsaysın table script generator)
+
+primarykey ismi = id_ olsun
+
+varchar yerine nvarchar kullan</value>
+  </data>
   <metadata name="fIELDSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
