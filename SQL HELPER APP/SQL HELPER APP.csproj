@@ -92,6 +92,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods.cs" />
+    <Compile Include="SP_CLASSTOCONVERTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SP_CLASSTOCONVERTER.Designer.cs">
+      <DependentUpon>SP_CLASSTOCONVERTER.cs</DependentUpon>
+    </Compile>
     <Compile Include="SP_EXECUTE2NORMALQUERY.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SP_CLASSTOCONVERTER.resx">
+      <DependentUpon>SP_CLASSTOCONVERTER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SP_EXECUTE2NORMALQUERY.resx">
       <DependentUpon>SP_EXECUTE2NORMALQUERY.cs</DependentUpon>

@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using System.Data.SqlClient;
 using DevExpress.XtraBars;
-using DevExpress.XtraBars.Ribbon; 
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraPrinting.Preview;
 using SQL_HELPER_APP.Properties;
 using DevExpress.LookAndFeel;
@@ -21,7 +21,7 @@ namespace SQL_HELPER_APP
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
-        public MainForm() 
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -65,6 +65,11 @@ namespace SQL_HELPER_APP
         {
             //BMS_DLL.DX.XTRAREPORT_AC("select * from BM_219_SIPARIS", null, true);
             BMS_DLL.GLOBAL.FORMAC(true, new SQLTABLEGENERATOR(), this, false, null);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BMS_DLL.GLOBAL.FORMAC(true, new SP_CLASSTOCONVERTER(), this, false, null);
         }
     }
 }
