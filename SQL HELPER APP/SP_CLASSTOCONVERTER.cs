@@ -70,8 +70,8 @@ namespace SQL_HELPER_APP
                 if (line.Contains("public class"))
                 {
                     r.Line = className = realLine.Replace("public class", "").Trim();
-                    if (!isDataRow) r.Line = "List<" + r.Line + "> " + r.Line + "_CONVERT_FROM_DATATABLE(DataTable dt)";
-                    if (isDataRow) r.Line = r.Line + " " + r.Line + "_CONVERT_FROM_DATAROW(DataRow r)";
+                    if (!isDataRow) r.Line = "public List<" + r.Line + "> " + r.Line + "_CONVERT_FROM_DATATABLE(DataTable dt)";
+                    if (isDataRow) r.Line = "public " + r.Line + " " + r.Line + "_CONVERT_FROM_DATAROW(DataRow r)";
                     RL.Add(r);
                     if (isDataRow == false)
                     {
@@ -108,6 +108,12 @@ namespace SQL_HELPER_APP
                     if (realLine.Contains("public double "))
                     {
                         realLine = realLine.Replace("public double ", "").Trim();
+                        realLine = "try { B." + realLine + " = (double)r[\"" + realLine + "\"]; } catch { }";
+                    }
+
+                    if (realLine.Contains("public float "))
+                    {
+                        realLine = realLine.Replace("public float ", "").Trim();
                         realLine = "try { B." + realLine + " = (double)r[\"" + realLine + "\"]; } catch { }";
                     }
 
