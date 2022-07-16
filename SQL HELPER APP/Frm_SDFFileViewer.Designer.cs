@@ -70,6 +70,7 @@
             // 
             // sb_OpenSdf
             // 
+            this.sb_OpenSdf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sb_OpenSdf.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sb_OpenSdf.ImageOptions.SvgImage")));
             this.sb_OpenSdf.Location = new System.Drawing.Point(12, 12);
             this.sb_OpenSdf.Name = "sb_OpenSdf";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItemReportDesigner = new DevExpress.XtraBars.BarButtonItem();
@@ -38,7 +39,8 @@
             this.bbi_SdfFileViewer = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.bbi_SqlFormatter = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +56,10 @@
             this.barButtonItem1,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.bbi_SdfFileViewer});
+            this.bbi_SdfFileViewer,
+            this.bbi_SqlFormatter});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -75,10 +78,6 @@
             // Skins
             // 
             this.Skins.Caption = "Skins";
-            // 
-            // 
-            // 
-
             this.Skins.Id = 2;
             this.Skins.Name = "Skins";
             // 
@@ -121,6 +120,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbi_SqlFormatter);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemReportDesigner);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
@@ -131,6 +131,14 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // bbi_SqlFormatter
+            // 
+            this.bbi_SqlFormatter.Caption = "SQL FORMATTER";
+            this.bbi_SqlFormatter.Id = 10;
+            this.bbi_SqlFormatter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbi_SqlFormatter.ImageOptions.SvgImage")));
+            this.bbi_SqlFormatter.Name = "bbi_SqlFormatter";
+            this.bbi_SqlFormatter.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbi_SqlFormatter_ItemClick);
             // 
             // MainForm
             // 
@@ -164,5 +172,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem bbi_SdfFileViewer;
+        private DevExpress.XtraBars.BarButtonItem bbi_SqlFormatter;
     }
 }

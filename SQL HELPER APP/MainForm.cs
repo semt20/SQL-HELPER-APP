@@ -44,8 +44,14 @@ namespace SQL_HELPER_APP
         }
 
         private void bbi_SdfFileViewer_ItemClick(object sender, ItemClickEventArgs e)
-        { 
+        {
             Methods.GLOBAL.FORMAC(true, new Frm_SDFFileViewer(), this, false, null);
+        }
+
+        private void bbi_SqlFormatter_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Methods.GLOBAL.FORMAC(true, new Frm_SQLFormatter(), this, false, null);
+
         }
     }
 }

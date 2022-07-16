@@ -14,16 +14,11 @@ namespace SQL_HELPER_APP
         [STAThread]
         static void Main()
         {
-            DevExpress.UserSkins.BonusSkins.Register();
-
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("McSkin");
-
-            Application.EnableVisualStyles();
-
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            //Application.Run(new MainForm());
-            Application.Run(new Frm_SQLFormatter());
+            DevExpress.UserSkins.BonusSkins.Register(); 
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("McSkin"); 
+            Application.EnableVisualStyles(); 
+            Application.SetCompatibleTextRenderingDefault(false); 
+            Application.Run(new MainForm());
         }
     }
 }

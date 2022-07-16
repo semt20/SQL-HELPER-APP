@@ -87,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 121);
+            this.panel1.Size = new System.Drawing.Size(1019, 122);
             this.panel1.TabIndex = 2;
             // 
             // ce_htmlColoring
@@ -194,10 +194,12 @@
             // 
             // sb_FormatSql
             // 
+            this.sb_FormatSql.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sb_FormatSql.Dock = System.Windows.Forms.DockStyle.Right;
             this.sb_FormatSql.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sb_FormatSql.ImageOptions.SvgImage")));
-            this.sb_FormatSql.Location = new System.Drawing.Point(526, 66);
+            this.sb_FormatSql.Location = new System.Drawing.Point(797, 0);
             this.sb_FormatSql.Name = "sb_FormatSql";
-            this.sb_FormatSql.Size = new System.Drawing.Size(98, 35);
+            this.sb_FormatSql.Size = new System.Drawing.Size(222, 122);
             this.sb_FormatSql.TabIndex = 0;
             this.sb_FormatSql.Text = "Format Sql";
             this.sb_FormatSql.Click += new System.EventHandler(this.sb_FormatSql_Click);
@@ -214,9 +216,9 @@
             // 
             this.panel3.Controls.Add(this.splitContainerControl1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 121);
+            this.panel3.Location = new System.Drawing.Point(0, 122);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1019, 550);
+            this.panel3.Size = new System.Drawing.Size(1019, 549);
             this.panel3.TabIndex = 4;
             // 
             // splitContainerControl1
@@ -234,7 +236,7 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.rec_SQLDestination);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 550);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 549);
             this.splitContainerControl1.SplitterPosition = 470;
             this.splitContainerControl1.TabIndex = 0;
             // 
@@ -245,20 +247,21 @@
             this.me_SQLSource.Location = new System.Drawing.Point(0, 0);
             this.me_SQLSource.Name = "me_SQLSource";
             this.me_SQLSource.Properties.WordWrap = false;
-            this.me_SQLSource.Size = new System.Drawing.Size(470, 550);
+            this.me_SQLSource.Size = new System.Drawing.Size(470, 549);
             this.me_SQLSource.TabIndex = 0;
             // 
             // rec_SQLDestination
             // 
+            this.rec_SQLDestination.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.rec_SQLDestination.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rec_SQLDestination.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
             this.rec_SQLDestination.Location = new System.Drawing.Point(0, 0);
             this.rec_SQLDestination.Name = "rec_SQLDestination";
             this.rec_SQLDestination.Options.DocumentCapabilities.ParagraphBorders = DevExpress.XtraRichEdit.DocumentCapability.Disabled;
             this.rec_SQLDestination.Options.HorizontalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
             this.rec_SQLDestination.Options.VerticalRuler.Visibility = DevExpress.XtraRichEdit.RichEditRulerVisibility.Hidden;
-            this.rec_SQLDestination.Size = new System.Drawing.Size(539, 550);
+            this.rec_SQLDestination.Size = new System.Drawing.Size(539, 549);
             this.rec_SQLDestination.TabIndex = 0;
-            this.rec_SQLDestination.Text = "SQL Formatted";
             this.rec_SQLDestination.Views.SimpleView.WordWrap = false;
             // 
             // Frm_SQLFormatter
@@ -271,6 +274,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Frm_SQLFormatter";
             this.Text = "SQL Formatter";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ce_htmlColoring.Properties)).EndInit();

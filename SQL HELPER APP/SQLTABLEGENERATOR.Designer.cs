@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLTABLEGENERATOR));
             this.panel1 = new System.Windows.Forms.Panel();
             this.TE_P3TYPE = new DevExpress.XtraEditors.TextEdit();
@@ -50,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.fIELDSBindingSource = new System.Windows.Forms.BindingSource();
+            this.fIELDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTYPE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -135,6 +136,7 @@
             // 
             this.simpleButton2.Appearance.Options.UseTextOptions = true;
             this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.simpleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
             this.simpleButton2.Location = new System.Drawing.Point(496, 48);
             this.simpleButton2.Name = "simpleButton2";
@@ -201,6 +203,7 @@
             // 
             this.simpleButton1.Appearance.Options.UseTextOptions = true;
             this.simpleButton1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.simpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
             this.simpleButton1.Location = new System.Drawing.Point(496, 3);
             this.simpleButton1.Name = "simpleButton1";
