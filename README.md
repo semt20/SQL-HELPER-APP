@@ -1,1 +1,5 @@
-# SQL-HELPER-APP for now there is only sp_execute to normal query convert and sql server table script generator
+# SQL-HELPER-APP
+-SP_EXECUTE TO NORMAL QUERY CONVERTER
+-SQL SERVER TABLE T-SQL GENERATOR
+-CLASS TO CONVERTER GENERATOR
+-WINCE SQL SDF TABLE VIEWER
