@@ -50,15 +50,24 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>C:\Program Files (x86)\BILMARK LTD\BMS BORDRO\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PoorMansTSqlFormatterLib35, Version=1.4.3.22897, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PoorMansTSQLFormatter.1.4.3.1\lib\net35\PoorMansTSqlFormatterLib35.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -74,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FIELDS.cs" />
+    <Compile Include="Frm_SQLFormatter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SQLFormatter.Designer.cs">
+      <DependentUpon>Frm_SQLFormatter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_SDFFileViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +129,12 @@
     <Compile Include="SQLTABLEGENERATOR.Designer.cs">
       <DependentUpon>SQLTABLEGENERATOR.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_SQLFormatter.resx">
+      <DependentUpon>Frm_SQLFormatter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_SDFFileViewer.resx">
       <DependentUpon>Frm_SDFFileViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -143,6 +162,7 @@
     <EmbeddedResource Include="SQLTABLEGENERATOR.resx">
       <DependentUpon>SQLTABLEGENERATOR.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\FIELDS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

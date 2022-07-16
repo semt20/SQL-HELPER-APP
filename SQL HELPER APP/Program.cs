@@ -22,7 +22,8 @@ namespace SQL_HELPER_APP
 
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new MainForm());
+            //Application.Run(new MainForm());
+            Application.Run(new Frm_SQLFormatter());
         }
     }
 }
