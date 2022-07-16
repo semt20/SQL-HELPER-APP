@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace SQL_HELPER_APP
 {
@@ -32,6 +32,25 @@ namespace SQL_HELPER_APP
             }
             catch { }
         }
-
+        public class GLOBAL
+        {
+            /// <summary>
+            /// <para>Aciklama: Mdi yada yeni ekranda form açar. Örnek Ayarlar adında bir form oluştur</para>
+            /// <para> Ornek Kod: Mdi Form:  BMS_DLL.GLOBAL.FORMAC(true, new Ayarlar(), this, false, null);</para>
+            /// <para> Ornek Kod: Normal Form:  BMS_DLL.GLOBAL.FORMAC(false, new Ayarlar(), this, false, null);</para>
+            /// </summary>
+            public static void FORMAC(bool isMDIForm, Form parentForm, Form mainform, bool isFormBasligi, string FormBasligi)
+            {
+                if (isFormBasligi == true)
+                {
+                    parentForm.Text = FormBasligi;
+                }
+                if (isMDIForm == true)
+                {
+                    parentForm.MdiParent = mainform;
+                }
+                parentForm.Show();
+            }
+        }
     }
 }

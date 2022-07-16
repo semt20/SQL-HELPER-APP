@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLTABLEGENERATOR));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TE_P3TYPE = new DevExpress.XtraEditors.TextEdit();
             this.CE_P3 = new System.Windows.Forms.CheckBox();
@@ -56,7 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.fIELDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fIELDSBindingSource = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTYPE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -107,13 +101,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1128, 72);
+            this.panel1.Size = new System.Drawing.Size(907, 95);
             this.panel1.TabIndex = 0;
             // 
             // TE_P3TYPE
             // 
             this.TE_P3TYPE.EditValue = "nvarchar(3)";
-            this.TE_P3TYPE.Location = new System.Drawing.Point(977, 49);
+            this.TE_P3TYPE.Location = new System.Drawing.Point(784, 57);
             this.TE_P3TYPE.Name = "TE_P3TYPE";
             this.TE_P3TYPE.Size = new System.Drawing.Size(75, 20);
             this.TE_P3TYPE.TabIndex = 12;
@@ -123,7 +117,7 @@
             this.CE_P3.AutoSize = true;
             this.CE_P3.Checked = true;
             this.CE_P3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CE_P3.Location = new System.Drawing.Point(840, 52);
+            this.CE_P3.Location = new System.Drawing.Point(647, 60);
             this.CE_P3.Name = "CE_P3";
             this.CE_P3.Size = new System.Drawing.Size(15, 14);
             this.CE_P3.TabIndex = 10;
@@ -132,16 +126,19 @@
             // TE_P3NAME
             // 
             this.TE_P3NAME.EditValue = "firma_nr";
-            this.TE_P3NAME.Location = new System.Drawing.Point(860, 49);
+            this.TE_P3NAME.Location = new System.Drawing.Point(667, 57);
             this.TE_P3NAME.Name = "TE_P3NAME";
             this.TE_P3NAME.Size = new System.Drawing.Size(110, 20);
             this.TE_P3NAME.TabIndex = 11;
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(496, 39);
+            this.simpleButton2.Appearance.Options.UseTextOptions = true;
+            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(496, 48);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(313, 24);
+            this.simpleButton2.Size = new System.Drawing.Size(129, 30);
             this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "SATIRLARI SİL";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -149,7 +146,7 @@
             // TE_P2TYPE
             // 
             this.TE_P2TYPE.EditValue = "int";
-            this.TE_P2TYPE.Location = new System.Drawing.Point(978, 28);
+            this.TE_P2TYPE.Location = new System.Drawing.Point(785, 36);
             this.TE_P2TYPE.Name = "TE_P2TYPE";
             this.TE_P2TYPE.Size = new System.Drawing.Size(74, 20);
             this.TE_P2TYPE.TabIndex = 9;
@@ -157,7 +154,7 @@
             // TE_P1TYPE
             // 
             this.TE_P1TYPE.EditValue = "int";
-            this.TE_P1TYPE.Location = new System.Drawing.Point(978, 4);
+            this.TE_P1TYPE.Location = new System.Drawing.Point(785, 12);
             this.TE_P1TYPE.Name = "TE_P1TYPE";
             this.TE_P1TYPE.Size = new System.Drawing.Size(75, 20);
             this.TE_P1TYPE.TabIndex = 6;
@@ -167,7 +164,7 @@
             this.CE_P2.AutoSize = true;
             this.CE_P2.Checked = true;
             this.CE_P2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CE_P2.Location = new System.Drawing.Point(841, 31);
+            this.CE_P2.Location = new System.Drawing.Point(648, 39);
             this.CE_P2.Name = "CE_P2";
             this.CE_P2.Size = new System.Drawing.Size(15, 14);
             this.CE_P2.TabIndex = 7;
@@ -178,7 +175,7 @@
             this.CE_P1.AutoSize = true;
             this.CE_P1.Checked = true;
             this.CE_P1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CE_P1.Location = new System.Drawing.Point(841, 7);
+            this.CE_P1.Location = new System.Drawing.Point(648, 15);
             this.CE_P1.Name = "CE_P1";
             this.CE_P1.Size = new System.Drawing.Size(15, 14);
             this.CE_P1.TabIndex = 4;
@@ -187,7 +184,7 @@
             // TE_P2NAME
             // 
             this.TE_P2NAME.EditValue = "is_cancelled";
-            this.TE_P2NAME.Location = new System.Drawing.Point(862, 28);
+            this.TE_P2NAME.Location = new System.Drawing.Point(669, 36);
             this.TE_P2NAME.Name = "TE_P2NAME";
             this.TE_P2NAME.Size = new System.Drawing.Size(109, 20);
             this.TE_P2NAME.TabIndex = 8;
@@ -195,30 +192,33 @@
             // TE_P1NAME
             // 
             this.TE_P1NAME.EditValue = "is_active";
-            this.TE_P1NAME.Location = new System.Drawing.Point(862, 4);
+            this.TE_P1NAME.Location = new System.Drawing.Point(669, 12);
             this.TE_P1NAME.Name = "TE_P1NAME";
             this.TE_P1NAME.Size = new System.Drawing.Size(110, 20);
             this.TE_P1NAME.TabIndex = 5;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(496, 7);
+            this.simpleButton1.Appearance.Options.UseTextOptions = true;
+            this.simpleButton1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(496, 3);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(313, 26);
+            this.simpleButton1.Size = new System.Drawing.Size(129, 38);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "CONVERT";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(102, 41);
+            this.textEdit2.Location = new System.Drawing.Point(92, 55);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(359, 20);
             this.textEdit2.TabIndex = 1;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(102, 7);
+            this.textEdit1.Location = new System.Drawing.Point(92, 21);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(359, 20);
             this.textEdit1.TabIndex = 0;
@@ -226,7 +226,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 44);
+            this.label2.Location = new System.Drawing.Point(14, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 1;
@@ -235,7 +235,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 7);
+            this.label1.Location = new System.Drawing.Point(14, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -248,9 +248,9 @@
             this.panel2.Controls.Add(this.memoEdit2);
             this.panel2.Controls.Add(this.gridControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 72);
+            this.panel2.Location = new System.Drawing.Point(0, 95);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1128, 516);
+            this.panel2.Size = new System.Drawing.Size(907, 493);
             this.panel2.TabIndex = 1;
             // 
             // textBox1
@@ -293,7 +293,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBoxTYPE,
             this.repositoryItemButtonEditSIL});
-            this.gridControl1.Size = new System.Drawing.Size(1128, 516);
+            this.gridControl1.Size = new System.Drawing.Size(907, 493);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -359,9 +359,8 @@
             // repositoryItemButtonEditSIL
             // 
             this.repositoryItemButtonEditSIL.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.repositoryItemButtonEditSIL.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
             this.repositoryItemButtonEditSIL.Name = "repositoryItemButtonEditSIL";
             this.repositoryItemButtonEditSIL.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonEditSIL.Click += new System.EventHandler(this.repositoryItemButtonEditSIL_Click);
@@ -414,7 +413,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 588);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1128, 160);
+            this.panel3.Size = new System.Drawing.Size(907, 160);
             this.panel3.TabIndex = 2;
             // 
             // memoEdit1
@@ -422,19 +421,19 @@
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.Location = new System.Drawing.Point(0, 0);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(1128, 160);
+            this.memoEdit1.Size = new System.Drawing.Size(907, 160);
             this.memoEdit1.TabIndex = 0;
             // 
             // SQLTABLEGENERATOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 748);
+            this.ClientSize = new System.Drawing.Size(907, 748);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "SQLTABLEGENERATOR";
-            this.Text = "SQLTABLEGENERATOR";
+            this.Text = "TABLE T-SQL GENERATOR";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TE_P3TYPE.Properties)).EndInit();

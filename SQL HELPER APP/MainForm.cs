@@ -31,45 +31,21 @@ namespace SQL_HELPER_APP
         }
         private void barButtonItemReportDesigner_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //BMS_DLL.DX.XTRAREPORT_AC("select * from BM_219_SIPARIS", null, true);
-            BMS_DLL.GLOBAL.FORMAC(true, new SP_EXECUTE2NORMALQUERY(), this, false, null);
+            Methods.GLOBAL.FORMAC(true, new SP_EXECUTE2NORMALQUERY(), this, false, null);
         }
-        public static void TEMAKAYDETFOLDERUSERS(string USERNAME)
-        {
-
-        }
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //  BMS_DLL.DX.TEMAKAYDETFOLDERUSERS("TEST");
-
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            BMS_DLL.CFGGETSET.AYARLARIYUKLE();
-        }
-
-        private void Skins_Gallery_PopupClose(object sender, InplaceGalleryEventArgs e)
-        {
-            BMS_DLL.DX.TEMAREGISTRYKAYDET("XtraReportDesigner");
-        }
-
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            BMS_DLL.GLOBAL.FORMAC(true, new Departmanlar(), this, false, null);
-
-        }
-
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //BMS_DLL.DX.XTRAREPORT_AC("select * from BM_219_SIPARIS", null, true);
-            BMS_DLL.GLOBAL.FORMAC(true, new SQLTABLEGENERATOR(), this, false, null);
+            Methods.GLOBAL.FORMAC(true, new SQLTABLEGENERATOR(), this, false, null);
         }
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            BMS_DLL.GLOBAL.FORMAC(true, new SP_CLASSTOCONVERTER(), this, false, null);
+            Methods.GLOBAL.FORMAC(true, new SP_CLASSTOCONVERTER(), this, false, null);
+        }
+
+        private void bbi_SdfFileViewer_ItemClick(object sender, ItemClickEventArgs e)
+        { 
+            Methods.GLOBAL.FORMAC(true, new Frm_SDFFileViewer(), this, false, null);
         }
     }
 }

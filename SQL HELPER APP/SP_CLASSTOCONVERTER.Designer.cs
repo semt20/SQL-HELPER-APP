@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SP_CLASSTOCONVERTER));
-            this.bMBORDROLEVENTMOTORDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bMBORDROLEVENTMOTORDataSetBindingSource = new System.Windows.Forms.BindingSource();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
@@ -52,9 +51,9 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(0, 495);
+            this.simpleButton2.Location = new System.Drawing.Point(0, 497);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(741, 38);
+            this.simpleButton2.Size = new System.Drawing.Size(741, 36);
             this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "CONVERT";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -83,7 +82,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 269);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(741, 226);
+            this.panel2.Size = new System.Drawing.Size(741, 228);
             this.panel2.TabIndex = 7;
             // 
             // memoEdit2
@@ -91,7 +90,7 @@
             this.memoEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit2.Location = new System.Drawing.Point(0, 0);
             this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Size = new System.Drawing.Size(741, 226);
+            this.memoEdit2.Size = new System.Drawing.Size(741, 228);
             this.memoEdit2.TabIndex = 0;
             // 
             // label1
