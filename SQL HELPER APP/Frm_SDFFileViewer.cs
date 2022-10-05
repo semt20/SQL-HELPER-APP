@@ -23,10 +23,10 @@ namespace SQL_HELPER_APP
         }
         private void sb_OpenSdf_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fd = new OpenFileDialog();   
+            OpenFileDialog fd = new OpenFileDialog();
             using (fd)
-            { 
-                fd.Filter = "Sdf Files (*.sdf)|*.sdf|All Files (*.*)|*.*"; 
+            {
+                fd.Filter = "Sdf Files (*.sdf)|*.sdf|All Files (*.*)|*.*";
                 fd.ShowDialog();
                 sdfFile = lc_SDFPath.Text = fd.FileName;
                 if (string.IsNullOrEmpty(sdfFile)) return;
@@ -42,7 +42,7 @@ namespace SQL_HELPER_APP
                         lbc_SDFTableNames.Items.Add(reader.GetString(0));
                     }
                     reader.Close();
-                    con.Close(); 
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
@@ -51,16 +51,16 @@ namespace SQL_HELPER_APP
                 }
             }
         }
-
-        private void lbc_SDFTableNames_SelectedIndexChanged(object sender, EventArgs e)
+        private void SDFQuery(string query = "")
         {
+            query = query == "" ? ("SELECT * FROM " + lbc_SDFTableNames.SelectedItem.ToString()) : query;
             try
             {
                 SqlCeConnection con = new SqlCeConnection("Data Source=" + sdfFile);
                 con.Open();
                 grc_SDFData.DataSource = null;
                 grv_SDFData.PopulateColumns();
-                SqlCeCommand cmd = new SqlCeCommand("SELECT * FROM " + lbc_SDFTableNames.SelectedItem.ToString(), con);
+                SqlCeCommand cmd = new SqlCeCommand(query, con);
                 SqlCeDataAdapter da = new SqlCeDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -72,6 +72,10 @@ namespace SQL_HELPER_APP
                 MessageBox.Show(ex.Message);
 
             }
+        }
+        private void lbc_SDFTableNames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SDFQuery("");
         }
 
         private void grv_SDFData_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -108,5 +112,11 @@ namespace SQL_HELPER_APP
                 System.Diagnostics.Process.Start(sfd.FileName);
             }
         }
+
+        private void sb_RunQuery_Click(object sender, EventArgs e)
+        {
+            SDFQuery(me_SQLQuery.Text);
+        }
+         
     }
 }

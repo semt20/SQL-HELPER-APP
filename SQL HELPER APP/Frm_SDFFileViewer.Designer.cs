@@ -33,12 +33,17 @@
             this.lc_SDFPath = new DevExpress.XtraEditors.LabelControl();
             this.sb_OpenSdf = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sb_RunQuery = new DevExpress.XtraEditors.SimpleButton();
+            this.me_SQLQuery = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.lbc_SDFTableNames = new DevExpress.XtraEditors.ListBoxControl();
             this.grc_SDFData = new DevExpress.XtraGrid.GridControl();
             this.grv_SDFData = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.me_SQLQuery.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
@@ -81,11 +86,47 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.sb_RunQuery);
+            this.panel2.Controls.Add(this.me_SQLQuery);
+            this.panel2.Controls.Add(this.labelControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 671);
+            this.panel2.Location = new System.Drawing.Point(0, 480);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1019, 29);
+            this.panel2.Size = new System.Drawing.Size(1019, 220);
             this.panel2.TabIndex = 3;
+            // 
+            // sb_RunQuery
+            // 
+            this.sb_RunQuery.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sb_RunQuery.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sb_RunQuery.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sb_RunQuery.ImageOptions.SvgImage")));
+            this.sb_RunQuery.Location = new System.Drawing.Point(0, 146);
+            this.sb_RunQuery.Name = "sb_RunQuery";
+            this.sb_RunQuery.Size = new System.Drawing.Size(1019, 74);
+            this.sb_RunQuery.TabIndex = 6;
+            this.sb_RunQuery.Text = "Run Query";
+            this.sb_RunQuery.Click += new System.EventHandler(this.sb_RunQuery_Click);
+            // 
+            // me_SQLQuery
+            // 
+            this.me_SQLQuery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.me_SQLQuery.EditValue = "";
+            this.me_SQLQuery.Location = new System.Drawing.Point(0, 13);
+            this.me_SQLQuery.Name = "me_SQLQuery";
+            this.me_SQLQuery.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.me_SQLQuery.Properties.Appearance.Options.UseBackColor = true;
+            this.me_SQLQuery.Properties.WordWrap = false;
+            this.me_SQLQuery.Size = new System.Drawing.Size(1019, 133);
+            this.me_SQLQuery.TabIndex = 5;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "SQL QUERY:";
             // 
             // panel3
             // 
@@ -93,7 +134,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 53);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1019, 618);
+            this.panel3.Size = new System.Drawing.Size(1019, 427);
             this.panel3.TabIndex = 4;
             // 
             // splitContainerControl1
@@ -111,7 +152,7 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.grc_SDFData);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 618);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1019, 427);
             this.splitContainerControl1.SplitterPosition = 253;
             this.splitContainerControl1.TabIndex = 0;
             // 
@@ -120,7 +161,7 @@
             this.lbc_SDFTableNames.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbc_SDFTableNames.Location = new System.Drawing.Point(0, 0);
             this.lbc_SDFTableNames.Name = "lbc_SDFTableNames";
-            this.lbc_SDFTableNames.Size = new System.Drawing.Size(253, 618);
+            this.lbc_SDFTableNames.Size = new System.Drawing.Size(253, 427);
             this.lbc_SDFTableNames.TabIndex = 0;
             this.lbc_SDFTableNames.SelectedIndexChanged += new System.EventHandler(this.lbc_SDFTableNames_SelectedIndexChanged);
             // 
@@ -130,7 +171,7 @@
             this.grc_SDFData.Location = new System.Drawing.Point(0, 0);
             this.grc_SDFData.MainView = this.grv_SDFData;
             this.grc_SDFData.Name = "grc_SDFData";
-            this.grc_SDFData.Size = new System.Drawing.Size(756, 618);
+            this.grc_SDFData.Size = new System.Drawing.Size(756, 427);
             this.grc_SDFData.TabIndex = 0;
             this.grc_SDFData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grv_SDFData});
@@ -155,6 +196,9 @@
             this.Text = "SDF Viewer";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.me_SQLQuery.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
             this.splitContainerControl1.Panel1.ResumeLayout(false);
@@ -179,6 +223,9 @@
         private DevExpress.XtraEditors.SimpleButton sb_OpenSdf;
         private DevExpress.XtraEditors.LabelControl lc_SDFPath;
         private DevExpress.XtraEditors.ListBoxControl lbc_SDFTableNames;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.MemoEdit me_SQLQuery;
+        private DevExpress.XtraEditors.SimpleButton sb_RunQuery;
     }
 }
 
